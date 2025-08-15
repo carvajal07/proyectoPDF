@@ -1,3 +1,4 @@
+import io
 from io import BytesIO
 import re
 import os
@@ -50,53 +51,463 @@ _GLOBAL_REGISTRY = {
 }
 
 inicio = time.time()
-layout_container = "Layout/Layout/"
+layout_container = "Layout/Layout"
 object_types = [
-    "Variable",
-    "Page",
-    "Font",
-    "FlowArea",
-    "Flow",
-    "FlowObject",
-    "PathObject",
-    "ImageObject",
-    "Image",
     "Barcode",
-    "Chart",
-    "ParaStyle",
     "BorderStyle",
-    "TextStyle",
-    "FillStyle",
+    "Chart",
+    "Cell",
     "Color",
-    "Table",
+    "ElementObject",
+    "FillStyle",
+    "Flow",
+    "FlowArea",
+    "FlowObject",
+    "Font",
+    "Image",
+    "ImageObject",
+    "Page",
+    "ParaStyle",
+    "PathObject",
     "RowSet",
-    "Cell"
+    "Table",
+    "TextStyle",
+    "Variable"
 ]
 
 #Objetos omitidos
 #-Data
 #-Group
+#-MessageManagement
+#-Pages
+def convert_units(value):
+    """Convierte las unidades del XML de metros a puntos para ReportLab"""
+    value = Decimal(value) 
+    return float(value * Decimal(72) * Decimal(39.3701))  # Convertir metros a puntos (72 puntos = 1 inch, 39.37 inches = 1 metro)            
+
+def get_variable_value(var_id, variables, context=None, default=None):
+    """Obtiene el valor real de una variable desde el JSON (self.register) usando la jerarquía definida por ParentId."""
+    def resolve_hierarchy_path(variable_id):
+        """Construye la ruta jerárquica completa basada en los ParentId."""
+        path = []
+        current_id = variable_id
+
+        # current_id 0 es el nodo principal
+        #while current_id and current_id != "0":
+        while current_id:
+            variable_object = variables.get(current_id)
+            if variable_object is None:
+                break
+            
+            name_elem = variable_object.find('Name')
+            name = name_elem.text if name_elem is not None else None
+            # 🚩 OMITE 'Value'
+            if name and name != "Value":
+                path.insert(0, name)  # Insertamos al principio para construir la ruta
+
+            parent_elem = variable_object.find('ParentId')
+            current_id = parent_elem.text if parent_elem is not None else None
+
+        return path
+
+    def get_value_from_path(data, path):
+        """Navega el diccionario usando la ruta para obtener el valor."""
+        # Si el contexto no tiene las claves iniciales las omito
+        while path and not (isinstance(data, dict) and path[0] in data):
+            path.pop(0)
+
+        for key in path:
+            if isinstance(data, dict) and key in data:
+                data = data[key]
+            else:
+                # Retornar valor por defecto cuando no sea necesario validar la existencia del path
+                if default is not None:
+                    return default
+                else:
+                    raise ValueError(f"ERROR: No se encontró la clave '{key}' en el path '{' -> '.join(path)}'")
+        # Transformar los valores numericos a String para evitar problemas en los join de los textos
+        if isinstance(data, (int, float, Decimal)) and not isinstance(data, bool):        
+            data = str(data)
+        
+        return data
+
+    # Construimos el path desde la raíz hasta la variable actual
+    full_path = resolve_hierarchy_path(var_id)
+    return get_value_from_path(context, full_path)
+
+def map_elements(layout):
+    now = datetime.now()
+    print(f"{now} Inicio mapeo de elementos")
+    config_dicts = {}
+    data_dicts = {}
+    grouped_nodes = {}
+    all_elements = {}
+
+    for object_type in object_types:
+        config_dicts[object_type] = {}
+        data_dicts[object_type] = {}
+    
+        elements = layout.findall(object_type)
+        for element in elements:
+            obj_id_elem = element.find("Id")
+            if obj_id_elem is None:
+                continue
+            obj_id = obj_id_elem.text.strip()
+            # Si existe el objeto "ParentId" quiere decir que el nodo corresponde al arbol de objetos
+            parent_element = element.find('ParentId')
+            if parent_element is not None:
+                parent = parent_element.text
+                if parent not in grouped_nodes:
+                    grouped_nodes[parent] = []
+                grouped_nodes[parent].append(element)
+                data_dicts[object_type][obj_id] = element
+            else:
+                config_dicts[object_type][obj_id] = element
+                all_elements[obj_id] = element
+
+
+    now = datetime.now()
+    print(f"{now} Fin mapeo de elementos")
+    return config_dicts, data_dicts, grouped_nodes, all_elements
+
+def register_parastyles(paras):
+    now = datetime.now()
+    print(f"{now} Inicio registro parastyle")
+    def get_node_text(xml, node_name, default=None):
+        node = xml.find(node_name)
+        return node.text if node is not None else default
+        
+    ParaStyle_reportlab = {}
+
+    for id, para in paras.items():
+        left_indent = get_node_text(para,"LeftIndent",0)
+        right_indent = get_node_text(para,"RightIndent")
+        first_line_left_indent = get_node_text(para,"FirstLineLeftIndent")
+        space_before = get_node_text(para,"SpaceBefore",0)
+        space_after = get_node_text(para,"SpaceAfter",0)
+        line_spacing = get_node_text(para,"LineSpacing")
+        widow = get_node_text(para,"Widow")
+        orphan = get_node_text(para,"Orphan")
+        keep_with_next = get_node_text(para,"KeepWithNext")
+        keep_lines_together = get_node_text(para,"KeepLinesTogether")
+        dont_wrap = get_node_text(para,"DontWrap")
+
+        h_align = get_node_text(para,"HAlign","Left")  # Valor por defecto "Left" si no existe el nodo
+        align = 0  # TA_LEFT por defecto
+        if h_align == "Center":
+            align = 1  # TA_CENTER
+        elif h_align == "Right":
+            align = 2  # TA_RIGHT
+        elif "Justify" in h_align:
+            align = 4  # TA_JUSTIFY
+
+        style_args = {"alignment": align}
+
+        if left_indent is not None:
+            style_args["leftIndent"] = convert_units(left_indent)
+        if right_indent is not None:
+            style_args["rightIndent"] = convert_units(right_indent)
+        if first_line_left_indent is not None:
+            style_args["firstLineIndent"] = convert_units(first_line_left_indent)
+        if space_before is not None:
+            style_args["spaceBefore"] = convert_units(space_before)
+        if space_after is not None:
+            style_args["spaceAfter"] = convert_units(space_after)
+        if line_spacing is not None:
+            style_args["leading"] = convert_units(line_spacing)                
+        if widow is not None:
+            style_args["allowWidows"] = widow
+        if orphan is not None:
+            style_args["allowOrphans"] = orphan
+        if keep_with_next is not None:
+            style_args["keepWithNext"] = keep_with_next
+        if keep_lines_together is not None:
+            style_args["keepTogether"] = keep_lines_together
+
+        ParaStyle_reportlab[id] = style_args
+                
+    now = datetime.now()
+    print(f"{now} Fin registro parastyle")
+    return ParaStyle_reportlab
+
+def register_colors(colors):
+    #Los colores los usan los fillstyle
+    #los fillstyle los usan los textStyle, formas, codigos barras
+    #los textStyle los usan los parraghrapstyle y los flow
+    #los parraghrapstyle los usan los flow
+    now = datetime.now()
+    print(f"{now} Inicio registro colores")
+
+    color_reportlab = {}
+    for id, color in colors.items():
+        color_string = color.find("RGB").text
+        color_name = color.find("RGB").text
+        r, g, b = map(float, color_string.split(","))                                                           
+        
+        #Agregar color en hex
+        r_hex, g_hex, b_hex = int(r * 255), int(g * 255), int(b * 255)
+        hex_color = "#{:02x}{:02x}{:02x}".format(r_hex, g_hex, b_hex)
+        color_reportlab[id] = hex_color
+    now = datetime.now()
+    print(f"{now} Fin registro colores")
+    return color_reportlab
+
+def register_fonts(fonts, include_bytes):
+    """Registra las fuentes definidas en el XML"""
+    now = datetime.now()
+    print(f"{now} Inicio registro fuentes")
+    font_reportlab = {}
+    for id, font in fonts.items():
+        font_name = font.find('FontName').text
+        sub_fonts = font.findall('SubFont')
+        for sub_font in sub_fonts:
+            font_location = sub_font.find('FontLocation').text
+            if font_location:
+                # Extraer el nombre del archivo de la ruta
+                font_container = font_location.split(',')[0]
+                font_path= font_location.split(',')[-1]
+                font_file = font_path.split('/')[-1]
+                sub_font_name = sub_font.get('Name')
+
+                try:
+                    complete_name = f'{font_name}-{sub_font_name}'
+                    #Pruebas buscando las fuentes en font
+                    path = "C:\\Windows\\Fonts\\"
+                    font_container = "OtraRuta"
+                    font_path = path
+                    #Fin pruebas
+                    
+                    if font_container == 'VCSLocation':
+                        print("Realizar la busqueda de la fuente en el VCS")
+                        #TODO
+                        #Realizar descarga desde el VCS o revisar como manejar las fuentes
+                    else:
+                        print(f"Realizar la busqueda de la fuente {font_file} en el directorio {font_path}")
+                        # Asumimos que las fuentes están en un directorio 'fonts'
+                        if include_bytes:
+                            # Leer las fuentes desde el disco y guardar los bytes en un BytesIO                    
+                            with open(f'{font_path}{font_file}', 'rb') as f:
+                                font_data = f.read()
+                                # Registrar la fuente en ReportLab
+                                font_reportlab[complete_name] = font_data
+                        else:
+                            pdfmetrics.registerFont(TTFont(complete_name, f'{font_path}{font_file}'))
+                except:
+                    print(f"No se pudo cargar la fuente: {complete_name}")
+    #print(pdfmetrics.getRegisteredFontNames())
+    now = datetime.now()
+    print(f"{now} Fin registro fuentes")
+    return font_reportlab
+
+def register_images(images, variables, data):
+    now = datetime.now()
+    print(f"{now} Inicio registro de imagenes")
+    image_reportlab = {}
+    for id, image in images.items():
+        image_id = image.find('Id').text
+        image_type = image.find('ImageType').text
+        
+        if image_type == "Variable":
+            variable_id = image.find("VariableId").text
+            path = get_variable_value(variable_id, variables, data)
+        elif image_type == "Simple":
+            image_location = image.find("ImageLocation").text
+            _, path = image_location.split(',')
+            print("Pendiente configurar la descarga de imagenes desde el vcs")
+            if "vcs" in path:
+                path = path.replace("vcs://Produccion/Epm/FacturasPrepago/Resources/Imagenes/", "D:\\ProyectoComunicaciones\\ProyectoPDFGit\\Imagenes\\")
+        else:
+            path = None
+
+        img = None
+        if isinstance(path, str):
+            if path and os.path.exists(path):                   
+                if path.lower().endswith(('.jpg', '.jpeg', '.png')):
+                    img = ImageReader(path)
+                elif path.lower().endswith('.pdf'):
+                    pdf_doc = fitz.open(path)
+                    pdf_page = pdf_doc[0]  # Tomar la primera página
+                    pix = pdf_page.get_pixmap(dpi=96)
+                    img_pil = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
+                    img = ImageReader(img_pil)
+                
+            else:
+                print(f"Imagen no disponible: {path}")
+                sys.exit(1)
+            # Guarda en el cache (sea imagen o None si no existe)
+            image_reportlab[path] = img
+        else:
+            print(f"Error: El path de la imagen no es una cadena válida: {path}")
+            sys.exit(1)
+    now = datetime.now()
+    print(f"{now} Inicio registro de imagenes")
+    return image_reportlab
+
+def register_images_bytes(images, variables):
+    """Registra las imagenes definidas en el XML"""
+    now = datetime.now()
+    print(f"{now} Inicio registro de imagenes")
+
+    image_reportlab = {}
+    for id, image in images.items():
+        image_id = image.find('Id').text
+        image_type = image.find('ImageType').text
+        
+        if image_type == "Variable":
+            variable_id = image.find("VariableId").text
+            path = self.get_variable_value(variable_id)
+        elif image_type == "Simple":
+            image_location = image.find("ImageLocation").text
+            _, path = image_location.split(',')
+        else:
+            path = None
+
+        img = None
+        if isinstance(path, str):
+            if path and os.path.exists(path):
+                with open(path, "rb") as f:
+                    # Guarda en el cache (sea imagen o None si no existe)
+                    image_reportlab[image_id] = f.read()
+
+            else:
+                print(f"Imagen no disponible: {path}")
+                sys.exit(1)
+
+        else:
+            print(f"Error: El path de la imagen no es una cadena válida: {path}")
+            sys.exit(1)
+    return image_reportlab
+
+def register_borderstyles(borderstyle_elements, fillstyle_config, color_reportlab):
+    """
+    Convierte todos los BorderStyle XML en un diccionario usable en ReportLab.
+    """
+    from datetime import datetime
+    print(f"{datetime.now()} Inicio registro borderstyle")
+
+    borderstyle_reportlab = {}
+
+    for border_id, border_elem in borderstyle_elements.items():
+        border_config = {
+            "sides": {},           # LEFT, RIGHT, TOP, BOTTOM, LEFTRIGHT, RIGHTLEFT
+            "corners": {},         # TOPLEFT, TOPRIGHT, BOTTOMRIGHT, BOTTOMLEFT
+            "corner_types": {},    # radios de esquina
+            "fill_style_id": None
+        }
+
+        # LADOS
+        side_map = {
+            "TopLine": "TOP",
+            "BottomLine": "BOTTOM",
+            "LeftLine": "LEFT",
+            "RightLine": "RIGHT",
+            "LeftRightLine": "LEFTRIGHT",
+            "RightLeftLine": "RIGHTLEFT"
+        }
+        # ESQUINAS
+        corner_map = {
+            "UpperLeftCorner": "TOPLEFT",
+            "RightTopCorner": "TOPRIGHT",
+            "LowerRightCorner": "BOTTOMRIGHT",
+            "LowerLeftCorner": "BOTTOMLEFT"
+        }
+        # RADIOS DE ESQUINA
+        corner_type_map = {
+            "UpperLeftCornerType": "TOPLEFT",
+            "UpperRightCornerType": "TOPRIGHT",
+            "LowerRightCornerType": "BOTTOMRIGHT",
+            "LowerLeftCornerType": "BOTTOMLEFT"
+        }
+
+        for xml_tag, side in side_map.items():
+            line_elem = border_elem.find(xml_tag)
+            if line_elem is not None:
+                fillstyle_id = line_elem.findtext("FillStyle")
+                width = float(line_elem.findtext("LineWidth"))
+
+                color = "#000000"
+                if fillstyle_id and fillstyle_id in fillstyle_config:
+                    color_id = fillstyle_config[fillstyle_id].findtext("ColorId")
+                    if color_id and color_id in color_reportlab:
+                        color = color_reportlab[color_id]
+
+                
+                    border_config["sides"][side] = {
+                        "width": width,
+                        "color": color
+                    }        
+
+        for xml_tag, corner in corner_map.items():
+            corner_elem = border_elem.find(xml_tag)
+            if corner_elem is not None:
+                fillstyle_id = corner_elem.findtext("FillStyle")
+                width = float(corner_elem.findtext("LineWidth") or 0.25)
+
+                color = "#000000"
+                if fillstyle_id and fillstyle_id in fillstyle_config:
+                    color_id = fillstyle_config[fillstyle_id].findtext("ColorId")
+                    if color_id and color_id in color_reportlab:
+                        color = color_reportlab[color_id]
+
+                border_config["corners"][corner] = {
+                    "width": width,
+                    "color": color
+                }
+
+        for xml_tag, corner in corner_type_map.items():
+            elem = border_elem.find(xml_tag)
+            if elem is not None:
+                radius_elem = elem.find("CornerRadius")
+                if radius_elem is not None:
+                    rx = convert_units(radius_elem.get("X", 0))
+                    ry = convert_units(radius_elem.get("Y", 0))
+                    border_config["corner_types"][corner] = {
+                        "rounded": rx > 0 or ry > 0,
+                        "radius_x": rx,
+                        "radius_y": ry
+                    }
+
+        # FillStyleId general (por si aplica)
+        fsid_elem = border_elem.find("FillStyleId")
+        if fsid_elem is not None and fsid_elem.text:
+            border_config["fill_style_id"] = fsid_elem.text
+
+        borderstyle_reportlab[border_id] = border_config
+
+    print(f"{datetime.now()} Fin registro borderstyle")
+    return borderstyle_reportlab
 
 class XMLToPDFConverter:
-    def __init__(self, xml_content):
-        self.workflow = ET.fromstring(xml_content)
+    def __init__(self, grouped_nodes, all_elements, config_dicts, data_dicts, parastyle_reportlabs, colors_reportlabs, borderstyle_reportlabs, images_cache):
         self.register = {}
 
         #_config son los elementos del arbol
         #Estos contienen el nombre y quien es su padre
         self.page_width = 0
         self.page_height = 0
-        self.grouped_nodes = {}
-        self.all_elements = {}
-        self.images_cache = {}
+        self.grouped_nodes = grouped_nodes
+        self.ParaStyle_reportlab = parastyle_reportlabs
+        self.Color_reportlab = colors_reportlabs
+        self.BorderStyle_reportlab = borderstyle_reportlabs
+        self.all_elements = all_elements
+        self.images_cache = images_cache
         
         for object_type in object_types:
-            setattr(self, f"{object_type}_data", {})
-            setattr(self, f"{object_type}_config", {})
-            setattr(self, f"{object_type}_reportlab", {})
+            setattr(self, f"{object_type}_config", config_dicts[object_type])
+            setattr(self, f"{object_type}_data", data_dicts.get(object_type, {}))
         
         self.variables_system = []
-                      
+    
+    def get_element_by_id(self, element_type, element_id):
+        """
+        Devuelve el elemento del tipo dado a partir de su ID.
+        Ejemplo: get_element_by_id('Image', 'Logo01')
+        """
+        config_dict = getattr(self, f"{element_type}_config", None)
+        if config_dict and element_id in config_dict:
+            return config_dict[element_id]
+        return None
+                
     def convert_units(self, value):
         """Convierte las unidades del XML de metros a puntos para ReportLab"""
         value = Decimal(value) 
@@ -120,6 +531,7 @@ class XMLToPDFConverter:
 
                 name_elem = variable_object.find('Name')
                 name = name_elem.text if name_elem is not None else None
+                
                 # 🚩 OMITE 'Value'
                 if name and name != "Value":
                     path.insert(0, name)  # Insertamos al principio para construir la ruta
@@ -183,6 +595,7 @@ class XMLToPDFConverter:
         }
 
         def get_value_from_path(path):
+            path = path.replace("DATA.","")
             parts = path.strip().split('.')
             val = context
             for p in parts:
@@ -278,7 +691,7 @@ class XMLToPDFConverter:
 
         return safe_eval(condition_str)
 
-    def evaluate_condition(self, condition_str,context):
+    def evaluate_condition(self, condition_str, context):
         """
         Evalúa condiciones simples o múltiples (con 'and' / 'or') sobre un dict anidado.
         Ej: 'Documents.Direccion == "ERROR" or Documents.Channel == "OTRA"'
@@ -430,7 +843,7 @@ class XMLToPDFConverter:
             c.setFont("Helvetica-Bold", 12)
             c.drawString(x, y + h + 10, chart_title)
 
-    def process_table(self, table_element, c=None, context=None,max_width=0):
+    def process_table(self, table_element, c=None, context=None, max_width=0):
         """Procesa una tabla del XML y la convierte a formato ReportLab"""
         #SubRowId
         #VariableId
@@ -650,7 +1063,7 @@ class XMLToPDFConverter:
 
         return Table(table_data, style=table_style,rowHeights=row_heights,colWidths=col_widths)
 
-    def process_rowset(self, rowset_element,context=None,c=None,col_widths=[]):
+    def process_rowset(self, rowset_element, context=None, c=None, col_widths=[]):
         """Procesa un RowSet del XML y lo convierte a formato ReportLab"""
         rowset_type = rowset_element.find("RowSetType").text
         min_height = 0
@@ -709,8 +1122,8 @@ class XMLToPDFConverter:
                     
 
                     border_id = cell_element.find("BorderId", "").text
-                    if border_id and border_id in self.BorderStyle_config:
-                        border_conf = self.BorderStyle_config[border_id]
+                    if border_id and border_id in self.BorderStyle_reportlab:
+                        border_conf = self.BorderStyle_reportlab[border_id]
 
                         # Fondo desde FillStyle asociado al BorderStyle (solo si lo tiene)
                         fill_id = border_conf.get("fill_style_id")
@@ -760,13 +1173,23 @@ class XMLToPDFConverter:
         else:
             raise ValueError(f"Tipo de RowSet desconocido: {rowset_type}")
 
-    def process_cell(self, cell_element,context=None,c=None,col_widths=[],col_index=0):
+    def process_cell(self, cell_element, context=None, c=None, col_widths=[], col_index=0):
         """Procesa una celda dentro de una fila de la tabla"""
         if context is None:
             context = self.register
         flow_id = cell_element.find("FlowId").text if cell_element.find("FlowId") is not None else None
         max_width = col_widths[col_index]
-        #print(f"Procesando celda con FlowId: {flow_id}")
+        
+        # Aplicar el borde a la celda segun los tamaños de ancho y alto
+        # Varificar si tiene un BorderId
+        if cell_element.find("BorderId") is not None:
+            border_id = cell_element.find("BorderId").text
+            if border_id in self.BorderStyle_config:
+                border_conf = self.BorderStyle_config[border_id]
+                # Obtener el ancho del borde
+                width = border_conf.get("width", 0.25)
+         
+
         if flow_id == "293":
             pass
             #print("Pausa")
@@ -777,7 +1200,7 @@ class XMLToPDFConverter:
                 return self.process_flow(flow,context=context,c=c,max_width=max_width)
         return ""  # Celda vacía
 
-    def process_flow(self, flow_element,context=None, c=None, parent_offset=(0,0),max_width=0):
+    def process_flow(self, flow_element, context=None, c=None, parent_offset=(0,0), max_width=0):
         """Procesa un objeto Flow dentro de una celda y lo convierte en texto o párrafo"""
         if context is None:
             context = self.register
@@ -831,7 +1254,11 @@ class XMLToPDFConverter:
             #Crear los paragraph o usarlos
             p_id = p.get('Id')
             #print(f"Procesando Paragraph con Id: {p_id}")
-            para_style = copy.copy(para_style_dict.get(p_id))
+            para_style_ant = copy.copy(para_style_dict.get(p_id))
+            
+            para_style = ParagraphStyle(p_id,**para_style_ant)
+            
+            
             space_after = para_style.spaceAfter
             leading_after = para_style.leading
             final_space_after = space_after
@@ -879,6 +1306,9 @@ class XMLToPDFConverter:
                      
                     #print(object_id)
                     element = self.all_elements.get(object_id)
+                    if element is None:
+                        print(f"❌ No se encontró el elemento con Id: {object_id}")
+                        continue
                     node_name = element.tag
                     #print(node_name)
                     if node_name == "Variable":
@@ -1265,7 +1695,7 @@ class XMLToPDFConverter:
             
             self.draw_path(adjusted_points, c)
 
-    def process_image_objects_Ant(self, element_object, c, parent_offset=(0,0)):
+    def process_image_objects_v1(self, element_object, c, parent_offset=(0,0)):
         """Procesa y dibuja objetos de imagen"""
         path = ""
         now = datetime.now()
@@ -1341,6 +1771,82 @@ class XMLToPDFConverter:
         print(f"{now} Fin creacion imagen")
 
     def process_image_objects(self, element_object, c, parent_offset=(0,0)):
+        """Procesa y dibuja objetos de imagen"""
+        now = datetime.now()
+        print(f"{now}: Inicio carga de imagen")
+        offset_x = parent_offset[0]
+        offset_y = parent_offset[1]
+        path = ""
+
+        #print(f"{now} Inicio creacion imagen")
+        image_object_id = element_object.find('Id').text
+        imageObject_objects = getattr(self,"ImageObject_config")
+        image_objects = getattr(self,"Image_config")
+        imageObject_object = imageObject_objects.get(image_object_id)
+        
+        pos = imageObject_object.find('Pos')
+        size = imageObject_object.find('Size')
+        
+        #rotation = float(imageObject_object.find("Rotation").text or 0)
+        #scale_x = float(imageObject_object.find("Scale").get("X", 1))
+        #scale_y = float(imageObject_object.find("Scale").get("Y", 1))
+        m0 = float(imageObject_object.find("Transformation_M0").text)
+        m1 = float(imageObject_object.find("Transformation_M1").text)
+        m2 = float(imageObject_object.find("Transformation_M2").text)
+        m3 = float(imageObject_object.find("Transformation_M3").text)
+        m4 = float(imageObject_object.find("Transformation_M4").text)
+        m5 = float(imageObject_object.find("Transformation_M5").text)
+        
+        image_id = imageObject_object.find('ImageId').text
+        #img = self.get_imagen_from_cache(image_id)
+        image_object = image_objects.get(image_id)
+        image_type = image_object.find('ImageType').text 
+
+        if image_type == "Variable":
+            variable_id = image_object.find("VariableId").text
+            path = self.get_variable_value(variable_id)
+        elif image_type == "Simple":
+            image_location = image_object.find("ImageLocation").text
+            _, path = image_location.split(',')
+        else:
+            print(f"Tipo de imagen desconocido: {image_type}")
+            exit(1)
+
+        img = self.images_cache.get(path)
+
+        #Si no tengo imagen en cache, buscarla en el XML
+        if img is None:                                               
+            if os.path.exists(path):
+                if path.lower().endswith(('.jpg', '.jpeg', '.png')):
+                    img = ImageReader(path)
+                elif path.lower().endswith('.pdf'):
+                    pdf_doc = fitz.open(path)
+                    pdf_page = pdf_doc[0]  # Tomar la primera página
+                    pix = pdf_page.get_pixmap(dpi=96)
+                    img_pil = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
+                    img = ImageReader(img_pil)
+                self.images_cache[path] = img
+        else:
+            if pos is not None and size is not None:
+                x = self.convert_units(pos.get('X')) + offset_x
+                y = self.convert_units(pos.get('Y')) + offset_y
+                width = self.convert_units(size.get('X'))
+                height = self.convert_units(size.get('Y'))
+                
+                if img:
+                    c.saveState()
+                    c.translate(x, self.page_height - y)
+                    # Invertir la rotación si corresponde
+                    c.transform(m0, -m1, -m2, m3, m4, m5)
+                    c.drawImage(img, 0, -height, width, height)
+                    c.restoreState()
+                else:
+                    print(f"Error: La imagen no existe en la ruta especificada: {path}")
+                    exit(1)
+        now = datetime.now()
+        print(f"{now} Fin creacion imagen")
+
+    def process_image_objects_v3(self, element_object, c, parent_offset=(0,0)):
         """Procesa y dibuja objetos de imagen"""
         now = datetime.now()
         print(f"{now}: Inicio carga de imagen")
@@ -1663,110 +2169,249 @@ class XMLToPDFConverter:
             style_commands.append(('ALIGN', (0, 0), (-1, -1), 'LEFT'))
 
         # Devuelve el estilo para aplicar al objeto Table
-        return TableStyle(style_commands)                 
+        return TableStyle(style_commands)                     
 
-    def parse_borderstyle_config(self,border_element):
+    def draw_border_fill_path(self, c, x, y, width, height, rx_tl, ry_tl, rx_tr, ry_tr, rx_br, ry_br, rx_bl, ry_bl, fill_color):
+        p = c.beginPath()
+
+        # Punto inicial: esquina inferior izquierda (después del arco)
+        p.moveTo(x + rx_bl, y)
+
+        # Lado inferior
+        p.lineTo(x + width - rx_br, y)
+        # Arco inferior derecho
+        p.arcTo(x + width - 2*rx_br, y, x + width, y + 2*ry_br, startAng=270, extent=90)
+
+        # Lado derecho
+        p.lineTo(x + width, y + height - ry_tr)
+        # Arco superior derecho
+        p.arcTo(x + width - 2*rx_tr, y + height - 2*ry_tr, x + width, y + height, startAng=0, extent=90)
+
+        # Lado superior
+        p.lineTo(x + rx_tl, y + height)
+        # Arco superior izquierdo
+        p.arcTo(x, y + height - 2*ry_tl, x + 2*rx_tl, y + height, startAng=90, extent=90)
+
+        # Lado izquierdo
+        p.lineTo(x, y + ry_bl)
+        # Arco inferior izquierdo
+        p.arcTo(x, y, x + 2*rx_bl, y + 2*ry_bl, startAng=180, extent=90)
+
+        # Cierra el path
+        p.close()
+
+        c.setFillColor(fill_color)
+        c.drawPath(p, fill=1, stroke=0)
+
+    def draw_border(self, c, x, y, width, height, border_conf):
         """
-        Extrae configuraciones completas de un nodo BorderStyle incluyendo líneas, esquinas y corners.
+        Dibuja bordes redondeados completos con líneas y arcos adaptados a los radios.
         """
-        border_config = {
-            "sides": {},
-            "corners": {},
-            "corner_types": {},
-            "fill_style_id": None
-        }
 
-        # Lados (Lineas)
-        for tag, side in {
-            "TopLine": "TOP",
-            "BottomLine": "BOTTOM",
-            "LeftLine": "LEFT",
-            "RightLine": "RIGHT"
-        }.items():
-            elem = border_element.find(tag)
-            if elem is not None:
-                color = "#000000"  # predeterminado, ya que no se especifica en el FillStyle
-                width = float(elem.findtext("LineWidth") or 0.25)
-                border_config["sides"][side] = {
-                    "color": color,
-                    "width": width
-                }
-
-        # Esquinas (Corners visuales)
-        for tag, corner in {
-            "UpperLeftCorner": "TOPLEFT",
-            "UpperRightCorner": "TOPRIGHT",
-            "LowerRightCorner": "BOTTOMRIGHT",
-            "LowerLeftCorner": "BOTTOMLEFT"
-        }.items():
-            elem = border_element.find(tag)
-            if elem is not None:
-                color = "#000000"  # por defecto
-                width = float(elem.findtext("LineWidth") or 0.25)
-                border_config["corners"][corner] = {
-                    "color": color,
-                    "width": width
-                }
-
-        # Tipo de esquina (rounded o no)
-        for tag, corner in {
-            "UpperLeftCornerType": "TOPLEFT",
-            "UpperRightCornerType": "TOPRIGHT",
-            "LowerRightCornerType": "BOTTOMRIGHT",
-            "LowerLeftCornerType": "BOTTOMLEFT"
-        }.items():
-            elem = border_element.find(tag)
-            if elem is not None:
-                radius_elem = elem.find("CornerRadius")
-                radius_x = float(radius_elem.get("X", 0)) if radius_elem is not None else 0
-                radius_y = float(radius_elem.get("Y", 0)) if radius_elem is not None else 0
-                border_config["corner_types"][corner] = {
-                    "rounded": radius_x > 0 or radius_y > 0,
-                    "radius_x": radius_x,
-                    "radius_y": radius_y
-                }
-
-        # Relleno
-        fill_elem = border_element.find("FillStyleId")
-        if fill_elem is not None and fill_elem.text:
-            border_config["fill_style_id"] = fill_elem.text
-
-        return border_config
-
-    def draw_border(self,c, x, y, width, height, border_conf):
-        """
-        Dibuja los bordes con lados, esquinas y redondeos si aplica.
-        """
         sides = border_conf.get("sides", {})
         corners = border_conf.get("corners", {})
         corner_types = border_conf.get("corner_types", {})
+        fill_style_id = border_conf.get("fill_style_id")
 
         def draw_line(x1, y1, x2, y2, conf):
             c.setLineWidth(conf["width"])
             c.setStrokeColor(conf["color"])
             c.line(x1, y1, x2, y2)
 
-        def draw_arc(cx, cy, rx, ry, start_ang, end_ang, conf):
+        def draw_arc(cx, cy, rx, ry, start_ang, conf):
             c.setLineWidth(conf["width"])
             c.setStrokeColor(conf["color"])
-            c.arc(cx - rx, cy - ry, cx + rx, cy + ry, start_ang, end_ang)
+            c.arc(cx - rx, cy - ry, cx + rx, cy + ry, start_ang, 90)
 
-        # Lados rectos
+        # === Radios por esquina con valores mínimos por defecto
+        #rx_tl, ry_tl = 20, 40  # Top-Left
+        #rx_tr, ry_tr = 40, 40  # Top-Right
+        #rx_br, ry_br = 20, 40  # Bottom-Right
+        #rx_bl, ry_bl = 40, 40  # Bottom-Left
+
+        min_rx = width / 2
+        min_ry = height / 2
+        # Aplicar radios reales si están definidos
+        def safe_radius(corner):
+            ct = corner_types.get(corner, {})
+            if ct.get("rounded"):
+                rx = ct.get("radius_x", 0)
+                ry = ct.get("radius_y", 0)
+                equal_corners = ry == rx
+                min_rx_aux = min(rx, min_rx)
+                min_ry_aux = min(ry, min_ry)
+                if equal_corners:
+                    rx = ry = min(min_rx_aux, min_ry_aux)
+                else:
+                    rx,ry = min_rx_aux, min_ry_aux
+                return rx, ry
+            return 0, 0
+
+        rx_tl, ry_tl = safe_radius("TOPLEFT")
+        rx_tr, ry_tr = safe_radius("TOPRIGHT")
+        rx_br, ry_br = safe_radius("BOTTOMRIGHT")
+        rx_bl, ry_bl = safe_radius("BOTTOMLEFT")
+
+        x0, y0 = x, y
+        x1, y1 = (x + width), (y + height)
+
+        # === FONDO (si lo deseas, aquí podrías usar roundRect con el mayor radio)
+        if fill_style_id and fill_style_id in self.FillStyle_config:
+            fill_elem = self.FillStyle_config[fill_style_id]
+            color_id = fill_elem.findtext("ColorId")
+            if color_id and color_id in self.Color_reportlab:
+                fill_color = self.Color_reportlab[color_id]
+                c.setFillColor(fill_color)
+                c.setStrokeColor(fill_color)
+                c.setLineWidth(0)
+                self.draw_border_fill_path(
+                    c, x0, y0, width, height,
+                    rx_tl, ry_tl, rx_tr, ry_tr, rx_br, ry_br, rx_bl, ry_bl,
+                    fill_color
+                )
+                #c.rect(x0, y0, width, height, fill=1, stroke=0)
+
+        # === ESQUINAS (arcos)
+        if "TOPLEFT" in corners:
+            draw_arc(x0 + rx_tl, y1 - ry_tl, rx_tl, ry_tl, 90, corners["TOPLEFT"])
+        if "TOPRIGHT" in corners:           
+            draw_arc(x1 - rx_tr, y1 - ry_tr, rx_tr, ry_tr, 0, corners["TOPRIGHT"])
+        if "BOTTOMRIGHT" in corners:
+            draw_arc(x1 - rx_br, y0 + ry_br, rx_br, ry_br, 270, corners["BOTTOMRIGHT"])
+        if "BOTTOMLEFT" in corners:
+            draw_arc(x0 + rx_bl, y0 + ry_bl, rx_bl, ry_bl, 180, corners["BOTTOMLEFT"])
+        
+
+        # === LADOS rectos (ajustados a los radios)
         if "TOP" in sides:
-            draw_line(x, y + height, x + width, y + height, sides["TOP"])
+            draw_line(x0 + rx_tl, y1, x1 - rx_tr, y1, sides["TOP"])
         if "BOTTOM" in sides:
-            draw_line(x, y, x + width, y, sides["BOTTOM"])
+            draw_line(x1 - rx_br, y0, x0 + rx_bl, y0, sides["BOTTOM"])
         if "LEFT" in sides:
-            draw_line(x, y, x, y + height, sides["LEFT"])
+            draw_line(x0, y0 + ry_bl, x0, y1 - ry_tl, sides["LEFT"])
         if "RIGHT" in sides:
-            draw_line(x + width, y, x + width, y + height, sides["RIGHT"])
+            draw_line(x1, y1 - ry_tr, x1, y0 + ry_br, sides["RIGHT"])
+
+        # LEFTRIGHT: de esquina inferior izquierda a esquina superior derecha
+        if "LEFTRIGHT" in sides:
+            #draw_line(x0, y0, x1, y1, sides["LEFTRIGHT"])
+            start_x = x0 + (rx_bl/2)
+            start_y = y0 + (ry_bl/2)
+            end_x   = x1 - (rx_tr/2)
+            end_y   = y1 - (ry_tr/2)
+            draw_line(start_x, start_y, end_x, end_y, sides["LEFTRIGHT"])
+
+        # RIGHTLEFT: de esquina inferior derecha a esquina superior izquierda
+        if "RIGHTLEFT" in sides:
+            #draw_line(x1, y0, x0, y1, sides["RIGHTLEFT"])
+            start_x = x1 - (rx_br/2)
+            start_y = y0 + (ry_br/2)
+            end_x   = x0 + (rx_tl/2)
+            end_y   = y1 - (ry_tl/2)
+            draw_line(start_x, start_y, end_x, end_y, sides["RIGHTLEFT"])
+
+    def draw_border_v1(self, c, x, y, width, height, border_conf):
+        """
+        Dibuja los bordes con lados, esquinas y redondeos si aplica.
+        """
+        sides = border_conf.get("sides", {})
+        corners = border_conf.get("corners", {})
+        corner_types = border_conf.get("corner_types", {})
+        fill_style_id = border_conf.get("fill_style_id")
+
+        def draw_line(x1, y1, x2, y2, conf):
+            c.setLineWidth(conf["width"])
+            c.setStrokeColor(conf["color"])
+            c.line(x1, y1, x2, y2)
+
+        def draw_arc(cx, cy, rx, ry, start_ang, conf):
+            c.setLineWidth(conf["width"])
+            c.setStrokeColor(conf["color"])
+            c.arc((cx - rx), (cy - ry), (cx + rx), (cy + ry), start_ang)
+
+        def draw_custom_shape(c, x, y):
+            # Tamaño del contorno total
+            width = 400
+            height = 80
+
+            # Radios de esquina
+            rx_tl, ry_tl = 20, 40  # superior izquierda
+            rx_tr, ry_tr = 40, 40  # superior derecha
+            rx_br, ry_br = 20, 40  # inferior derecha
+            rx_bl, ry_bl = 40, 40  # inferior izquierda
+
+            # Calcula los puntos
+            x0, y0 = x, y  # inferior izquierdo
+            x1, y1 = (x + width), (y + height)  # superior derecho
+
+
+            # Dibujar líneas rectas
+            # Top
+            
+            c.line(x0 + rx_tl, y1, x1 - rx_tr, y1)
+            # Right
+            c.line(x1, y1 - ry_tr, x1, y0 + ry_br)
+            # Bottom
+            c.line(x1 - rx_br, y0, x0 + rx_bl, y0)
+            # Left
+            c.line(x0, y0 + ry_bl, x0, y1 - ry_tl)
+            
+
+            min_rx = width / 2
+            min_ry = height / 2
+            rx_tl, ry_tl = min(min_rx,rx_tl), min(min_ry, ry_tl)
+            rx_tr, ry_tr = min(min_rx,rx_tr), min(min_ry, ry_tr)
+            rx_br, ry_br = min(min_rx,rx_br), min(min_ry, ry_br)
+            rx_bl, ry_bl = min(min_rx,rx_bl), min(min_ry, ry_bl)
+            #rx = min(min_rx, rx)
+            #ry = min(min_ry, ry)
+
+            # Dibujar arcos
+            # Top-left
+            c.arc(x0, (y1 - 2 * ry_tl), (x0 + 2 * rx_tl), y1, startAng=90)
+            # Top-right
+            c.arc((x1 - 2 * rx_tr), (y1 - 2 * ry_tr), x1, y1, startAng=0)
+            # Bottom-right
+            c.arc((x1 - 2 * rx_br), y0, x1, (y0 + 2 * ry_br), startAng=270)
+            # Bottom-left
+            c.arc(x0, y0, (x0 + 2 * rx_bl), (y0 + 2 * ry_bl), startAng=180)
+
+        draw_custom_shape(c, x=100, y=400)
+
+        # FONDO (si existe)
+        
+        if fill_style_id and fill_style_id in self.FillStyle_config:
+            fill_elem = self.FillStyle_config[fill_style_id]
+            color_id = fill_elem.findtext("ColorId")
+            if color_id and color_id in self.Color_reportlab:
+                fill_color = self.Color_reportlab[color_id]
+                '''
+                c.setFillColor(fill_color)
+                c.setStrokeColor(fill_color)  # Evita contornos dobles
+                c.setLineWidth(0)
+                c.rect(x, y, width, height, fill=1, stroke=0)
+                '''
+
+                rounded_radius = max(
+                    ct.get("radius_x", 0) for ct in corner_types.values() if ct.get("rounded")
+                )
+
+                if rounded_radius > 0:
+                    c.setFillColor(fill_color)
+                    c.roundRect(x, y, width, height, rounded_radius, fill=1, stroke=0)
+                else:
+                    c.setFillColor(fill_color)
+                    c.rect(x, y, width, height, fill=1, stroke=0)
 
         # Esquinas redondeadas
+        
+        #c.arc(x, y, (x + width), (y + height))  # Dibuja un rectángulo vacío para el fondo
+        c.arc(x, y, (x + width), (y + height), 180)  # Dibuja un rectángulo vacío para el fondo
         for key, angles in {
-            "TOPLEFT": (90, 180, x, y + height),
-            "TOPRIGHT": (0, 90, x + width, y + height),
-            "BOTTOMLEFT": (180, 270, x, y),
-            "BOTTOMRIGHT": (270, 360, x + width, y)
+            "TOPLEFT": (90, x, (y + height)),
+            "TOPRIGHT": (0, (x + width), (y + height)),
+            "BOTTOMLEFT": (180, x, y),
+            "BOTTOMRIGHT": (270, (x + width), y)
         }.items():
             if key in corners:
                 conf = corners[key]
@@ -1774,67 +2419,25 @@ class XMLToPDFConverter:
                 if rounded_conf.get("rounded"):
                     rx = rounded_conf.get("radius_x", 4)
                     ry = rounded_conf.get("radius_y", 4)
-                    draw_arc(angles[2], angles[3], rx, ry, angles[0], angles[1], conf)
+                    draw_arc(angles[1], angles[2], rx, ry, angles[0], conf)
 
-    def draw_bordered_rect(self, c, x, y, width, height, border_conf):
-        """
-        Dibuja un rectángulo con bordes personalizados por lado (color y grosor)
-        y opcionalmente esquinas redondeadas.
+        # Lados rectos
+        if "TOP" in sides:
+            draw_line(x, (y + height), (x + width), (y + height), sides["TOP"])
+        if "BOTTOM" in sides:
+            draw_line(x, y, (x + width), y, sides["BOTTOM"])
+        if "LEFT" in sides:
+            draw_line(x, y, x, (y + height), sides["LEFT"])
+        if "RIGHT" in sides:
+            draw_line((x + width), y, (x + width), (y + height), sides["RIGHT"])
+        if "LEFTRIGHT" in sides:
+            draw_line(x, (y + height), x, y, sides["LEFTRIGHT"])
+            draw_line((x + width), y + height, (x + width), y, sides["LEFTRIGHT"])
+        if "RIGHTLEFT" in sides:
+            draw_line((x + width), (y + height), (x + width), y, sides["RIGHTLEFT"])
+            draw_line(x, (y + height), x, y, sides["RIGHTLEFT"])
 
-        Parámetros:
-            c: canvas de ReportLab
-            x, y: esquina inferior izquierda
-            width, height: dimensiones del rectángulo
-            border_conf: diccionario con configuración de bordes (incluye sides y corner_radius)
-        """
-
-        x0 = x
-        y0 = y
-        x1 = x + width
-        y1 = y + height
-
-        sides = border_conf.get("sides", {})
-        corner_radius = float(border_conf.get("corner_radius", 0))
-
-        # Si todos los lados son iguales y hay radio, usar roundRect
-        if len(set((frozenset(props.items()) for props in sides.values()))) == 1 and corner_radius > 0:
-            props = list(sides.values())[0]
-            width_ = props.get("width", 0.5)
-            color_ = props.get("color", "#000000")
-            c.setStrokeColor(colors.HexColor(color_))
-            c.setLineWidth(width_)
-            c.roundRect(x0, y0, width, height, corner_radius, stroke=1, fill=0)
-        else:
-            # Dibujar cada lado individual
-            for side, props in sides.items():
-                line_width = props.get("width", 0.5)
-                color = props.get("color", "#000000")
-                color_obj = colors.HexColor(color)
-
-                c.setStrokeColor(color_obj)
-                c.setLineWidth(line_width)
-
-                if side == "TOP":
-                    c.line(x0 + corner_radius, y1, x1 - corner_radius, y1)
-                elif side == "BOTTOM":
-                    c.line(x0 + corner_radius, y0, x1 - corner_radius, y0)
-                elif side == "LEFT":
-                    c.line(x0, y0 + corner_radius, x0, y1 - corner_radius)
-                elif side == "RIGHT":
-                    c.line(x1, y0 + corner_radius, x1, y1 - corner_radius)
-
-            # Dibujar esquinas redondeadas si corresponde
-            if corner_radius > 0:
-                c.setLineWidth(1)
-                c.setStrokeColor(colors.black)
-
-                # Esquinas con arcs
-                c.arc(x0, y0, x0 + 2*corner_radius, y0 + 2*corner_radius, startAng=180, extent=90)  # Inferior izquierda
-                c.arc(x1 - 2*corner_radius, y0, x1, y0 + 2*corner_radius, startAng=270, extent=90)  # Inferior derecha
-                c.arc(x0, y1 - 2*corner_radius, x0 + 2*corner_radius, y1, startAng=90, extent=90)   # Superior izquierda
-                c.arc(x1 - 2*corner_radius, y1 - 2*corner_radius, x1, y1, startAng=0, extent=90)    # Superior derecha
-
-    def process_flows_areas(self, flow_area_element, c, parent_offset=(0,0),element=False):
+    def process_flows_areas(self, flow_area_element, c, parent_offset=(0,0), element=False):
         id_flow_area = flow_area_element.find("Id").text
         flow_areas = getattr(self,"FlowArea_config")
         if id_flow_area == "177": #Este es el element, se deben aplicar estos offset a todos sus hijos
@@ -1862,9 +2465,8 @@ class XMLToPDFConverter:
         s_x = self.convert_units(size.get('X',0))
         s_y = self.convert_units(size.get('Y',0))
         
-        #border_conf = self.BorderStyle_config[flow_border_id]
-        #self.draw_bordered_rect(c, p_x, (self.page_height - p_y - s_y), s_x, s_y, border_conf)
-
+        ##############PROCESO ANTERIOR######################
+        '''
         if flow_border_id is not None:
             border_conf = self.BorderStyle_config[flow_border_id]
             sides = border_conf.get("sides", {})
@@ -1875,7 +2477,12 @@ class XMLToPDFConverter:
                 c.setStrokeColor(color_obj)
                 c.setLineWidth(width)
             c.rect(p_x, (self.page_height - p_y - s_y), s_x, s_y, fill=0)
+        '''
+        ####################################################
 
+        if flow_border_id is not None:
+            border_conf = self.BorderStyle_reportlab[flow_border_id]
+            self.draw_border(c, p_x, (self.page_height - p_y - s_y), s_x, s_y, border_conf)
 
         if element:
             offset_x = parent_offset[0]
@@ -1922,21 +2529,6 @@ class XMLToPDFConverter:
             sys.exit(1)
      
     def process_elements_by_object(self, object_id, c, parent_offset=(0,0), element=False):
-        #Proceso anterior
-        '''
-        frames_list = []
-        ids_flow_areas_by_pages = getattr(self,"FlowArea_data")
-        para_style_dict = getattr(self,"ParaStyle_reportlab")
-        flow_areas = getattr(self,"FlowArea_config")
-        fill_styles = getattr(self,"FillStyle_config")
-        colors = getattr(self,"Color_reportlab")
-        text_styles = self.TextStyle_config
-        fonts_config_dict = self.Font_config
-        
-        ids_flow_areas = ids_flow_areas_by_pages.get(page_id)
-        for id_flow_area in ids_flow_areas:            
-            self.process_flows_areas()    
-        '''
         offset_x = parent_offset[0]
         offset_y = parent_offset[1]
         elements_to_process = self.grouped_nodes.get(object_id) 
@@ -1954,15 +2546,15 @@ class XMLToPDFConverter:
 
             if (node_name == "FlowArea"):
                 self.process_flows_areas(element_to_process, c, parent_offset=(offset_x,offset_y), element=element)
+            elif (node_name == "ElementObject"):
+                print("Se omite hasta que se configure")
+                #self.process_flows_areas(element_to_process, c, parent_offset=(offset_x,offset_y), element=True)
             elif (node_name == "PathObject"):
                 self.process_path_object(element_to_process, c, parent_offset=(offset_x,offset_y))
             elif (node_name == "ImageObject"):                
                 self.process_image_objects(element_to_process, c, parent_offset=(offset_x,offset_y))
-                #pass
-            #Creo que una hoja no puede tener una tabla como elemento raiz
             elif (node_name == "Chart"):
                 self.process_chart(element_to_process, c, parent_offset=(offset_x,offset_y))
-                
             elif (node_name == "Barcode"):
                 self.process_barcode_objects(element_to_process, c)
             else:
@@ -2192,47 +2784,7 @@ class XMLToPDFConverter:
             para_dict = getattr(self,"ParaStyle_reportlab")
             para_dict[id] = style
             
-            '''
-            is_visible = para.find("IsVisible").text == "True"
-            if not is_visible: continue
-            left_indent = para.find("LeftIndent").text
-            right_indent = para.find("RightIndent").text            
-            first_line_left_indent = para.find("FirstLineLeftIndent").text
-            space_before = para.find("SpaceBefore").text
-            space_after = para.find("SpaceAfter").text
-            line_spacing = para.find("LineSpacing").text
             
-            widow = para.find("Widow").text
-            orphan = para.find("Orphan").text
-            keep_with_next = para.find("KeepWithNext").text
-            keep_lines_together = para.find("KeepLinesTogether").text
-            dont_wrap = para.find("DontWrap").text
-            
-            h_align = para.find("HAlign").text
-            align = 0 #TA_LEFT #Por defecto            
-            if h_align == "Center": align = 1 #TA_CENTER
-            if h_align == "Right": align = 2 #TA_RIGHT
-            if "Justify" in h_align: align = 4 #TA_JUSTIFY
-            style = ParagraphStyle(
-                id,
-                leftIndent=self.convert_units(left_indent),
-                rightIndent=self.convert_units(right_indent),
-                firstLineIndent=self.convert_units(first_line_left_indent),
-                spaceBefore=self.convert_units(space_before),
-                spaceAfter=self.convert_units(space_after),
-                leading=self.convert_units(line_spacing),  # "LineSpacing" es el interlineado
-                alignment=align,  # "HAlign" -> Alineación a la izquierda
-                allowWidows=widow,  # "Widow" -> Mínimo de líneas en la siguiente página
-                allowOrphans=orphan,  # "Orphan" -> Mínimo de líneas en la página actual
-                keepWithNext=keep_with_next,  # "KeepWithNext"
-                keepTogether=keep_lines_together  # "KeepLinesTogether"                
-            )
-            #No usar de momento
-            #wordWrap=None if dont_wrap else 'CJK'  # "DontWrap" -> No cortar palabras
-
-            para_dict = getattr(self,"ParaStyle_reportlab")
-            para_dict[id] = style
-            '''
         now = datetime.now()
         print(f"{now} Fin registro parastyle")
                 
@@ -2271,9 +2823,21 @@ class XMLToPDFConverter:
                             pdfmetrics.registerFont(TTFont(complete_name, f'{font_path}{font_file}'))
                     except:
                         print(f"No se pudo cargar la fuente: {complete_name}")
-        #print(pdfmetrics.getRegisteredFontNames())
+        print(pdfmetrics.getRegisteredFontNames())
         now = datetime.now()
         print(f"{now} Fin registro fuentes")
+
+    def register_fonts_from_bytes(self, fonts):
+        """Registra las fuentes definidas en el XML"""
+        now = datetime.now()
+        print(f"{now} Inicio registro fuentes desde bytes")
+
+        for name, font_bytes in fonts.items():
+            font_stream = BytesIO(font_bytes)
+            pdfmetrics.registerFont(TTFont(name, font_stream))
+
+        now = datetime.now()
+        print(f"{now} Fin registro fuentes desde bytes")
 
     def grouping_elements(self):
         now = datetime.now()
@@ -2321,7 +2885,7 @@ class XMLToPDFConverter:
                 #volver a llamar "process_page"
                 pass                                
 
-    def map_elements(self,element_String):        
+    def map_elements(self, element_String):        
         path_to_find = f'{layout_container}{element_String}'
         elements = self.workflow.findall(path_to_find)
         parent_dict_data = getattr(self, f"{element_String}_data")
@@ -2348,14 +2912,14 @@ class XMLToPDFConverter:
         #prueba = getattr(self, "Variable_config")
         #print(prueba.get('1')) 
                 
-    def create_pdf(self, output_filename):
+    def create_pdf(self, pages, output_filename):
         """Crea el archivo PDF"""
         #self.register = register
         c = canvas.Canvas(output_filename)
                                 
         # Procesar páginas
 
-        pages = self.workflow.find(f'{layout_container}Pages')                
+                      
         selection_type = pages.find("SelectionType").text         
         page_dict = getattr(self,"Page_config")
         page_id = None
@@ -2451,21 +3015,19 @@ def configurar_logger_por_hilo():
 # 9- Para cada flowId se debe procesar el contenido del flujo, que puede ser un texto o una variable
 # 10- 
 
-def process_document(xml_string, json_data, document, i):
+def process_document(pages, full_context, document, i, grouped_nodes, all_elements, config_dicts, data_dicts, parastyle_reportlabs, colors_reportlabs, borderstyle_reportlabs, fonts_reportlabs, images_cache):
     """Función auxiliar para generar un PDF en un proceso separado"""
     logger = configurar_logger_por_hilo()
-
-    converter = XMLToPDFConverter(xml_string)
-
-    full_context = json_data.copy()
+    now = datetime.now()
+    print(f"{now} Inicio creacion pdf")
+    converter = XMLToPDFConverter(grouped_nodes, all_elements, config_dicts, data_dicts, parastyle_reportlabs, colors_reportlabs, borderstyle_reportlabs, images_cache)
+    
     full_context["Documents"] = document
     converter.register = full_context
 
     now = datetime.now()
 
-    #Sacar de la clase:
-    #map_elements, register_colors, register_fonts, register_images, grouping_elements, register_parastyles, register_borderstyles
-
+    '''
     print(f"{now} Inicio mapeo elementos")
     for object_type in object_types:
         converter.map_elements(object_type)
@@ -2477,6 +3039,9 @@ def process_document(xml_string, json_data, document, i):
     converter.grouping_elements()
     converter.register_parastyles()
     converter.register_borderstyles()
+    '''
+    #converter.register_fonts_from_bytes(fonts_reportlabs)
+    #converter.register_images()
 
     pdf_name = document.get("NombrePDF", None)
     print(pdf_name)
@@ -2485,38 +3050,57 @@ def process_document(xml_string, json_data, document, i):
         return
 
     pdf_path = f"D:\\ProyectoComunicaciones\\ProyectoPDFGit\\{i}_{pdf_name}"
-    converter.create_pdf(pdf_path)
+    converter.create_pdf(pages, pdf_path)
+    now = datetime.now()
+    print(f"{now} Fin creacion pdf")
 
 def main():
-    path_json = "D:/ProyectoComunicaciones/ProyectoPDFGit/Datos/1_PE_860007336_FacturasWS_20250620_37F7155071DA4B57E0632A64A8C03854_Transform.json"
-    path_xml = "D:\\ProyectoComunicaciones\\ProyectoPDFGit\\Colsubsidio_Compose_FacturasWS.xml"
+    #path_json = "D:/ProyectoComunicaciones/ProyectoPDFGit/Datos/1_PE_860007336_FacturasWS_20250620_37F7155071DA4B57E0632A64A8C03854_Transform.json"
+    path_json = "D:/ProyectoComunicaciones/ProyectoPDFGit/Datos/PE_890904996_FacturasPrepago_20250627_DEEP10507508_Transform.json"
+    #path_xml = "D:\\ProyectoComunicaciones\\ProyectoPDFGit\\Colsubsidio_Compose_FacturasWS_PruebaBordes2.xml"
+    path_xml = "D:\\ProyectoComunicaciones\\ProyectoPDFGit\\EPM_Compose_FacturasPrepago.xml"
+    
+
+    with open(path_xml, 'r', encoding="UTF-8") as f_x:
+        xml_string = f_x.read()
+    workflow = ET.fromstring(xml_string)
+    layout = workflow.find(f"{layout_container}")
+    pages = layout.find('Pages') 
+  
+    if layout is None:
+        raise ValueError("No se encontró el contenedor de diseño en el XML")
+    
+    config_dicts, data_dicts, grouped_nodes, all_elements = map_elements(layout)
+    parastyle_reportlabs = register_parastyles(config_dicts["ParaStyle"])
+    fonts_reportlabs = register_fonts(config_dicts["Font"], include_bytes=False)
+    colors_reportlabs = register_colors(config_dicts["Color"])
+    borderstyle_reportlabs = register_borderstyles(config_dicts["BorderStyle"], config_dicts["FillStyle"],colors_reportlabs)    
 
     json_string = ""
     with open(path_json, 'r', encoding="UTF-8") as f_j:
         json_string = f_j.read()
     json_data = json.loads(json_string)
-
-    with open(path_xml, 'r', encoding="UTF-8") as f_x:
-        xml_string = f_x.read()
-        
     principal_array = "Documents"  # Nombre del array principal en el JSON
-
     docs = json_data.get(principal_array)
-
+    # Se realiza validación de los documentos para verificar si son una lista o un diccionario para poder recorrerlo
     if isinstance(docs, dict):
         documents = [docs]  # Lo convertimos a lista
     elif isinstance(docs, list):
         documents = docs
     else:
         raise ValueError("Formato de 'Documents' no reconocido")
+    
+    full_context = json_data.copy()
+    full_context["Documents"] = documents[0]
 
-
+    # Realizo inicialmente el registro de las imagenes del primer registro
+    images_cache = register_images(config_dicts["Image"], data_dicts["Variable"], full_context)
 
     #########PRUEBAS###########
     ###########################
-    for i in range(10):
+    for i in range(1):
         for document in documents:
-            process_document(xml_string, json_data, document, i)
+            process_document(pages, full_context, document, i, grouped_nodes, all_elements, config_dicts, data_dicts, parastyle_reportlabs, colors_reportlabs, borderstyle_reportlabs, fonts_reportlabs, images_cache)
     
     ###########################
     ###########################
@@ -2526,7 +3110,7 @@ def main():
         args_list = []
         for i in range(10):
             for document in documents:
-                args_list.append((xml_string, json_data, document, i))
+                args_list.append((pages, json_data, document, i, grouped_nodes, all_elements, config_dicts, data_dicts, parastyle_reportlabs, colors_reportlabs, borderstyle_reportlabs, fonts_reportlabs))
 
         for args in args_list:
             executor.submit(process_document, *args)
@@ -2544,3 +3128,6 @@ if __name__ == "__main__":
     # Configurar el logger para el hilo principal
     logger = configurar_logger_por_hilo()
     main()
+
+
+InspireCLi.exe -icmuser -icmpassword -wfd2xml

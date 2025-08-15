@@ -1,0 +1,4 @@
+Hola, este es el archivo actualizado.
+Contiene varias lineas de texto.
+Y esta es una linea nueva.
+otra linea agregada.

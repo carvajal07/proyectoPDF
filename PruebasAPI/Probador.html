@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Probador de API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Probador de API</h1>
+        
+        <div class="form-group">
+            <label for="urlInput">URL de la API:</label>
+            <input type="text" id="urlInput" placeholder="Ej: https://mi-api.com/endpoint" value="https://jsonplaceholder.typicode.com/posts">
+        </div>
+        
+        <div class="form-group">
+            <label for="payloadInput">Payload (JSON):</label>
+            <textarea id="payloadInput" rows="5" placeholder="Ej: { 'title': 'foo', 'body': 'bar', 'userId': 1 }">{ "title": "foo", "body": "bar", "userId": 1 }</textarea>
+        </div>
+        
+        <button id="sendButton">Enviar Solicitud</button>
+        
+        <div class="response-container">
+            <h3>Respuesta de la API:</h3>
+            <pre id="responseDisplay"></pre>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

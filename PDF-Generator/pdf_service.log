@@ -1,0 +1,1376 @@
+2025-07-21 15:01:22,806 [INFO] Inicio del servicio Generador PDF
+2025-07-21 15:01:22,806 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-21 15:01:23,290 [ERROR] Error en la ejecución del servicio: ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Incorrect syntax near the keyword 'schema'. (156) (SQLExecDirectW); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)")
+Traceback (most recent call last):
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 35, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 18, in load_input
+    layout = xml_read(customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\xml_parser.py", line 65, in xml_read
+    layout_str = get_layout_xml(customer, product)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\interface\xml_fetcher.py", line 12, in get_layout_xml
+    cursor.execute(query, (customer, product))
+pyodbc.ProgrammingError: ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Incorrect syntax near the keyword 'schema'. (156) (SQLExecDirectW); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)")
+2025-07-21 15:01:23,308 [INFO] Servicio finalizado
+2025-07-21 15:01:52,169 [INFO] Inicio del servicio Generador PDF
+2025-07-21 15:01:52,169 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-21 15:02:56,044 [ERROR] Error en la ejecución del servicio: ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Incorrect syntax near the keyword 'schema'. (156) (SQLExecDirectW); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)")
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 35, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 18, in load_input
+    layout = xml_read(customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\xml_parser.py", line 65, in xml_read
+    layout_str = get_layout_xml(customer, product)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\interface\xml_fetcher.py", line 12, in get_layout_xml
+    cursor.execute(query, (customer, product))
+pyodbc.ProgrammingError: ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Incorrect syntax near the keyword 'schema'. (156) (SQLExecDirectW); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)")
+2025-07-21 15:02:57,509 [INFO] Servicio finalizado
+2025-07-21 15:04:49,012 [INFO] Inicio del servicio Generador PDF
+2025-07-21 15:04:49,012 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-21 15:06:17,360 [INFO] Inicio del servicio Generador PDF
+2025-07-21 15:06:17,360 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-21 15:07:32,392 [INFO] Inicio del servicio Generador PDF
+2025-07-21 15:07:32,393 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-21 15:10:49,722 [INFO] Inicio del servicio Generador PDF
+2025-07-21 15:10:49,730 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-21 15:11:09,836 [ERROR] Error en la ejecución del servicio: Error al ejecutar la consulta: ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Incorrect syntax near the keyword 'schema'. (156) (SQLExecDirectW); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)")
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\interface\xml_fetcher.py", line 13, in get_layout_xml
+    cursor.execute(query, (customer, product))
+pyodbc.ProgrammingError: ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Incorrect syntax near the keyword 'schema'. (156) (SQLExecDirectW); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 35, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 18, in load_input
+    layout = xml_read(customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\xml_parser.py", line 65, in xml_read
+    layout_str = get_layout_xml(customer, product)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\interface\xml_fetcher.py", line 16, in get_layout_xml
+    raise ValueError(f"Error al ejecutar la consulta: {e}")
+ValueError: Error al ejecutar la consulta: ('42000', "[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Incorrect syntax near the keyword 'schema'. (156) (SQLExecDirectW); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)")
+2025-07-21 15:12:36,490 [INFO] Inicio del servicio Generador PDF
+2025-07-21 15:12:36,490 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-21 15:14:31,056 [ERROR] Error en la ejecución del servicio: register_fonts() got an unexpected keyword argument 'include_bytes'
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 35, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 21, in load_input
+    fonts_reportlabs = register_fonts(config_dicts["Font"], include_bytes=False)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: register_fonts() got an unexpected keyword argument 'include_bytes'
+2025-07-22 09:23:26,393 [INFO] Inicio del servicio Generador PDF
+2025-07-22 09:23:26,394 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-22 09:25:41,310 [ERROR] Error en la ejecución del servicio: 'dict' object has no attribute 'Page_config'
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 41, in main
+    process_document(document, i, config)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\pdf\process_document.py", line 104, in process_document
+    for page_element in config.config_dicts.Page_config.values():
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'Page_config'
+2025-07-22 09:26:52,831 [INFO] Inicio del servicio Generador PDF
+2025-07-22 09:26:52,831 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-22 09:27:02,767 [ERROR] Error en la ejecución del servicio: 'dict' object has no attribute 'Page_config'
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 41, in main
+    process_document(document, i, config)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\pdf\process_document.py", line 104, in process_document
+    for page_element in config.config_dicts.Page_config.values():
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'Page_config'
+2025-07-22 09:27:02,783 [INFO] Servicio finalizado
+2025-07-22 09:28:38,590 [INFO] Inicio del servicio Generador PDF
+2025-07-22 09:28:38,590 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-22 09:31:58,263 [INFO] Inicio del servicio Generador PDF
+2025-07-22 09:31:58,263 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-22 09:37:01,354 [INFO] Inicio del servicio Generador PDF
+2025-07-22 09:37:01,354 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-22 09:37:19,999 [INFO] Inicio del servicio Generador PDF
+2025-07-22 09:37:19,999 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-22 09:40:11,340 [INFO] Inicio del servicio Generador PDF
+2025-07-22 09:40:11,341 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-22 11:12:05,653 [INFO] Inicio del servicio Generador PDF
+2025-07-22 11:12:05,653 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-22 11:13:05,808 [ERROR] Error en la ejecución del servicio: process_barcode_objects() missing 1 required positional argument: 'c'
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 41, in main
+    process_document(document, i, config)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\pdf\process_document.py", line 105, in process_document
+    process_page(page_element, c, config)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\pdf\process_page.py", line 15, in process_page
+    process_elements_by_object(page_id, c, config=config)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\pdf\process_elements.py", line 35, in process_elements_by_object
+    process_barcode_objects(element_to_process, c)
+TypeError: process_barcode_objects() missing 1 required positional argument: 'c'
+2025-07-22 11:13:06,229 [INFO] Servicio finalizado
+2025-07-23 14:38:05,441 [INFO] Inicio del servicio Generador PDF
+2025-07-23 14:38:05,442 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-23 14:38:06,849 [ERROR] Error en la ejecución del servicio: 'dict' object has no attribute 'layout'
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 41, in main
+    process_document(document, i, config)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\pdf\process_document.py", line 9, in process_document
+    layout = config.layout
+             ^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'layout'
+2025-07-23 14:38:06,856 [INFO] Servicio finalizado
+2025-07-23 14:38:43,837 [INFO] Inicio del servicio Generador PDF
+2025-07-23 14:38:43,837 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-23 14:38:57,236 [ERROR] Error en la ejecución del servicio: 'dict' object has no attribute 'layout'
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 41, in main
+    process_document(document, i, config)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\pdf\process_document.py", line 9, in process_document
+    layout = config.layout
+             ^^^^^^^^^^^^^
+AttributeError: 'dict' object has no attribute 'layout'
+2025-07-23 14:38:58,009 [INFO] Servicio finalizado
+2025-07-23 14:39:59,046 [INFO] Inicio del servicio Generador PDF
+2025-07-23 14:39:59,046 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-23 14:40:43,023 [INFO] Inicio del servicio Generador PDF
+2025-07-23 14:40:43,024 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-23 14:41:55,966 [INFO] Inicio del servicio Generador PDF
+2025-07-23 14:41:55,966 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-23 14:43:11,163 [ERROR] Error en la ejecución del servicio: process_page() takes 3 positional arguments but 4 were given
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 41, in main
+    process_document(config, document, i)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\pdf\process_document.py", line 77, in process_document
+    process_page(config, page_element, c, config)
+TypeError: process_page() takes 3 positional arguments but 4 were given
+2025-07-23 14:43:11,592 [INFO] Servicio finalizado
+2025-07-23 14:44:54,163 [INFO] Inicio del servicio Generador PDF
+2025-07-23 14:44:54,163 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-23 14:44:54,745 [ERROR] Error en la ejecución del servicio: 'Page_config'
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 41, in main
+    process_document(config, document, i)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\pdf\process_document.py", line 76, in process_document
+    for page_element in config.config_dicts['Page_config'].values():
+        ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'Page_config'
+2025-07-23 14:44:54,751 [INFO] Servicio finalizado
+2025-07-23 14:45:48,057 [INFO] Inicio del servicio Generador PDF
+2025-07-23 14:45:48,057 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-23 14:45:48,590 [ERROR] Error en la ejecución del servicio: 'Page_config'
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 41, in main
+    process_document(config, document, i)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\pdf\process_document.py", line 76, in process_document
+    for page_element in config.config_dicts['Page_config'].values():
+        ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'Page_config'
+2025-07-23 14:45:48,590 [INFO] Servicio finalizado
+2025-07-23 14:46:08,883 [INFO] Inicio del servicio Generador PDF
+2025-07-23 14:46:08,883 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-23 14:46:09,356 [ERROR] Error en la ejecución del servicio: 'Page_config'
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 41, in main
+    process_document(config, document, i)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\pdf\process_document.py", line 76, in process_document
+    for page_element in config.config_dicts['Page_config'].values():
+        ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'Page_config'
+2025-07-23 14:46:09,356 [INFO] Servicio finalizado
+2025-07-23 14:46:36,083 [INFO] Inicio del servicio Generador PDF
+2025-07-23 14:46:36,084 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-23 14:46:50,963 [INFO] Inicio del servicio Generador PDF
+2025-07-23 14:46:50,963 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-23 14:48:18,403 [INFO] Inicio del servicio Generador PDF
+2025-07-23 14:48:18,403 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-23 14:49:41,344 [INFO] Inicio del servicio Generador PDF
+2025-07-23 14:49:41,345 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-23 14:53:59,074 [INFO] Inicio del servicio Generador PDF
+2025-07-23 14:53:59,074 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-23 14:54:52,065 [INFO] Inicio del servicio Generador PDF
+2025-07-23 14:54:52,065 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-23 14:55:43,865 [INFO] Inicio del servicio Generador PDF
+2025-07-23 14:55:43,865 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-23 14:56:31,253 [ERROR] Error en la ejecución del servicio: get_variable_value() missing 1 required positional argument: 'variables'
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 41, in main
+    process_document(config, document, i)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\pdf\process_document.py", line 77, in process_document
+    process_page(config, page_element, c)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\pdf\process_page.py", line 15, in process_page
+    process_elements_by_object(config, page_id, page_width, page_height, c)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\pdf\process_elements.py", line 44, in process_elements_by_object
+    process_barcode_objects(element_object, page_height, c)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\renderer\barcode_renderer.py", line 167, in process_barcode_objects
+    code_text = get_variable_value(variable_id)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: get_variable_value() missing 1 required positional argument: 'variables'
+2025-07-23 14:56:31,693 [INFO] Servicio finalizado
+2025-07-23 14:57:05,240 [INFO] Inicio del servicio Generador PDF
+2025-07-23 14:57:05,240 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-24 06:46:12,711 [INFO] Inicio del servicio Generador PDF
+2025-07-24 06:46:12,712 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-24 06:46:52,486 [INFO] Inicio del servicio Generador PDF
+2025-07-24 06:46:52,486 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-24 06:48:31,240 [INFO] Inicio del servicio Generador PDF
+2025-07-24 06:48:31,240 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-24 06:49:28,681 [ERROR] Error en la ejecución del servicio: <Table@0x1C625DAAF10 0 rows x unknown cols>... must have at least a row and column
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 41, in main
+    process_document(config, document, i)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\pdf\process_document.py", line 79, in process_document
+    process_page(config, page_element, c)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\pdf\process_page.py", line 15, in process_page
+    process_elements_by_object(config, page_id, page_width, page_height, c)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\pdf\process_elements.py", line 29, in process_elements_by_object
+    process_flows_areas(config, element_object, page_height, page_width, c, parent_offset=(offset_x,offset_y), element=element)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\renderer\flowarea_renderer.py", line 86, in process_flows_areas
+    para, min_height_default = process_flow(config, flow, page_height, page_width, c=c, parent_offset=(offset_x,offset_y),max_width=s_x)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\renderer\flow_renderer.py", line 138, in process_flow
+    table = process_table(config,element,context=context,c=c,max_width=max_width)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\renderer\table_renderer.py", line 290, in process_table
+    return Table(table_data, style=table_style,rowHeights=row_heights,colWidths=col_widths)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\tables.py", line 289, in __init__
+    raise ValueError(f'{self.identity()} must have at least a row and column')
+ValueError: <Table@0x1C625DAAF10 0 rows x unknown cols>... must have at least a row and column
+2025-07-24 06:49:29,139 [INFO] Servicio finalizado
+2025-07-24 06:49:53,639 [INFO] Inicio del servicio Generador PDF
+2025-07-24 06:49:53,639 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-24 06:54:21,955 [INFO] Inicio del servicio Generador PDF
+2025-07-24 06:54:21,955 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-24 06:55:14,244 [INFO] Inicio del servicio Generador PDF
+2025-07-24 06:55:14,244 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-24 06:57:03,198 [INFO] Inicio del servicio Generador PDF
+2025-07-24 06:57:03,198 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-24 06:58:05,439 [INFO] Inicio del servicio Generador PDF
+2025-07-24 06:58:05,439 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-24 06:58:24,882 [INFO] Inicio del servicio Generador PDF
+2025-07-24 06:58:24,882 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-24 07:03:00,069 [INFO] Inicio del servicio Generador PDF
+2025-07-24 07:03:00,070 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-24 07:03:37,928 [ERROR] Error en la ejecución del servicio: evaluate_condition_v2() missing 1 required positional argument: 'context'
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 41, in main
+    process_document(config, document, i)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\pdf\process_document.py", line 79, in process_document
+    process_page(config, page_element, c)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\pdf\process_page.py", line 15, in process_page
+    process_elements_by_object(config, page_id, page_width, page_height, c)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\pdf\process_elements.py", line 29, in process_elements_by_object
+    process_flows_areas(config, element_object, page_height, page_width, c, parent_offset=(offset_x,offset_y), element=element)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\renderer\flowarea_renderer.py", line 86, in process_flows_areas
+    para, min_height_default = process_flow(config, flow, page_height, page_width, c=c, parent_offset=(offset_x,offset_y),max_width=s_x)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\renderer\flow_renderer.py", line 138, in process_flow
+    table = process_table(config,element,page_height,page_width,context=context,c=c,max_width=max_width)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\renderer\table_renderer.py", line 180, in process_table
+    row, min_height, cell_styles = process_rowset(config,all_elements.get(subrow.text),page_height,page_width,c=c,col_widths=col_widths)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\renderer\rowset_renderer.py", line 52, in process_rowset
+    cell, min_height_default = process_cell(config,cell_element,page_height,page_width,context=context,c=c,col_widths=col_widths,col_index=col_index)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\renderer\cell_renderer.py", line 28, in process_cell
+    return process_flow(config,flow,page_height,page_width,context=context,c=c,max_width=max_width)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\renderer\flow_renderer.py", line 33, in process_flow
+    if evaluate_condition_v2(condition, register):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: evaluate_condition_v2() missing 1 required positional argument: 'context'
+2025-07-24 07:03:37,998 [INFO] Servicio finalizado
+2025-07-24 07:06:29,170 [INFO] Inicio del servicio Generador PDF
+2025-07-24 07:06:29,171 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-24 07:06:31,216 [ERROR] Error en la ejecución del servicio: 'LoadInputResult' object has no attribute 'borderstyle_reportlab'
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 41, in main
+    process_document(config, document, i)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\pdf\process_document.py", line 79, in process_document
+    process_page(config, page_element, c)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\pdf\process_page.py", line 15, in process_page
+    process_elements_by_object(config, page_id, page_width, page_height, c)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\pdf\process_elements.py", line 29, in process_elements_by_object
+    process_flows_areas(config, element_object, page_height, page_width, c, parent_offset=(offset_x,offset_y), element=element)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\renderer\flowarea_renderer.py", line 49, in process_flows_areas
+    border_conf = config.borderstyle_reportlab[flow_border_id]
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'LoadInputResult' object has no attribute 'borderstyle_reportlab'
+2025-07-24 07:06:31,234 [INFO] Servicio finalizado
+2025-07-24 07:09:51,229 [INFO] Inicio del servicio Generador PDF
+2025-07-24 07:09:51,230 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-24 07:09:51,998 [ERROR] Error en la ejecución del servicio: 'LoadInputResult' object has no attribute 'cofig_dicts'
+Traceback (most recent call last):
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 41, in main
+    process_document(config, document, i)
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\pdf\process_document.py", line 79, in process_document
+    process_page(config, page_element, c)
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\pdf\process_page.py", line 15, in process_page
+    process_elements_by_object(config, page_id, page_width, page_height, c)
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\pdf\process_elements.py", line 36, in process_elements_by_object
+    image_objects = config.cofig_dicts['Image_config']
+                    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'LoadInputResult' object has no attribute 'cofig_dicts'
+2025-07-24 07:09:52,014 [INFO] Servicio finalizado
+2025-07-24 07:10:28,344 [INFO] Inicio del servicio Generador PDF
+2025-07-24 07:10:28,345 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-24 07:10:29,177 [ERROR] Error en la ejecución del servicio: 'LoadInputResult' object has no attribute 'cofig_dicts'
+Traceback (most recent call last):
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 41, in main
+    process_document(config, document, i)
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\pdf\process_document.py", line 79, in process_document
+    process_page(config, page_element, c)
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\pdf\process_page.py", line 15, in process_page
+    process_elements_by_object(config, page_id, page_width, page_height, c)
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\pdf\process_elements.py", line 36, in process_elements_by_object
+    image_objects = config.cofig_dicts['Image']
+                    ^^^^^^^^^^^^^^^^^^
+AttributeError: 'LoadInputResult' object has no attribute 'cofig_dicts'
+2025-07-24 07:10:29,191 [INFO] Servicio finalizado
+2025-07-24 07:11:49,712 [INFO] Inicio del servicio Generador PDF
+2025-07-24 07:11:49,712 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-24 07:11:50,524 [INFO] Servicio finalizado
+2025-07-24 07:26:01,966 [INFO] Inicio del servicio Generador PDF
+2025-07-24 07:26:01,966 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-24 07:26:03,767 [INFO] Servicio finalizado
+2025-07-24 07:26:11,203 [INFO] Inicio del servicio Generador PDF
+2025-07-24 07:26:11,204 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-24 07:26:12,921 [INFO] Servicio finalizado
+2025-07-28 11:42:02,111 [INFO] Inicio del servicio Generador PDF
+2025-07-28 11:42:02,112 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-28 11:42:03,520 [INFO] Servicio finalizado
+2025-07-28 11:42:57,169 [INFO] Inicio del servicio Generador PDF
+2025-07-28 11:42:57,169 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-28 11:42:59,324 [INFO] Servicio finalizado
+2025-07-28 11:43:19,552 [INFO] Inicio del servicio Generador PDF
+2025-07-28 11:43:19,552 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-28 11:47:33,359 [INFO] Inicio del servicio Generador PDF
+2025-07-28 11:47:33,360 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-28 11:54:51,948 [INFO] Inicio del servicio Generador PDF
+2025-07-28 11:54:51,949 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-28 12:39:46,645 [INFO] Inicio del servicio Generador PDF
+2025-07-28 12:39:46,646 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-28 12:46:44,739 [INFO] Inicio del servicio Generador PDF
+2025-07-28 12:46:44,739 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-28 12:53:48,806 [INFO] Inicio del servicio Generador PDF
+2025-07-28 12:53:48,806 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-28 12:53:49,058 [ERROR] Error en la ejecución del servicio: XML or text declaration not at start of entity: line 2, column 4
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 36, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 20, in load_input
+    workflow = xml_read(customer, product)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\xml_parser.py", line 37640, in xml_read
+    workflow = ET.fromstring(xml_string)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\xml\etree\ElementTree.py", line 1338, in XML
+    parser.feed(text)
+xml.etree.ElementTree.ParseError: XML or text declaration not at start of entity: line 2, column 4
+2025-07-28 12:53:49,075 [INFO] Servicio finalizado
+2025-07-28 12:54:30,481 [INFO] Inicio del servicio Generador PDF
+2025-07-28 12:54:30,481 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-28 12:54:30,718 [ERROR] Error en la ejecución del servicio: XML or text declaration not at start of entity: line 2, column 4
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 36, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 20, in load_input
+    workflow = xml_read(customer, product)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\xml_parser.py", line 37640, in xml_read
+    workflow = ET.fromstring(xml_string)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\xml\etree\ElementTree.py", line 1338, in XML
+    parser.feed(text)
+xml.etree.ElementTree.ParseError: XML or text declaration not at start of entity: line 2, column 4
+2025-07-28 12:54:30,731 [INFO] Servicio finalizado
+2025-07-28 12:55:04,764 [INFO] Inicio del servicio Generador PDF
+2025-07-28 12:55:04,764 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-28 12:55:04,996 [ERROR] Error en la ejecución del servicio: XML or text declaration not at start of entity: line 2, column 4
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 36, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 20, in load_input
+    workflow = xml_read(customer, product)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\xml_parser.py", line 37640, in xml_read
+    workflow = ET.fromstring(xml_string)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\xml\etree\ElementTree.py", line 1338, in XML
+    parser.feed(text)
+xml.etree.ElementTree.ParseError: XML or text declaration not at start of entity: line 2, column 4
+2025-07-28 12:55:04,997 [INFO] Servicio finalizado
+2025-07-28 12:55:13,402 [INFO] Inicio del servicio Generador PDF
+2025-07-28 12:55:13,402 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-28 12:55:13,630 [ERROR] Error en la ejecución del servicio: XML or text declaration not at start of entity: line 2, column 4
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 36, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 20, in load_input
+    workflow = xml_read(customer, product)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\xml_parser.py", line 37640, in xml_read
+    workflow = ET.fromstring(xml_string)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\xml\etree\ElementTree.py", line 1338, in XML
+    parser.feed(text)
+xml.etree.ElementTree.ParseError: XML or text declaration not at start of entity: line 2, column 4
+2025-07-28 12:55:13,646 [INFO] Servicio finalizado
+2025-07-28 12:55:46,021 [INFO] Inicio del servicio Generador PDF
+2025-07-28 12:55:46,021 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-28 12:55:46,221 [ERROR] Error en la ejecución del servicio: XML or text declaration not at start of entity: line 2, column 4
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 36, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 20, in load_input
+    workflow = xml_read(customer, product)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\xml_parser.py", line 37640, in xml_read
+    workflow = ET.fromstring(xml_string)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\xml\etree\ElementTree.py", line 1338, in XML
+    parser.feed(text)
+xml.etree.ElementTree.ParseError: XML or text declaration not at start of entity: line 2, column 4
+2025-07-28 12:55:46,234 [INFO] Servicio finalizado
+2025-07-28 12:56:13,385 [INFO] Inicio del servicio Generador PDF
+2025-07-28 12:56:13,385 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-28 12:56:27,004 [ERROR] Error en la ejecución del servicio: XML or text declaration not at start of entity: line 2, column 4
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 36, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 20, in load_input
+    workflow = xml_read(customer, product)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\xml_parser.py", line 37640, in xml_read
+    workflow = ET.fromstring(xml_string)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\xml\etree\ElementTree.py", line 1338, in XML
+    parser.feed(text)
+xml.etree.ElementTree.ParseError: XML or text declaration not at start of entity: line 2, column 4
+2025-07-28 12:56:28,934 [INFO] Servicio finalizado
+2025-07-28 12:56:49,828 [INFO] Inicio del servicio Generador PDF
+2025-07-28 12:56:49,828 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-28 12:58:23,672 [INFO] Inicio del servicio Generador PDF
+2025-07-28 12:58:23,672 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-28 13:14:30,642 [INFO] Inicio del servicio Generador PDF
+2025-07-28 13:14:30,643 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-29 11:58:23,191 [INFO] Inicio del servicio Generador PDF
+2025-07-29 11:58:23,191 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-29 11:59:30,324 [INFO] Inicio del servicio Generador PDF
+2025-07-29 11:59:30,324 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-29 12:01:17,414 [INFO] Inicio del servicio Generador PDF
+2025-07-29 12:01:17,414 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-29 12:35:21,205 [INFO] Inicio del servicio Generador PDF
+2025-07-29 12:35:21,210 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-29 12:38:04,411 [INFO] Inicio del servicio Generador PDF
+2025-07-29 12:38:04,415 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-29 12:40:40,256 [INFO] Inicio del servicio Generador PDF
+2025-07-29 12:40:40,256 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-29 12:41:52,696 [INFO] Inicio del servicio Generador PDF
+2025-07-29 12:41:52,696 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-29 12:47:07,480 [INFO] Inicio del servicio Generador PDF
+2025-07-29 12:47:07,488 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-29 12:53:11,873 [INFO] Inicio del servicio Generador PDF
+2025-07-29 12:53:11,873 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-29 13:01:27,240 [INFO] Inicio del servicio Generador PDF
+2025-07-29 13:01:27,240 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-29 13:03:15,099 [INFO] Inicio del servicio Generador PDF
+2025-07-29 13:03:15,099 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-29 13:07:57,507 [INFO] Inicio del servicio Generador PDF
+2025-07-29 13:07:57,507 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-29 13:12:48,492 [INFO] Inicio del servicio Generador PDF
+2025-07-29 13:12:48,500 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-29 13:14:20,412 [INFO] Inicio del servicio Generador PDF
+2025-07-29 13:14:20,412 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-29 13:16:49,963 [INFO] Inicio del servicio Generador PDF
+2025-07-29 13:16:49,963 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-29 13:17:44,809 [INFO] Inicio del servicio Generador PDF
+2025-07-29 13:17:44,809 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-29 13:21:25,097 [INFO] Inicio del servicio Generador PDF
+2025-07-29 13:21:25,097 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-29 13:21:25,593 [ERROR] Error en la ejecución del servicio: El campo 'Field' debe tener atributos 'Key' y 'Value'
+Traceback (most recent call last):
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 36, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 40, in load_input
+    full_context, documents = json_parser(json_path, all_elements_workflow, list_to_preprocess)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 187, in json_parser
+    raise ValueError("El campo 'Field' debe tener atributos 'Key' y 'Value'")
+ValueError: El campo 'Field' debe tener atributos 'Key' y 'Value'
+2025-07-29 13:21:25,606 [INFO] Servicio finalizado
+2025-07-29 13:21:56,682 [INFO] Inicio del servicio Generador PDF
+2025-07-29 13:21:56,682 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-29 13:23:49,744 [INFO] Inicio del servicio Generador PDF
+2025-07-29 13:23:49,744 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-29 13:25:32,216 [INFO] Inicio del servicio Generador PDF
+2025-07-29 13:25:32,216 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-29 13:28:05,878 [INFO] Inicio del servicio Generador PDF
+2025-07-29 13:28:05,893 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-29 13:28:06,425 [ERROR] Error en la ejecución del servicio: 'tuple' object does not support item assignment
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 36, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 40, in load_input
+    full_context, documents = json_parser(json_path, all_elements_workflow, list_to_preprocess)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 157, in json_parser
+    register["Documents"] = register
+    ~~~~~~~~^^^^^^^^^^^^^
+TypeError: 'tuple' object does not support item assignment
+2025-07-29 13:28:06,444 [INFO] Servicio finalizado
+2025-07-29 13:28:31,878 [INFO] Inicio del servicio Generador PDF
+2025-07-29 13:28:31,880 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-29 13:28:32,409 [ERROR] Error en la ejecución del servicio: 'tuple' object does not support item assignment
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 36, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 40, in load_input
+    full_context, documents = json_parser(json_path, all_elements_workflow, list_to_preprocess)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 157, in json_parser
+    register["Documents"] = register
+    ~~~~~~~~^^^^^^^^^^^^^
+TypeError: 'tuple' object does not support item assignment
+2025-07-29 13:28:32,427 [INFO] Servicio finalizado
+2025-07-29 13:29:06,831 [INFO] Inicio del servicio Generador PDF
+2025-07-29 13:29:06,831 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-29 13:29:07,274 [ERROR] Error en la ejecución del servicio: 'tuple' object does not support item assignment
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 36, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 40, in load_input
+    full_context, documents = json_parser(json_path, all_elements_workflow, list_to_preprocess)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 157, in json_parser
+    register["Documents"] = register
+    ~~~~~~~~^^^^^^^^^^^^^
+TypeError: 'tuple' object does not support item assignment
+2025-07-29 13:29:07,292 [INFO] Servicio finalizado
+2025-07-29 13:29:41,012 [INFO] Inicio del servicio Generador PDF
+2025-07-29 13:29:41,015 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-29 13:33:32,299 [INFO] Inicio del servicio Generador PDF
+2025-07-29 13:33:32,299 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-29 13:35:03,229 [INFO] Inicio del servicio Generador PDF
+2025-07-29 13:35:03,233 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-29 13:38:30,656 [INFO] Inicio del servicio Generador PDF
+2025-07-29 13:38:30,656 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-29 13:55:59,193 [INFO] Inicio del servicio Generador PDF
+2025-07-29 13:55:59,193 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-29 13:56:12,313 [ERROR] Error en la ejecución del servicio: El campo 'Field' debe tener atributos 'Key' y 'Value'
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 36, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 40, in load_input
+    full_context, documents = json_parser(json_path, all_elements_workflow, list_to_preprocess)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 190, in json_parser
+    raise ValueError("El campo 'Field' debe tener atributos 'Key' y 'Value'")
+ValueError: El campo 'Field' debe tener atributos 'Key' y 'Value'
+2025-07-29 13:56:12,337 [INFO] Servicio finalizado
+2025-07-29 13:59:31,762 [INFO] Inicio del servicio Generador PDF
+2025-07-29 13:59:31,768 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-29 14:09:12,449 [INFO] Inicio del servicio Generador PDF
+2025-07-29 14:09:12,449 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-29 14:25:47,121 [INFO] Inicio del servicio Generador PDF
+2025-07-29 14:25:47,123 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-29 14:30:35,305 [INFO] Inicio del servicio Generador PDF
+2025-07-29 14:30:35,305 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-29 14:30:36,619 [ERROR] Error en la ejecución del servicio: cannot access local variable 'value' where it is not associated with a value
+Traceback (most recent call last):
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 38, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 40, in load_input
+    full_context, documents = json_parser(json_path, all_elements_workflow, list_to_preprocess)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 152, in json_parser
+    full_context = apply_created_nodes(created_nodes, full_context)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\transformer\created_nodes.py", line 87, in apply_created_nodes
+    set_nested_value_recursive(json_data, field_path, value)
+                                                      ^^^^^
+UnboundLocalError: cannot access local variable 'value' where it is not associated with a value
+2025-07-29 14:30:36,651 [INFO] Servicio finalizado
+2025-07-29 14:31:14,203 [INFO] Inicio del servicio Generador PDF
+2025-07-29 14:31:14,203 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-29 14:32:40,858 [INFO] Inicio del servicio Generador PDF
+2025-07-29 14:32:40,868 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-29 14:35:45,738 [INFO] Inicio del servicio Generador PDF
+2025-07-29 14:35:45,738 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-29 14:39:23,228 [INFO] Inicio del servicio Generador PDF
+2025-07-29 14:39:23,228 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-29 15:17:34,835 [INFO] Inicio del servicio Generador PDF
+2025-07-29 15:17:34,835 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-29 15:20:29,874 [INFO] Inicio del servicio Generador PDF
+2025-07-29 15:20:29,874 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 07:10:28,529 [INFO] Inicio del servicio Generador PDF
+2025-07-30 07:10:28,529 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 07:10:28,986 [ERROR] Error en la ejecución del servicio: cannot access local variable 'value' where it is not associated with a value
+Traceback (most recent call last):
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 38, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 40, in load_input
+    full_context, documents = json_parser(json_path, all_elements_workflow, list_to_preprocess)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 178, in json_parser
+    full_context = apply_created_nodes(new_nodes, full_context)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\transformer\created_nodes.py", line 85, in apply_created_nodes
+    set_nested_value_recursive(json_data, field_path, value)
+                                                      ^^^^^
+UnboundLocalError: cannot access local variable 'value' where it is not associated with a value
+2025-07-30 07:10:28,996 [INFO] Servicio finalizado
+2025-07-30 07:10:57,550 [INFO] Inicio del servicio Generador PDF
+2025-07-30 07:10:57,550 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 07:14:31,766 [INFO] Inicio del servicio Generador PDF
+2025-07-30 07:14:31,766 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 07:33:43,398 [INFO] Inicio del servicio Generador PDF
+2025-07-30 07:33:43,398 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 07:35:21,312 [INFO] Inicio del servicio Generador PDF
+2025-07-30 07:35:21,312 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 07:35:58,394 [INFO] Inicio del servicio Generador PDF
+2025-07-30 07:35:58,394 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 07:36:31,026 [INFO] Inicio del servicio Generador PDF
+2025-07-30 07:36:31,026 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 07:36:34,860 [ERROR] Error en la ejecución del servicio: No se encontró el contenedor de diseño en el XML
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 38, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 23, in load_input
+    raise ValueError("No se encontró el contenedor de diseño en el XML")
+ValueError: No se encontró el contenedor de diseño en el XML
+2025-07-30 07:36:34,860 [INFO] Servicio finalizado
+2025-07-30 07:36:55,170 [INFO] Inicio del servicio Generador PDF
+2025-07-30 07:36:55,172 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 07:36:55,387 [ERROR] Error en la ejecución del servicio: No se encontró el contenedor de diseño en el XML
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 38, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 23, in load_input
+    raise ValueError("No se encontró el contenedor de diseño en el XML")
+ValueError: No se encontró el contenedor de diseño en el XML
+2025-07-30 07:36:55,387 [INFO] Servicio finalizado
+2025-07-30 07:37:16,615 [INFO] Inicio del servicio Generador PDF
+2025-07-30 07:37:16,615 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 07:38:14,607 [INFO] Inicio del servicio Generador PDF
+2025-07-30 07:38:14,608 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 07:49:47,012 [INFO] Inicio del servicio Generador PDF
+2025-07-30 07:49:47,012 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 07:53:48,270 [INFO] Inicio del servicio Generador PDF
+2025-07-30 07:53:48,271 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 08:03:28,536 [INFO] Inicio del servicio Generador PDF
+2025-07-30 08:03:28,536 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 08:05:51,358 [INFO] Inicio del servicio Generador PDF
+2025-07-30 08:05:51,358 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 08:08:45,199 [INFO] Inicio del servicio Generador PDF
+2025-07-30 08:08:45,199 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 08:09:18,162 [INFO] Inicio del servicio Generador PDF
+2025-07-30 08:09:18,162 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 08:15:16,469 [INFO] Inicio del servicio Generador PDF
+2025-07-30 08:15:16,469 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 08:18:30,922 [INFO] Inicio del servicio Generador PDF
+2025-07-30 08:18:30,923 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 08:19:22,935 [INFO] Inicio del servicio Generador PDF
+2025-07-30 08:19:22,935 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 08:47:18,860 [INFO] Inicio del servicio Generador PDF
+2025-07-30 08:47:18,860 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 08:52:56,257 [INFO] Inicio del servicio Generador PDF
+2025-07-30 08:52:56,257 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 08:53:16,728 [INFO] Inicio del servicio Generador PDF
+2025-07-30 08:53:16,728 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 09:11:08,432 [INFO] Inicio del servicio Generador PDF
+2025-07-30 09:11:08,432 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 09:13:32,435 [INFO] Inicio del servicio Generador PDF
+2025-07-30 09:13:32,435 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 09:23:51,593 [INFO] Inicio del servicio Generador PDF
+2025-07-30 09:23:51,593 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 09:25:39,804 [INFO] Inicio del servicio Generador PDF
+2025-07-30 09:25:39,804 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 09:26:59,063 [INFO] Inicio del servicio Generador PDF
+2025-07-30 09:26:59,063 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 09:27:37,321 [INFO] Inicio del servicio Generador PDF
+2025-07-30 09:27:37,321 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 09:28:36,285 [ERROR] Error en la ejecución del servicio: 'CopyFirstOfConceptoDetalleDescuento'
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 38, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 41, in load_input
+    full_context, documents = json_parser(json_path, all_elements_workflow, list_to_preprocess)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 304, in json_parser
+    inject_value_at_last_array(full_register, field_dot_name, linked_to_dot_name)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 64, in inject_value_at_last_array
+    recurse(json_obj, array_path_parts)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 62, in recurse
+    recurse(next_obj, rest)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 62, in recurse
+    recurse(next_obj, rest)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 53, in recurse
+    recurse(item, remaining_parts)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 60, in recurse
+    next_obj[new_field_name] = first_element[target_key]
+                                    ~~~~~~~~^^^^^^^^^^^^
+KeyError: 'CopyFirstOfConceptoDetalleDescuento'
+2025-07-30 09:28:36,303 [INFO] Servicio finalizado
+2025-07-30 09:28:52,245 [INFO] Inicio del servicio Generador PDF
+2025-07-30 09:28:52,245 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 09:32:18,644 [INFO] Inicio del servicio Generador PDF
+2025-07-30 09:32:18,644 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 09:33:57,494 [INFO] Inicio del servicio Generador PDF
+2025-07-30 09:33:57,494 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 09:40:13,877 [INFO] Inicio del servicio Generador PDF
+2025-07-30 09:40:13,877 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 09:40:14,201 [ERROR] Error en la ejecución del servicio: can only concatenate str (not "int") to str
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 38, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 41, in load_input
+    full_context, documents = json_parser(json_path, all_elements_workflow, list_to_preprocess)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 310, in json_parser
+    inject_first_value_at_last_array(full_register, field_dot_name, linked_to_dot_name)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 70, in inject_first_value_at_last_array
+    recurse(json_obj, array_path_parts)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 68, in recurse
+    recurse(next_obj, rest)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 68, in recurse
+    recurse(next_obj, rest)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 53, in recurse
+    recurse(item, remaining_parts)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 60, in recurse
+    for parent_element in obj[current_key:current_key+1]:  # obtenemos el padre (el dict donde vive "tres")
+                                          ~~~~~~~~~~~^~
+TypeError: can only concatenate str (not "int") to str
+2025-07-30 09:40:14,224 [INFO] Servicio finalizado
+2025-07-30 09:41:58,917 [INFO] Inicio del servicio Generador PDF
+2025-07-30 09:41:58,917 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 09:42:56,046 [INFO] Inicio del servicio Generador PDF
+2025-07-30 09:42:56,046 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 09:42:56,290 [ERROR] Error en la ejecución del servicio: can only concatenate str (not "int") to str
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 38, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 41, in load_input
+    full_context, documents = json_parser(json_path, all_elements_workflow, list_to_preprocess)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 310, in json_parser
+    inject_first_value_at_last_array(full_register, field_dot_name, linked_to_dot_name)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 70, in inject_first_value_at_last_array
+    recurse(json_obj, array_path_parts)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 68, in recurse
+    recurse(next_obj, rest)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 68, in recurse
+    recurse(next_obj, rest)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 53, in recurse
+    recurse(item, remaining_parts)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 60, in recurse
+    for parent_element in obj[current_key:current_key+1]:  # obtenemos el padre (el dict donde vive "tres")
+                                          ~~~~~~~~~~~^~
+TypeError: can only concatenate str (not "int") to str
+2025-07-30 09:42:56,290 [INFO] Servicio finalizado
+2025-07-30 09:43:51,787 [INFO] Inicio del servicio Generador PDF
+2025-07-30 09:43:51,787 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 09:43:52,067 [ERROR] Error en la ejecución del servicio: can only concatenate str (not "int") to str
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 38, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 41, in load_input
+    full_context, documents = json_parser(json_path, all_elements_workflow, list_to_preprocess)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 310, in json_parser
+    inject_first_value_at_last_array(full_register, field_dot_name, linked_to_dot_name)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 70, in inject_first_value_at_last_array
+    recurse(json_obj, array_path_parts)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 68, in recurse
+    recurse(next_obj, rest)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 68, in recurse
+    recurse(next_obj, rest)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 53, in recurse
+    recurse(item, remaining_parts)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 60, in recurse
+    for parent_element in obj[current_key:current_key+1]:  # obtenemos el padre (el dict donde vive "tres")
+                                          ~~~~~~~~~~~^~
+TypeError: can only concatenate str (not "int") to str
+2025-07-30 09:43:52,067 [INFO] Servicio finalizado
+2025-07-30 09:44:35,877 [INFO] Inicio del servicio Generador PDF
+2025-07-30 09:44:35,877 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 09:44:36,077 [ERROR] Error en la ejecución del servicio: name 'inject_value_at_last_array' is not defined
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 38, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 41, in load_input
+    full_context, documents = json_parser(json_path, all_elements_workflow, list_to_preprocess)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 310, in json_parser
+    inject_value_at_last_array(full_register, field_dot_name, linked_to_dot_name)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'inject_value_at_last_array' is not defined
+2025-07-30 09:44:36,090 [INFO] Servicio finalizado
+2025-07-30 09:45:18,159 [INFO] Inicio del servicio Generador PDF
+2025-07-30 09:45:18,159 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 09:46:26,738 [INFO] Inicio del servicio Generador PDF
+2025-07-30 09:46:26,741 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 09:48:11,919 [INFO] Inicio del servicio Generador PDF
+2025-07-30 09:48:11,919 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 09:48:12,139 [ERROR] Error en la ejecución del servicio: can only concatenate str (not "int") to str
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 38, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 41, in load_input
+    full_context, documents = json_parser(json_path, all_elements_workflow, list_to_preprocess)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 311, in json_parser
+    inject_first_value_at_last_array(full_register, field_dot_name, linked_to_dot_name)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 70, in inject_first_value_at_last_array
+    recurse(json_obj, array_path_parts)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 68, in recurse
+    recurse(next_obj, rest)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 68, in recurse
+    recurse(next_obj, rest)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 53, in recurse
+    recurse(item, remaining_parts)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 60, in recurse
+    for parent_element in obj[current_key:current_key+1]:  # obtenemos el padre (el dict donde vive "tres")
+                                          ~~~~~~~~~~~^~
+TypeError: can only concatenate str (not "int") to str
+2025-07-30 09:48:12,142 [INFO] Servicio finalizado
+2025-07-30 09:49:44,825 [INFO] Inicio del servicio Generador PDF
+2025-07-30 09:49:44,825 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 09:49:45,052 [ERROR] Error en la ejecución del servicio: can only concatenate str (not "int") to str
+Traceback (most recent call last):
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 38, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 41, in load_input
+    full_context, documents = json_parser(json_path, all_elements_workflow, list_to_preprocess)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 311, in json_parser
+    inject_first_value_at_last_array(full_register, field_dot_name, linked_to_dot_name)
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 70, in inject_first_value_at_last_array
+    recurse(json_obj, array_path_parts)
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 68, in recurse
+    recurse(next_obj, rest)
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 68, in recurse
+    recurse(next_obj, rest)
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 53, in recurse
+    recurse(item, remaining_parts)
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 60, in recurse
+    for parent_element in obj[current_key:current_key+1]:  # obtenemos el padre (el dict donde vive "tres")
+                                          ~~~~~~~~~~~^~
+TypeError: can only concatenate str (not "int") to str
+2025-07-30 09:49:45,069 [INFO] Servicio finalizado
+2025-07-30 09:50:17,620 [INFO] Inicio del servicio Generador PDF
+2025-07-30 09:50:17,620 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 09:50:17,882 [ERROR] Error en la ejecución del servicio: can only concatenate str (not "int") to str
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 38, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 41, in load_input
+    full_context, documents = json_parser(json_path, all_elements_workflow, list_to_preprocess)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 311, in json_parser
+    inject_first_value_at_last_array(full_register, field_dot_name, linked_to_dot_name)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 70, in inject_first_value_at_last_array
+    recurse(json_obj, array_path_parts)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 68, in recurse
+    recurse(next_obj, rest)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 68, in recurse
+    recurse(next_obj, rest)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 53, in recurse
+    recurse(item, remaining_parts)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 60, in recurse
+    for parent_element in obj[current_key:current_key+1]:  # obtenemos el padre (el dict donde vive "tres")
+                                          ~~~~~~~~~~~^~
+TypeError: can only concatenate str (not "int") to str
+2025-07-30 09:50:17,886 [INFO] Servicio finalizado
+2025-07-30 09:51:39,385 [INFO] Inicio del servicio Generador PDF
+2025-07-30 09:51:39,385 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 09:55:15,271 [INFO] Inicio del servicio Generador PDF
+2025-07-30 09:55:15,271 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 09:58:10,303 [INFO] Inicio del servicio Generador PDF
+2025-07-30 09:58:10,303 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 10:02:40,207 [INFO] Inicio del servicio Generador PDF
+2025-07-30 10:02:40,207 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 10:05:21,512 [INFO] Inicio del servicio Generador PDF
+2025-07-30 10:05:21,513 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 10:06:44,247 [ERROR] Error en la ejecución del servicio: 'NoneType' object has no attribute 'findall'
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 38, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 43, in load_input
+    config_dicts, data_dicts, grouped_nodes, all_elements = map_elements(layout)
+                                                            ^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\xml_parser.py", line 53, in map_elements
+    elements = layout.findall(object_type)
+               ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'findall'
+2025-07-30 10:06:44,256 [INFO] Servicio finalizado
+2025-07-30 10:06:54,474 [INFO] Inicio del servicio Generador PDF
+2025-07-30 10:06:54,474 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 10:11:24,683 [INFO] Inicio del servicio Generador PDF
+2025-07-30 10:11:24,683 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 10:13:21,894 [INFO] Inicio del servicio Generador PDF
+2025-07-30 10:13:21,894 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 10:13:22,381 [ERROR] Error en la ejecución del servicio: name 'inject_first_value_at_last_array' is not defined
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 38, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 41, in load_input
+    full_context, documents = json_parser(json_path, all_elements_workflow, list_to_preprocess)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 310, in json_parser
+    inject_first_value_at_last_array(full_register, field_dot_name, linked_to_dot_name)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'inject_first_value_at_last_array' is not defined
+2025-07-30 10:13:22,397 [INFO] Servicio finalizado
+2025-07-30 10:13:42,445 [INFO] Inicio del servicio Generador PDF
+2025-07-30 10:13:42,445 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 10:13:42,857 [ERROR] Error en la ejecución del servicio: name 'inject_first_value_at_last_array' is not defined
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 38, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 41, in load_input
+    full_context, documents = json_parser(json_path, all_elements_workflow, list_to_preprocess)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 310, in json_parser
+    inject_first_value_at_last_array(full_register, field_dot_name, linked_to_dot_name)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'inject_first_value_at_last_array' is not defined
+2025-07-30 10:13:42,868 [INFO] Servicio finalizado
+2025-07-30 10:14:23,256 [INFO] Inicio del servicio Generador PDF
+2025-07-30 10:14:23,256 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 10:14:23,521 [ERROR] Error en la ejecución del servicio: string indices must be integers, not 'str'
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 38, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 41, in load_input
+    full_context, documents = json_parser(json_path, all_elements_workflow, list_to_preprocess)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 310, in json_parser
+    inject_first_value_at_last_array_fixed(full_register, field_dot_name, linked_to_dot_name)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 69, in inject_first_value_at_last_array_fixed
+    recurse(json_obj, path_to_array)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 60, in recurse
+    if last_array_name in item and isinstance(item[last_array_name], list):
+                                              ~~~~^^^^^^^^^^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+2025-07-30 10:14:23,541 [INFO] Servicio finalizado
+2025-07-30 10:16:43,531 [INFO] Inicio del servicio Generador PDF
+2025-07-30 10:16:43,531 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 10:33:42,049 [INFO] Inicio del servicio Generador PDF
+2025-07-30 10:33:42,049 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 10:39:46,609 [INFO] Inicio del servicio Generador PDF
+2025-07-30 10:39:46,609 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 10:39:50,240 [ERROR] Error en la ejecución del servicio: cannot access local variable 'full_register' where it is not associated with a value
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 38, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 41, in load_input
+    full_context, documents = json_parser(json_path, all_elements_workflow, list_to_preprocess)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 254, in json_parser
+    json.dump(full_register, f, ensure_ascii=False)
+              ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'full_register' where it is not associated with a value
+2025-07-30 10:39:50,256 [INFO] Servicio finalizado
+2025-07-30 10:40:25,356 [INFO] Inicio del servicio Generador PDF
+2025-07-30 10:40:25,356 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 10:42:16,069 [INFO] Inicio del servicio Generador PDF
+2025-07-30 10:42:16,069 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 10:47:04,452 [INFO] Inicio del servicio Generador PDF
+2025-07-30 10:47:04,452 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 10:48:48,169 [INFO] Inicio del servicio Generador PDF
+2025-07-30 10:48:48,169 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 10:54:52,660 [INFO] Inicio del servicio Generador PDF
+2025-07-30 10:54:52,660 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 11:01:23,808 [INFO] Inicio del servicio Generador PDF
+2025-07-30 11:01:23,809 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 11:03:03,595 [INFO] Inicio del servicio Generador PDF
+2025-07-30 11:03:03,595 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 11:03:03,814 [ERROR] Error en la ejecución del servicio: 'CopyFirstOfConceptoDetalleDescuento'
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 38, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 41, in load_input
+    full_context, documents = json_parser(json_path, all_elements_workflow, list_to_preprocess)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 327, in json_parser
+    add_field_to_nested_array(
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 246, in add_field_to_nested_array
+    add_field_to_nested_array(
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 246, in add_field_to_nested_array
+    add_field_to_nested_array(
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 272, in add_field_to_nested_array
+    add_field_to_nested_array(item, path_parts, new_field_name, new_field_value)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 246, in add_field_to_nested_array
+    add_field_to_nested_array(
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 272, in add_field_to_nested_array
+    add_field_to_nested_array(item, path_parts, new_field_name, new_field_value)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 254, in add_field_to_nested_array
+    if isinstance(data_structure[current_key], dict):
+                  ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'CopyFirstOfConceptoDetalleDescuento'
+2025-07-30 11:03:03,814 [INFO] Servicio finalizado
+2025-07-30 11:03:23,342 [INFO] Inicio del servicio Generador PDF
+2025-07-30 11:03:23,342 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 11:03:23,595 [ERROR] Error en la ejecución del servicio: 'CopyFirstOfConceptoDetalleDescuento'
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 38, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 41, in load_input
+    full_context, documents = json_parser(json_path, all_elements_workflow, list_to_preprocess)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 327, in json_parser
+    add_field_to_nested_array(
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 246, in add_field_to_nested_array
+    add_field_to_nested_array(
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 246, in add_field_to_nested_array
+    add_field_to_nested_array(
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 272, in add_field_to_nested_array
+    add_field_to_nested_array(item, path_parts, new_field_name, new_field_value)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 246, in add_field_to_nested_array
+    add_field_to_nested_array(
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 272, in add_field_to_nested_array
+    add_field_to_nested_array(item, path_parts, new_field_name, new_field_value)
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 254, in add_field_to_nested_array
+    if isinstance(data_structure[current_key], dict):
+                  ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+KeyError: 'CopyFirstOfConceptoDetalleDescuento'
+2025-07-30 11:03:23,595 [INFO] Servicio finalizado
+2025-07-30 11:03:59,039 [INFO] Inicio del servicio Generador PDF
+2025-07-30 11:03:59,039 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 11:12:42,373 [INFO] Inicio del servicio Generador PDF
+2025-07-30 11:12:42,373 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 11:15:38,877 [INFO] Inicio del servicio Generador PDF
+2025-07-30 11:15:38,878 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 11:18:12,917 [INFO] Inicio del servicio Generador PDF
+2025-07-30 11:18:12,917 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 11:21:05,322 [INFO] Inicio del servicio Generador PDF
+2025-07-30 11:21:05,322 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 11:22:05,411 [INFO] Inicio del servicio Generador PDF
+2025-07-30 11:22:05,411 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 11:22:36,948 [INFO] Inicio del servicio Generador PDF
+2025-07-30 11:22:36,949 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 11:27:06,249 [INFO] Inicio del servicio Generador PDF
+2025-07-30 11:27:06,249 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 12:29:40,511 [INFO] Inicio del servicio Generador PDF
+2025-07-30 12:29:40,524 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 13:09:54,374 [INFO] Inicio del servicio Generador PDF
+2025-07-30 13:09:54,374 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 13:21:44,790 [INFO] Inicio del servicio Generador PDF
+2025-07-30 13:21:44,790 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 13:24:01,347 [INFO] Inicio del servicio Generador PDF
+2025-07-30 13:24:01,347 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 13:24:01,719 [ERROR] Error en la ejecución del servicio: 'list' object has no attribute 'split'
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 38, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 41, in load_input
+    full_context, documents = json_parser(json_path, all_elements_workflow, list_to_preprocess)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 493, in json_parser
+    field_name = field_dot_name.split(".")[-1]
+                 ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'split'
+2025-07-30 13:24:01,761 [INFO] Servicio finalizado
+2025-07-30 13:24:43,735 [INFO] Inicio del servicio Generador PDF
+2025-07-30 13:24:43,735 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 13:25:50,428 [INFO] Inicio del servicio Generador PDF
+2025-07-30 13:25:50,428 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 13:33:59,950 [INFO] Inicio del servicio Generador PDF
+2025-07-30 13:33:59,950 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 13:34:00,842 [ERROR] Error en la ejecución del servicio: 'NoneType' object has no attribute 'text'
+Traceback (most recent call last):
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 41, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 41, in load_input
+    full_context, documents = json_parser(json_path, all_elements_workflow, list_to_preprocess)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 526, in json_parser
+    transformation_class = transformation.find("FCVClassName").text
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'text'
+2025-07-30 13:34:00,852 [INFO] Servicio finalizado
+2025-07-30 13:35:35,772 [INFO] Inicio del servicio Generador PDF
+2025-07-30 13:35:35,774 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 13:39:50,388 [INFO] Inicio del servicio Generador PDF
+2025-07-30 13:39:50,400 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 13:39:51,102 [ERROR] Error en la ejecución del servicio: 'NoneType' object has no attribute 'text'
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 41, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 41, in load_input
+    full_context, documents = json_parser(json_path, all_elements_workflow, list_to_preprocess)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 526, in json_parser
+    transformation_class = transformation.find("FCVClassName").text
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'text'
+2025-07-30 13:39:51,114 [INFO] Servicio finalizado
+2025-07-30 13:41:17,911 [INFO] Inicio del servicio Generador PDF
+2025-07-30 13:41:17,911 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 13:41:18,607 [ERROR] Error en la ejecución del servicio: concat_str() takes 1 positional argument but 3 were given
+Traceback (most recent call last):
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 41, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 41, in load_input
+    full_context, documents = json_parser(json_path, all_elements_workflow, list_to_preprocess)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 537, in json_parser
+    parent[key] = concat_str(original_value, pre, post)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: concat_str() takes 1 positional argument but 3 were given
+2025-07-30 13:41:18,616 [INFO] Servicio finalizado
+2025-07-30 13:41:51,294 [INFO] Inicio del servicio Generador PDF
+2025-07-30 13:41:51,303 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 13:43:44,744 [INFO] Inicio del servicio Generador PDF
+2025-07-30 13:43:44,744 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 13:43:48,652 [ERROR] Error en la ejecución del servicio: 'NoneType' object has no attribute 'findall'
+Traceback (most recent call last):
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 41, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 43, in load_input
+    config_dicts, data_dicts, grouped_nodes, all_elements = map_elements(layout)
+                                                            ^^^^^^^^^^^^^^^^^^^^
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\xml_parser.py", line 53, in map_elements
+    elements = layout.findall(object_type)
+               ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'findall'
+2025-07-30 13:43:48,667 [INFO] Servicio finalizado
+2025-07-30 13:44:24,566 [INFO] Inicio del servicio Generador PDF
+2025-07-30 13:44:24,571 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 13:46:41,165 [INFO] Inicio del servicio Generador PDF
+2025-07-30 13:46:41,165 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 13:49:06,898 [INFO] Inicio del servicio Generador PDF
+2025-07-30 13:49:06,898 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 13:49:07,805 [ERROR] Error en la ejecución del servicio: 'NoneType' object has no attribute 'findall'
+Traceback (most recent call last):
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 41, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 43, in load_input
+    config_dicts, data_dicts, grouped_nodes, all_elements = map_elements(layout)
+                                                            ^^^^^^^^^^^^^^^^^^^^
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\xml_parser.py", line 53, in map_elements
+    elements = layout.findall(object_type)
+               ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'findall'
+2025-07-30 13:49:07,814 [INFO] Servicio finalizado
+2025-07-30 13:50:07,171 [INFO] Inicio del servicio Generador PDF
+2025-07-30 13:50:07,171 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-30 13:50:08,656 [ERROR] Error en la ejecución del servicio: 'NoneType' object has no attribute 'findall'
+Traceback (most recent call last):
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 41, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 43, in load_input
+    config_dicts, data_dicts, grouped_nodes, all_elements = map_elements(layout)
+                                                            ^^^^^^^^^^^^^^^^^^^^
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\xml_parser.py", line 53, in map_elements
+    elements = layout.findall(object_type)
+               ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'findall'
+2025-07-30 13:50:08,662 [INFO] Servicio finalizado
+2025-07-31 06:50:06,828 [INFO] Inicio del servicio Generador PDF
+2025-07-31 06:50:06,828 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-31 06:50:07,303 [ERROR] Error en la ejecución del servicio: 'NoneType' object has no attribute 'findall'
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 41, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 43, in load_input
+    config_dicts, data_dicts, grouped_nodes, all_elements = map_elements(layout)
+                                                            ^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\xml_parser.py", line 53, in map_elements
+    elements = layout.findall(object_type)
+               ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'findall'
+2025-07-31 06:50:07,319 [INFO] Servicio finalizado
+2025-07-31 06:51:56,463 [INFO] Inicio del servicio Generador PDF
+2025-07-31 06:51:56,463 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-31 06:52:12,662 [INFO] Inicio del servicio Generador PDF
+2025-07-31 06:52:12,662 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-31 06:52:38,957 [INFO] Inicio del servicio Generador PDF
+2025-07-31 06:52:38,963 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-31 06:58:34,379 [INFO] Inicio del servicio Generador PDF
+2025-07-31 06:58:34,380 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-31 07:36:39,438 [INFO] Inicio del servicio Generador PDF
+2025-07-31 07:36:39,438 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-31 07:36:39,809 [ERROR] Error en la ejecución del servicio: 'NoneType' object has no attribute 'findall'
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 41, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 43, in load_input
+    config_dicts, data_dicts, grouped_nodes, all_elements = map_elements(layout)
+                                                            ^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\xml_parser.py", line 53, in map_elements
+    elements = layout.findall(object_type)
+               ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'findall'
+2025-07-31 07:36:39,815 [INFO] Servicio finalizado
+2025-07-31 07:38:12,821 [INFO] Inicio del servicio Generador PDF
+2025-07-31 07:38:12,821 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-31 07:42:11,496 [INFO] Inicio del servicio Generador PDF
+2025-07-31 07:42:11,496 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-31 07:43:37,142 [INFO] Inicio del servicio Generador PDF
+2025-07-31 07:43:37,142 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-31 07:44:35,299 [INFO] Inicio del servicio Generador PDF
+2025-07-31 07:44:35,299 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-31 07:45:31,465 [INFO] Inicio del servicio Generador PDF
+2025-07-31 07:45:31,465 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-31 08:24:01,122 [INFO] Inicio del servicio Generador PDF
+2025-07-31 08:24:01,122 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-31 08:35:28,289 [INFO] Inicio del servicio Generador PDF
+2025-07-31 08:35:28,289 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-31 08:41:30,745 [INFO] Inicio del servicio Generador PDF
+2025-07-31 08:41:30,746 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-31 08:46:41,786 [INFO] Inicio del servicio Generador PDF
+2025-07-31 08:46:41,786 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-31 08:48:00,558 [INFO] Inicio del servicio Generador PDF
+2025-07-31 08:48:00,558 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-31 09:02:55,423 [INFO] Inicio del servicio Generador PDF
+2025-07-31 09:02:55,425 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-31 09:04:42,041 [INFO] Inicio del servicio Generador PDF
+2025-07-31 09:04:42,041 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-31 09:11:07,298 [INFO] Inicio del servicio Generador PDF
+2025-07-31 09:11:07,298 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-31 09:15:08,498 [INFO] Inicio del servicio Generador PDF
+2025-07-31 09:15:08,498 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-31 12:58:04,646 [INFO] Inicio del servicio Generador PDF
+2025-07-31 12:58:04,647 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-31 13:47:12,798 [INFO] Inicio del servicio Generador PDF
+2025-07-31 13:47:12,798 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-31 13:48:29,439 [INFO] Inicio del servicio Generador PDF
+2025-07-31 13:48:29,439 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-31 13:55:30,161 [INFO] Inicio del servicio Generador PDF
+2025-07-31 13:55:30,161 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-31 13:56:39,550 [INFO] Inicio del servicio Generador PDF
+2025-07-31 13:56:39,551 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-31 14:00:09,532 [INFO] Inicio del servicio Generador PDF
+2025-07-31 14:00:09,541 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-31 14:01:49,389 [INFO] Inicio del servicio Generador PDF
+2025-07-31 14:01:49,389 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-31 14:05:07,177 [INFO] Inicio del servicio Generador PDF
+2025-07-31 14:05:07,177 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-31 14:06:35,232 [ERROR] Error en la ejecución del servicio: 'NoneType' object has no attribute 'findall'
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 41, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 43, in load_input
+    config_dicts, data_dicts, grouped_nodes, all_elements = map_elements(layout)
+                                                            ^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\xml_parser.py", line 53, in map_elements
+    elements = layout.findall(object_type)
+               ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'findall'
+2025-07-31 14:06:35,258 [INFO] Servicio finalizado
+2025-07-31 14:07:29,148 [INFO] Inicio del servicio Generador PDF
+2025-07-31 14:07:29,148 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-31 14:07:29,532 [ERROR] Error en la ejecución del servicio: 'NoneType' object has no attribute 'findall'
+Traceback (most recent call last):
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 41, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 43, in load_input
+    config_dicts, data_dicts, grouped_nodes, all_elements = map_elements(layout)
+                                                            ^^^^^^^^^^^^^^^^^^^^
+  File "d:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\xml_parser.py", line 53, in map_elements
+    elements = layout.findall(object_type)
+               ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'findall'
+2025-07-31 14:07:29,542 [INFO] Servicio finalizado
+2025-07-31 14:12:59,035 [INFO] Inicio del servicio Generador PDF
+2025-07-31 14:12:59,035 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-31 14:13:38,873 [ERROR] Error en la ejecución del servicio: 'NoneType' object has no attribute 'findall'
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 41, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 43, in load_input
+    config_dicts, data_dicts, grouped_nodes, all_elements = map_elements(layout)
+                                                            ^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\xml_parser.py", line 53, in map_elements
+    elements = layout.findall(object_type)
+               ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'findall'
+2025-07-31 14:13:38,896 [INFO] Servicio finalizado
+2025-07-31 14:19:41,254 [INFO] Inicio del servicio Generador PDF
+2025-07-31 14:19:41,254 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-07-31 14:21:11,850 [INFO] Inicio del servicio Generador PDF
+2025-07-31 14:21:11,850 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-08-06 14:42:02,923 [INFO] Inicio del servicio Generador PDF
+2025-08-06 14:42:02,923 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-08-06 14:43:10,584 [ERROR] Error en la ejecución del servicio: 'NoneType' object has no attribute 'findall'
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 41, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 43, in load_input
+    config_dicts, data_dicts, grouped_nodes, all_elements = map_elements(layout)
+                                                            ^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\xml_parser.py", line 53, in map_elements
+    elements = layout.findall(object_type)
+               ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'findall'
+2025-08-06 14:43:10,589 [INFO] Servicio finalizado
+2025-08-06 14:44:37,049 [INFO] Inicio del servicio Generador PDF
+2025-08-06 14:44:37,049 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-08-06 14:44:37,653 [ERROR] Error en la ejecución del servicio: 'NoneType' object has no attribute 'text'
+Traceback (most recent call last):
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\main.py", line 41, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\loader\input_loader.py", line 41, in load_input
+    full_context, documents = json_parser(json_path, all_elements_workflow, list_to_preprocess, connections)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\ProyectoComunicaciones\ProyectoPDFGit\PDF-Generator\parser\json_parser.py", line 1076, in json_parser
+    transformation_class = transformation.find("FCVClassName").text
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'text'
+2025-08-06 14:44:37,654 [INFO] Servicio finalizado

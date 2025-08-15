@@ -1,0 +1,8 @@
+{
+    "database": {
+        "driver": "ODBC Driver 17 for SQL Server",
+        "server": "10.1.0.86",
+        "user": "user5X",
+        "password": "c0l0mb1@n0"
+    }
+}

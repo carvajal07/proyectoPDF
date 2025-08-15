@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WorkFlow version="12.0.91.0">
+  <Property>
+    <Name>AFPApplyMediumOrientation</Name>
+    <Value>1</Value>
+  </Property>
+  <Property>
+    <Name>AFPApplyPageTransformation</Name>
+    <Value>1</Value>
+  </Property>
+  <Property>
+    <Name>AFPDefaultCP</Name>
+    <Value>ibm-500</Value>
+  </Property>
+  <Property>
+    <Name>AFPDefaultPageSegmentHeight</Name>
+    <Value>0.297</Value>
+  </Property>
+  <Property>
+    <Name>AFPDefaultPageSegmentWidth</Name>
+    <Value>0.21</Value>
+  </Property>
+  <Property>
+    <Name>AFPFDDir</Name>
+    <Value>C:/ProgramData/Quadient/InspireDesigner12/Inspire</Value>
+  </Property>
+  <Property>
+    <Name>AFPFontDPIDefault</Name>
+    <Value>300</Value>
+  </Property>
+  <Property>
+    <Name>AFPFormDef</Name>
+    <Value/>
+  </Property>
+  <Property>
+    <Name>AFPHLBlack</Name>
+    <Value>black</Value>
+  </Property>
+  <Property>
+    <Name>AFPHLColorCount</Name>
+    <Value>0</Value>
+  </Property>
+  <Property>
+    <Name>AFPHideParseWarnings</Name>
+    <Value>1</Value>
+  </Property>
+  <Property>
+    <Name>AFPLD</Name>
+    <Value>0</Value>
+  </Property>
+  <Property>
+    <Name>AFPLDCarriageControl</Name>
+    <Value>3</Value>
+  </Property>
+  <Property>
+    <Name>AFPLDCarriageControlInterpretation</Name>
+    <Value>0</Value>
+  </Property>
+  <Property>
+    <Name>AFPLDFileFormat</Name>
+    <Value>1</Value>
+  </Property>
+  <Property>
+    <Name>AFPLDLineSeparator</Name>
+    <Value>0</Value>
+  </Property>
+  <Property>
+    <Name>AFPLDRecordLen</Name>
+    <Value>100</Value>
+  </Property>
+  <Property>
+    <Name>AFPLDSOSI</Name>
+    <Value>2</Value>
+  </Property>
+  <Property>
+    <Name>AFPLDWithTableReferenceCharacter</Name>
+    <Value>0</Value>
+  </Property>
+  <Property>
+    <Name>AFPMICRColor</Name>
+    <Value/>
+  </Property>
+  <Property>
+    <Name>AFPMaxDPIX</Name>
+    <Value>600</Value>
+  </Property>
+  <Property>
+    <Name>AFPMaxDPIY</Name>
+    <Value>600</Value>
+  </Property>
+  <Property>
+    <Name>AFPOverrideFormDef</Name>
+    <Value>0</Value>
+  </Property>
+  <Property>
+    <Name>AFPOverridePageDef</Name>
+    <Value>0</Value>
+  </Property>
+  <Property>
+    <Name>AFPPageDef</Name>
+    <Value/>
+  </Property>
+  <Property>
+    <Name>AFPRDir</Name>
+    <Value/>
+  </Property>
+  <Property>
+    <Name>AFPRDirAlternativesCount</Name>
+    <Value>0</Value>
+  </Property>
+  <Property>
+    <Name>AFPRDirIsRecursive</Name>
+    <Value>0</Value>
+  </Property>
+  <Property>
+    <Name>AFPResourceFail</Name>
+    <Value>0</Value>
+  </Property>
+  <Property>
+    <Name>AFPSuppressPageOffset</Name>
+    <Value>0</Value>
+  </Property>
+  <Property>
+    <Name>AFPUseMediumMap</Name>
+    <Value>0</Value>
+  </Property>
+  <Property>
+    <Name>ConvertStream2StreamIface-ConversionPrefType</Name>
+    <Value>0</Value>
+  </Property>
+  <Property>
+    <Name>CustomModuleIcons</Name>
+    <ValueBase64>AQAAAAAAAAA=</ValueBase64>
+  </Property>
+  <Property>
+    <Name>DefaultModuleNameForProduction</Name>
+    <Value/>
+  </Property>
+  <Property>
+    <Name>DefaultModuleNameForProof</Name>
+    <Value>DataOutput1</Value>
+  </Property>
+  <Property>
+    <Name>DeltaStyles</Name>
+    <Value>1</Value>
+  </Property>
+  <Property>
+    <Name>DpiFromExif</Name>
+    <Value>1</Value>
+  </Property>
+  <Property>
+    <Name>Guid</Name>
+    <Value>F1913C458D6BE24E9B2F7E3481E9E731</Value>
+  </Property>
+  <Property>
+    <Name>HTMLImportNoScaleMode</Name>
+    <Value>0</Value>
+  </Property>
+  <Property>
+    <Name>HTMLImportPageHeight</Name>
+    <Value>0.297</Value>
+  </Property>
+  <Property>
+    <Name>HTMLImportPageWidth</Name>
+    <Value>0.21</Value>
+  </Property>
+  <Property>
+    <Name>LayoutTask</Name>
+    <Value/>
+  </Property>
+  <Property>
+    <Name>LockedModules</Name>
+    <ValueBase64>AgAAAAAAAAAAAAAA</ValueBase64>
+  </Property>
+  <Property>
+    <Name>MasterWorkFlow</Name>
+    <Value/>
+  </Property>
+  <Property>
+    <Name>NativeImgRecovery</Name>
+    <Value>1</Value>
+  </Property>
+  <Property>
+    <Name>PCLImport-ColorantCount</Name>
+    <Value>0</Value>
+  </Property>
+  <Property>
+    <Name>PCLImport-Configured</Name>
+    <Value>1</Value>
+  </Property>
+  <Property>
+    <Name>PCLImport-CutImageDuringLoading</Name>
+    <Value>0</Value>
+  </Property>
+  <Property>
+    <Name>PCLImport-DefaultPaperSize</Name>
+    <Value>2</Value>
+  </Property>
+  <Property>
+    <Name>PCLImport-DefaultSymbolSet</Name>
+    <Value>CXPCL-277</Value>
+  </Property>
+  <Property>
+    <Name>PCLImport-EnhancementFontSelection</Name>
+    <Value>1</Value>
+  </Property>
+  <Property>
+    <Name>PCLImport-ForceSymbolSet</Name>
+    <Value>0</Value>
+  </Property>
+  <Property>
+    <Name>PCLImport-KeepDuplexOrder</Name>
+    <Value>0</Value>
+  </Property>
+  <Property>
+    <Name>PCLImport-OptimizationFontMacro</Name>
+    <Value>0</Value>
+  </Property>
+  <Property>
+    <Name>PCLImport-OptimizeHPGLShading</Name>
+    <Value>1</Value>
+  </Property>
+  <Property>
+    <Name>PCLImport-OptimizePatternReferencePoint</Name>
+    <Value>0</Value>
+  </Property>
+  <Property>
+    <Name>PCLImport-OptimizeShading</Name>
+    <Value>0</Value>
+  </Property>
+  <Property>
+    <Name>PCLImport-PageMetricRegistry</Name>
+    <Value>&lt;PCLPageMetricRegistry&gt;&#xd;&#xa;  &lt;Item&gt;&#xd;&#xa;    &lt;PaperSize&gt;1&lt;/PaperSize&gt;&#xd;&#xa;    &lt;Name&gt;Executive&lt;/Name&gt;&#xd;&#xa;    &lt;PhysicalSizeX&gt;0.18414999999999998&lt;/PhysicalSizeX&gt;&#xd;&#xa;    &lt;PhysicalSizeY&gt;0.26669999999999999&lt;/PhysicalSizeY&gt;&#xd;&#xa;    &lt;PortraitLogicalMargin&gt;6.3499999999999997e-003&lt;/PortraitLogicalMargin&gt;&#xd;&#xa;    &lt;LandscapeLogicalMargin&gt;5.0799999999999994e-003&lt;/LandscapeLogicalMargin&gt;&#xd;&#xa;    &lt;PrintAreaMargin&gt;4.2333333333333337e-003&lt;/PrintAreaMargin&gt;&#xd;&#xa;  &lt;/Item&gt;&#xd;&#xa;  &lt;Item&gt;&#xd;&#xa;    &lt;PaperSize&gt;2&lt;/PaperSize&gt;&#xd;&#xa;    &lt;Name&gt;Letter&lt;/Name&gt;&#xd;&#xa;    &lt;PhysicalSizeX&gt;0.21589999999999998&lt;/PhysicalSizeX&gt;&#xd;&#xa;    &lt;PhysicalSizeY&gt;0.27939999999999998&lt;/PhysicalSizeY&gt;&#xd;&#xa;    &lt;PortraitLogicalMargin&gt;6.3499999999999997e-003&lt;/PortraitLogicalMargin&gt;&#xd;&#xa;    &lt;LandscapeLogicalMargin&gt;5.0799999999999994e-003&lt;/LandscapeLogicalMargin&gt;&#xd;&#xa;    &lt;PrintAreaMargin&gt;4.2333333333333337e-003&lt;/PrintAreaMargin&gt;&#xd;&#xa;  &lt;/Item&gt;&#xd;&#xa;  &lt;Item&gt;&#xd;&#xa;    &lt;PaperSize&gt;3&lt;/PaperSize&gt;&#xd;&#xa;    &lt;Name&gt;Legal&lt;/Name&gt;&#xd;&#xa;    &lt;PhysicalSizeX&gt;0.21589999999999998&lt;/PhysicalSizeX&gt;&#xd;&#xa;    &lt;PhysicalSizeY&gt;0.35559999999999997&lt;/PhysicalSizeY&gt;&#xd;&#xa;    &lt;PortraitLogicalMargin&gt;6.3499999999999997e-003&lt;/PortraitLogicalMargin&gt;&#xd;&#xa;    &lt;LandscapeLogicalMargin&gt;5.0799999999999994e-003&lt;/LandscapeLogicalMargin&gt;&#xd;&#xa;    &lt;PrintAreaMargin&gt;4.2333333333333337e-003&lt;/PrintAreaMargin&gt;&#xd;&#xa;  &lt;/Item&gt;&#xd;&#xa;  &lt;Item&gt;&#xd;&#xa;    &lt;PaperSize&gt;6&lt;/PaperSize&gt;&#xd;&#xa;    &lt;Name&gt;Ledger&lt;/Name&gt;&#xd;&#xa;    &lt;PhysicalSizeX&gt;0.27939999999999998&lt;/PhysicalSizeX&gt;&#xd;&#xa;    &lt;PhysicalSizeY&gt;0.43179999999999996&lt;/PhysicalSizeY&gt;&#xd;&#xa;    &lt;PortraitLogicalMargin&gt;6.3499999999999997e-003&lt;/PortraitLogicalMargin&gt;&#xd;&#xa;    &lt;LandscapeLogicalMargin&gt;5.0799999999999994e-003&lt;/LandscapeLogicalMargin&gt;&#xd;&#xa;    &lt;PrintAreaMargin&gt;4.2333333333333337e-003&lt;/PrintAreaMargin&gt;&#xd;&#xa;  &lt;/Item&gt;&#xd;&#xa;  &lt;Item&gt;&#xd;&#xa;    &lt;PaperSize&gt;26&lt;/PaperSize&gt;&#xd;&#xa;    &lt;Name&gt;A4&lt;/Name&gt;&#xd;&#xa;    &lt;PhysicalSizeX&gt;0.20999999999999999&lt;/PhysicalSizeX&gt;&#xd;&#xa;    &lt;PhysicalSizeY&gt;0.29699999999999999&lt;/PhysicalSizeY&gt;&#xd;&#xa;    &lt;PortraitLogicalMargin&gt;6.0113333333333329e-003&lt;/PortraitLogicalMargin&gt;&#xd;&#xa;    &lt;LandscapeLogicalMargin&gt;4.9953333333333325e-003&lt;/LandscapeLogicalMargin&gt;&#xd;&#xa;    &lt;PrintAreaMargin&gt;4.2333333333333337e-003&lt;/PrintAreaMargin&gt;&#xd;&#xa;  &lt;/Item&gt;&#xd;&#xa;  &lt;Item&gt;&#xd;&#xa;    &lt;PaperSize&gt;27&lt;/PaperSize&gt;&#xd;&#xa;    &lt;Name&gt;A3&lt;/Name&gt;&#xd;&#xa;    &lt;PhysicalSizeX&gt;0.29699999999999999&lt;/PhysicalSizeX&gt;&#xd;&#xa;    &lt;PhysicalSizeY&gt;0.41999999999999998&lt;/PhysicalSizeY&gt;&#xd;&#xa;    &lt;PortraitLogicalMargin&gt;6.0113333333333329e-003&lt;/PortraitLogicalMargin&gt;&#xd;&#xa;    &lt;LandscapeLogicalMargin&gt;4.9953333333333325e-003&lt;/LandscapeLogicalMargin&gt;&#xd;&#xa;    &lt;PrintAreaMargin&gt;4.2333333333333337e-003&lt;/PrintAreaMargin&gt;&#xd;&#xa;  &lt;/Item&gt;&#xd;&#xa;&lt;/PCLPageMetricRegistry&gt;&#xd;&#xa;</Value>
+  </Property>
+  <Property>
+    <Name>PCLImport-PlaceAllRectanglesIntoOverlay</Name>
+    <Value>0</Value>
+  </Property>
+  <Property>
+    <Name>PCLImport-RecoverySetting</Name>
+    <Value>0</Value>
+  </Property>
+  <Property>
+    <Name>PCLImport-TransferPaletteBetweenPCLHPGL2</Name>
+    <Value>0</Value>
+  </Property>
+  <Property>
+    <Name>PCLNative-FontConfig</Name>
+    <Value/>
+  </Property>
+  <Property>
+    <Name>PDFAutoRotate</Name>
+    <Value>0</Value>
+  </Property>
+  <Property>
+    <Name>PDFComplex</Name>
+    <Value>1</Value>
+  </Property>
+  <Property>
+    <Name>PDFConvertToPDFA</Name>
+    <Value>0</Value>
+  </Property>
+  <Property>
+    <Name>PDFConvertToPDFA/ConversionOption</Name>
+    <Value>0</Value>
+  </Property>
+  <Property>
+    <Name>PDFConvertToPDFA/RemoveAllAnnotations</Name>
+    <Value>0</Value>
+  </Property>
+  <Property>
+    <Name>PDFExtRes</Name>
+    <Value>150</Value>
+  </Property>
+  <Property>
+    <Name>PDFFlattenTransp</Name>
+    <Value>1</Value>
+  </Property>
+  <Property>
+    <Name>PDFGray2CMYK</Name>
+    <Value>0</Value>
+  </Property>
+  <Property>
+    <Name>PDFIntRes</Name>
+    <Value>300</Value>
+  </Property>
+  <Property>
+    <Name>PDFInvContent</Name>
+    <Value>Hide</Value>
+  </Property>
+  <Property>
+    <Name>PDFOverprint</Name>
+    <Value>1</Value>
+  </Property>
+  <Property>
+    <Name>PDFOverprintPreview</Name>
+    <Value>Never</Value>
+  </Property>
+  <Property>
+    <Name>PDFPSDefaultPageHeight</Name>
+    <Value>0.2794</Value>
+  </Property>
+  <Property>
+    <Name>PDFPSDefaultPageWidth</Name>
+    <Value>0.2159</Value>
+  </Property>
+  <Property>
+    <Name>PDFPSDirs</Name>
+    <Value/>
+  </Property>
+  <Property>
+    <Name>PDFPSDoFiles</Name>
+    <Value>0</Value>
+  </Property>
+  <Property>
+    <Name>PDFPSNonExistTerm</Name>
+    <Value>1</Value>
+  </Property>
+  <Property>
+    <Name>PDFPSSupportExternal</Name>
+    <Value>1</Value>
+  </Property>
+  <Property>
+    <Name>PDFPdfImportFontReplacement</Name>
+    <ValueBase64>AAAAAAAA</ValueBase64>
+  </Property>
+  <Property>
+    <Name>PDFPrintDigitalSignature</Name>
+    <Value>0</Value>
+  </Property>
+  <Property>
+    <Name>PDFStroke2Out</Name>
+    <Value>1</Value>
+  </Property>
+  <Property>
+    <Name>PDFTab2Space</Name>
+    <Value>0</Value>
+  </Property>
+  <Property>
+    <Name>PDFText2Out</Name>
+    <Value>0</Value>
+  </Property>
+  <Property>
+    <Name>PDFThinLines</Name>
+    <Value>0</Value>
+  </Property>
+  <Property>
+    <Name>PDFTranspQ</Name>
+    <Value>75</Value>
+  </Property>
+  <Property>
+    <Name>PDFVariableInForm</Name>
+    <Value>0</Value>
+  </Property>
+  <Property>
+    <Name>ProductionTask</Name>
+    <Value/>
+  </Property>
+  <Property>
+    <Name>ProofTask</Name>
+    <Value/>
+  </Property>
+  <SecurityDescriptorManager/>
+  <SecurityDescriptorWorkFlow>
+    <SecurityDescriptorId>-1</SecurityDescriptorId>
+  </SecurityDescriptorWorkFlow>
+  <WordTabulatorGroupSepar>,</WordTabulatorGroupSepar>
+  <XMLDataInput>
+    <Id>XMLDataInput1</Id>
+    <Name>XMLDataInput1</Name>
+    <ModulePos X="11" Y="12"/>
+    <Location>DiskLocation,D:/ProyectoComunicaciones/ProyectoPDFGit/Datos/PE_890904996_FacturasPrepago_20250627_DEEP10507508_2.json</Location>
+    <TextCodec>AutoDetect</TextCodec>
+    <XMLNode Type="Element" Level="1" Optionality="One" Change="Flatten" Name="Empty" XMLName="Empty" DefaultValue=""/>
+    <XMLNode Type="Element" Level="2" Optionality="OneOrMore" Change="None" Name="Documents" XMLName="Documents" DefaultValue=""/>
+    <XMLNode Type="Element" Level="3" Optionality="One" Change="Flatten" Name="IdUnico" XMLName="IdUnico" DefaultValue=""/>
+    <XMLNode Type="PCData" Level="4" Optionality="One" Change="None" Name="IdUnico" XMLName="PCData" DefaultValue=""/>
+    <XMLNode Type="Element" Level="3" Optionality="One" Change="Flatten" Name="Canal_Datos" XMLName="Canal_Datos" DefaultValue=""/>
+    <XMLNode Type="PCData" Level="4" Optionality="One" Change="None" Name="Canal_Datos" XMLName="PCData" DefaultValue=""/>
+    <XMLNode Type="Element" Level="3" Optionality="One" Change="Flatten" Name="Ordenamiento" XMLName="Ordenamiento" DefaultValue=""/>
+    <XMLNode Type="PCData" Level="4" Optionality="One" Change="None" Name="Ordenamiento" XMLName="PCData" DefaultValue=""/>
+    <XMLNode Type="Element" Level="3" Optionality="One" Change="Flatten" Name="Agrupamiento" XMLName="Agrupamiento" DefaultValue=""/>
+    <XMLNode Type="PCData" Level="4" Optionality="One" Change="None" Name="Agrupamiento" XMLName="PCData" DefaultValue=""/>
+    <XMLNode Type="Element" Level="3" Optionality="One" Change="Flatten" Name="Nombre" XMLName="Nombre" DefaultValue=""/>
+    <XMLNode Type="PCData" Level="4" Optionality="One" Change="None" Name="Nombre" XMLName="PCData" DefaultValue=""/>
+    <XMLNode Type="Element" Level="3" Optionality="One" Change="Flatten" Name="Direccion" XMLName="Direccion" DefaultValue=""/>
+    <XMLNode Type="PCData" Level="4" Optionality="One" Change="None" Name="Direccion" XMLName="PCData" DefaultValue=""/>
+    <XMLNode Type="Element" Level="3" Optionality="One" Change="Flatten" Name="Ciudad" XMLName="Ciudad" DefaultValue=""/>
+    <XMLNode Type="PCData" Level="4" Optionality="One" Change="None" Name="Ciudad" XMLName="PCData" DefaultValue=""/>
+    <XMLNode Type="Element" Level="3" Optionality="One" Change="Flatten" Name="Departamento" XMLName="Departamento" DefaultValue=""/>
+    <XMLNode Type="PCData" Level="4" Optionality="One" Change="None" Name="Departamento" XMLName="PCData" DefaultValue=""/>
+    <XMLNode Type="Element" Level="3" Optionality="OneOrMore" Change="None" Name="uno" XMLName="uno" DefaultValue=""/>
+    <XMLNode Type="Element" Level="4" Optionality="One" Change="Flatten" Name="conceptoDetalle" XMLName="conceptoDetalle" DefaultValue=""/>
+    <XMLNode Type="PCData" Level="5" Optionality="One" Change="None" Name="conceptoDetalle" XMLName="PCData" DefaultValue=""/>
+    <XMLNode Type="Element" Level="4" Optionality="One" Change="Flatten" Name="NumeroMedidor" XMLName="NumeroMedidor" DefaultValue=""/>
+    <XMLNode Type="PCData" Level="5" Optionality="One" Change="None" Name="NumeroMedidor" XMLName="PCData" DefaultValue=""/>
+    <XMLNode Type="Element" Level="4" Optionality="One" Change="Flatten" Name="ConsumoPromedio" XMLName="ConsumoPromedio" DefaultValue=""/>
+    <XMLNode Type="PCData" Level="5" Optionality="One" Change="None" Name="ConsumoPromedio" XMLName="PCData" DefaultValue=""/>
+    <XMLNode Type="Element" Level="4" Optionality="OneOrMore" Change="None" Name="dos" XMLName="dos" DefaultValue=""/>
+    <XMLNode Type="Element" Level="5" Optionality="One" Change="Flatten" Name="DescripcionNotaServices_SubscriberConsumption" XMLName="DescripcionNotaServices_SubscriberConsumption" DefaultValue=""/>
+    <XMLNode Type="PCData" Level="6" Optionality="One" Change="None" Name="DescripcionNotaServices_SubscriberConsumption" XMLName="PCData" DefaultValue=""/>
+    <XMLNode Type="Element" Level="5" Optionality="One" Change="Flatten" Name="ValorNotaServices_SubscriberConsumption" XMLName="ValorNotaServices_SubscriberConsumption" DefaultValue=""/>
+    <XMLNode Type="PCData" Level="6" Optionality="One" Change="None" Name="ValorNotaServices_SubscriberConsumption" XMLName="PCData" DefaultValue=""/>
+    <XMLNode Type="Element" Level="5" Optionality="OneOrMore" Change="None" Name="tres" XMLName="tres" DefaultValue=""/>
+    <XMLNode Type="Element" Level="6" Optionality="One" Change="Flatten" Name="ConceptoDetalleDescuento" XMLName="ConceptoDetalleDescuento" DefaultValue=""/>
+    <XMLNode Type="PCData" Level="7" Optionality="One" Change="None" Name="ConceptoDetalleDescuento" XMLName="PCData" DefaultValue=""/>
+    <XMLNode Type="Element" Level="6" Optionality="One" Change="Flatten" Name="ValorDetalleDescuento" XMLName="ValorDetalleDescuento" DefaultValue=""/>
+    <XMLNode Type="PCData" Level="7" Optionality="One" Change="None" Name="ValorDetalleDescuento" XMLName="PCData" DefaultValue=""/>
+    <NotDefSevAttr>WarnOnce</NotDefSevAttr>
+    <NotDefSevElem>WarnOnce</NotDefSevElem>
+    <AllowAnyOrderOfElements>False</AllowAnyOrderOfElements>
+    <IgnoreNamespaces>False</IgnoreNamespaces>
+    <CreateByScript>True</CreateByScript>
+    <Script>function validateElementName(String name) : String&#xd;&#xa;   {&#xd;&#xa;   if (name.isEmpty()) return &quot;Empty&quot;;&#xd;&#xa;   name.replace(&quot;@&quot;, &quot;_at_&quot;);&#xd;&#xa;   name.replace(&quot;$&quot;, &quot;_Dollar_&quot;);&#xd;&#xa;   name.replace(&quot; &quot;, &quot;_&quot;);&#xd;&#xa;   return name;&#xd;&#xa;   }&#xd;&#xa;&#xd;&#xa;File.JSONReader reader;&#xd;&#xa;reader.initInputStream(getStream(),&quot;UTF-8&quot;);&#xd;&#xa;while(reader.read())&#xd;&#xa;   {&#xd;&#xa;   is(reader.NodeType)&#xd;&#xa;      {&#xd;&#xa;      File.JSONNodeType.ObjectBegin:&#xd;&#xa;         elementBegin(validateElementName(reader.Key));&#xd;&#xa;&#xd;&#xa;      File.JSONNodeType.ObjectEnd:&#xd;&#xa;         elementEnd();&#xd;&#xa;      &#xd;&#xa;      File.JSONNodeType.Value:&#xd;&#xa;         {&#xd;&#xa;         elementBegin(validateElementName(reader.Key));&#xd;&#xa;         unparsed(reader.Value);&#xd;&#xa;         elementEnd();&#xd;&#xa;         }&#xd;&#xa;      }&#xd;&#xa;   }&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;</Script>
+    <PreserveSpacesInAllLeafs>False</PreserveSpacesInAllLeafs>
+    <TreatMisplacedElementsWithWarning>True</TreatMisplacedElementsWithWarning>
+    <EditXSD>True</EditXSD>
+    <EditXSDFileName/>
+    <EditXSDRootName/>
+    <GenerateXMLSchemaEachRun>False</GenerateXMLSchemaEachRun>
+    <FlattenAndRenameAttributes>False</FlattenAndRenameAttributes>
+  </XMLDataInput>
+  <DataTransformer>
+    <Id>DataTransformer1</Id>
+    <Name>DT1</Name>
+    <ModulePos X="24" Y="12"/>
+    <WorkFlowDefinition>
+      <Node Name="" Type="SubTree" Optionality="MustExist">
+        <Node Name="Documents" Type="SubTree" Optionality="Array">
+          <Node Name="IdUnico" Type="String" Optionality="MustExist"/>
+          <Node Name="Canal_Datos" Type="String" Optionality="MustExist"/>
+          <Node Name="Ordenamiento" Type="String" Optionality="MustExist"/>
+          <Node Name="Agrupamiento" Type="String" Optionality="MustExist"/>
+          <Node Name="Nombre" Type="String" Optionality="MustExist"/>
+          <Node Name="Direccion" Type="String" Optionality="MustExist"/>
+          <Node Name="Ciudad" Type="String" Optionality="MustExist"/>
+          <Node Name="Departamento" Type="String" Optionality="MustExist"/>
+          <Node Name="uno" Type="SubTree" Optionality="Array">
+            <Node Name="conceptoDetalle" Type="String" Optionality="MustExist"/>
+            <Node Name="NumeroMedidor" Type="String" Optionality="MustExist"/>
+            <Node Name="ConsumoPromedio" Type="String" Optionality="MustExist"/>
+            <Node Name="dos" Type="SubTree" Optionality="Array">
+              <Node Name="DescripcionNotaServices_SubscriberConsumption" Type="String" Optionality="MustExist"/>
+              <Node Name="ValorNotaServices_SubscriberConsumption" Type="String" Optionality="MustExist"/>
+              <Node Name="tres" Type="SubTree" Optionality="Array">
+                <Node Name="ConceptoDetalleDescuento" Type="String" Optionality="MustExist"/>
+                <Node Name="ValorDetalleDescuento" Type="String" Optionality="MustExist"/>
+              </Node>
+            </Node>
+          </Node>
+        </Node>
+      </Node>
+    </WorkFlowDefinition>
+    <CreatedNodes>
+      <CreatedNode Type="String" Optionality="MustExist" Caption="CopyFirstOfConceptoDetalleDescuento" FieldDotName="Documents.uno.dos.CopyFirstOfConceptoDetalleDescuento" ParentDotName="Documents.uno.dos" LinkedToDotName="Documents.uno.dos.tres.ConceptoDetalleDescuento" LinkedToDotName2="" NodeLink2NodeType="String" LinkedType="Special" Operation="CopyFirstValueLevelUp" DefaultValue="" SearchArrayKeyValue=""/>
+      <CreatedNode Type="String" Optionality="MustExist" Caption="CopyLAstOfValorDetalleDescuento" FieldDotName="Documents.uno.dos.CopyLAstOfValorDetalleDescuento" ParentDotName="Documents.uno.dos" LinkedToDotName="Documents.uno.dos.tres.ValorDetalleDescuento" LinkedToDotName2="" NodeLink2NodeType="String" LinkedType="Special" Operation="CopyLevelUp" DefaultValue="" SearchArrayKeyValue=""/>
+      <CreatedNode Type="String" Optionality="MustExist" Caption="CopyFirstOfDescripcionNotaServices_SubscriberConsumption" FieldDotName="Documents.uno.CopyFirstOfDescripcionNotaServices_SubscriberConsumption" ParentDotName="Documents.uno" LinkedToDotName="Documents.uno.dos.DescripcionNotaServices_SubscriberConsumption" LinkedToDotName2="" NodeLink2NodeType="String" LinkedType="Special" Operation="CopyFirstValueLevelUp" DefaultValue="" SearchArrayKeyValue=""/>
+      <CreatedNode Type="String" Optionality="MustExist" Caption="CopyFirstOfValorNotaServices_SubscriberConsumption" FieldDotName="Documents.uno.CopyFirstOfValorNotaServices_SubscriberConsumption" ParentDotName="Documents.uno" LinkedToDotName="Documents.uno.dos.ValorNotaServices_SubscriberConsumption" LinkedToDotName2="" NodeLink2NodeType="String" LinkedType="Special" Operation="CopyLevelUp" DefaultValue="" SearchArrayKeyValue=""/>
+      <CreatedNode Type="String" Optionality="MustExist" Caption="CopyFirstOfconceptoDetalle" FieldDotName="Documents.CopyFirstOfconceptoDetalle" ParentDotName="Documents" LinkedToDotName="Documents.uno.conceptoDetalle" LinkedToDotName2="" NodeLink2NodeType="String" LinkedType="Special" Operation="CopyFirstValueLevelUp" DefaultValue="" SearchArrayKeyValue=""/>
+      <CreatedNode Type="String" Optionality="MustExist" Caption="CopyFirstOfNumeroMedidor" FieldDotName="Documents.CopyFirstOfNumeroMedidor" ParentDotName="Documents" LinkedToDotName="Documents.uno.NumeroMedidor" LinkedToDotName2="" NodeLink2NodeType="String" LinkedType="Special" Operation="CopyLevelUp" DefaultValue="" SearchArrayKeyValue=""/>
+    </CreatedNodes>
+    <Transformations/>
+    <TrimSpacesInFields>False</TrimSpacesInFields>
+    <LogTrackVariable/>
+    <TransformationsRecovery/>
+    <FieldReordering>
+      <SortFieldDefiniton>
+        <ParentFieldFullPathName>Documents</ParentFieldFullPathName>
+        <MapFieldItem>
+          <SetInDesign>False</SetInDesign>
+          <OriginalSubNodeIndex>0</OriginalSubNodeIndex>
+          <DestinationSubNodeIndex>0</DestinationSubNodeIndex>
+          <FieldName>IdUnico</FieldName>
+        </MapFieldItem>
+        <MapFieldItem>
+          <SetInDesign>False</SetInDesign>
+          <OriginalSubNodeIndex>1</OriginalSubNodeIndex>
+          <DestinationSubNodeIndex>1</DestinationSubNodeIndex>
+          <FieldName>Canal_Datos</FieldName>
+        </MapFieldItem>
+        <MapFieldItem>
+          <SetInDesign>False</SetInDesign>
+          <OriginalSubNodeIndex>2</OriginalSubNodeIndex>
+          <DestinationSubNodeIndex>2</DestinationSubNodeIndex>
+          <FieldName>Ordenamiento</FieldName>
+        </MapFieldItem>
+        <MapFieldItem>
+          <SetInDesign>False</SetInDesign>
+          <OriginalSubNodeIndex>3</OriginalSubNodeIndex>
+          <DestinationSubNodeIndex>3</DestinationSubNodeIndex>
+          <FieldName>Agrupamiento</FieldName>
+        </MapFieldItem>
+        <MapFieldItem>
+          <SetInDesign>False</SetInDesign>
+          <OriginalSubNodeIndex>4</OriginalSubNodeIndex>
+          <DestinationSubNodeIndex>4</DestinationSubNodeIndex>
+          <FieldName>Nombre</FieldName>
+        </MapFieldItem>
+        <MapFieldItem>
+          <SetInDesign>False</SetInDesign>
+          <OriginalSubNodeIndex>5</OriginalSubNodeIndex>
+          <DestinationSubNodeIndex>5</DestinationSubNodeIndex>
+          <FieldName>Direccion</FieldName>
+        </MapFieldItem>
+        <MapFieldItem>
+          <SetInDesign>False</SetInDesign>
+          <OriginalSubNodeIndex>6</OriginalSubNodeIndex>
+          <DestinationSubNodeIndex>6</DestinationSubNodeIndex>
+          <FieldName>Ciudad</FieldName>
+        </MapFieldItem>
+        <MapFieldItem>
+          <SetInDesign>False</SetInDesign>
+          <OriginalSubNodeIndex>7</OriginalSubNodeIndex>
+          <DestinationSubNodeIndex>7</DestinationSubNodeIndex>
+          <FieldName>Departamento</FieldName>
+        </MapFieldItem>
+        <MapFieldItem>
+          <SetInDesign>False</SetInDesign>
+          <OriginalSubNodeIndex>8</OriginalSubNodeIndex>
+          <DestinationSubNodeIndex>8</DestinationSubNodeIndex>
+          <FieldName>uno</FieldName>
+        </MapFieldItem>
+        <MapFieldItem>
+          <SetInDesign>True</SetInDesign>
+          <OriginalSubNodeIndex>9</OriginalSubNodeIndex>
+          <DestinationSubNodeIndex>10</DestinationSubNodeIndex>
+          <FieldName>CopyFirstOfconceptoDetalle</FieldName>
+        </MapFieldItem>
+        <MapFieldItem>
+          <SetInDesign>False</SetInDesign>
+          <OriginalSubNodeIndex>10</OriginalSubNodeIndex>
+          <DestinationSubNodeIndex>9</DestinationSubNodeIndex>
+          <FieldName>CopyFirstOfNumeroMedidor</FieldName>
+        </MapFieldItem>
+      </SortFieldDefiniton>
+      <SortFieldDefiniton>
+        <ParentFieldFullPathName>Documents.uno</ParentFieldFullPathName>
+        <MapFieldItem>
+          <SetInDesign>False</SetInDesign>
+          <OriginalSubNodeIndex>0</OriginalSubNodeIndex>
+          <DestinationSubNodeIndex>0</DestinationSubNodeIndex>
+          <FieldName>conceptoDetalle</FieldName>
+        </MapFieldItem>
+        <MapFieldItem>
+          <SetInDesign>False</SetInDesign>
+          <OriginalSubNodeIndex>1</OriginalSubNodeIndex>
+          <DestinationSubNodeIndex>1</DestinationSubNodeIndex>
+          <FieldName>NumeroMedidor</FieldName>
+        </MapFieldItem>
+        <MapFieldItem>
+          <SetInDesign>False</SetInDesign>
+          <OriginalSubNodeIndex>2</OriginalSubNodeIndex>
+          <DestinationSubNodeIndex>2</DestinationSubNodeIndex>
+          <FieldName>ConsumoPromedio</FieldName>
+        </MapFieldItem>
+        <MapFieldItem>
+          <SetInDesign>False</SetInDesign>
+          <OriginalSubNodeIndex>3</OriginalSubNodeIndex>
+          <DestinationSubNodeIndex>3</DestinationSubNodeIndex>
+          <FieldName>dos</FieldName>
+        </MapFieldItem>
+        <MapFieldItem>
+          <SetInDesign>True</SetInDesign>
+          <OriginalSubNodeIndex>4</OriginalSubNodeIndex>
+          <DestinationSubNodeIndex>5</DestinationSubNodeIndex>
+          <FieldName>CopyFirstOfDescripcionNotaServices_SubscriberConsumption</FieldName>
+        </MapFieldItem>
+        <MapFieldItem>
+          <SetInDesign>False</SetInDesign>
+          <OriginalSubNodeIndex>5</OriginalSubNodeIndex>
+          <DestinationSubNodeIndex>4</DestinationSubNodeIndex>
+          <FieldName>CopyFirstOfValorNotaServices_SubscriberConsumption</FieldName>
+        </MapFieldItem>
+      </SortFieldDefiniton>
+      <SortFieldDefiniton>
+        <ParentFieldFullPathName>Documents.uno.dos</ParentFieldFullPathName>
+        <MapFieldItem>
+          <SetInDesign>False</SetInDesign>
+          <OriginalSubNodeIndex>0</OriginalSubNodeIndex>
+          <DestinationSubNodeIndex>0</DestinationSubNodeIndex>
+          <FieldName>DescripcionNotaServices_SubscriberConsumption</FieldName>
+        </MapFieldItem>
+        <MapFieldItem>
+          <SetInDesign>False</SetInDesign>
+          <OriginalSubNodeIndex>1</OriginalSubNodeIndex>
+          <DestinationSubNodeIndex>1</DestinationSubNodeIndex>
+          <FieldName>ValorNotaServices_SubscriberConsumption</FieldName>
+        </MapFieldItem>
+        <MapFieldItem>
+          <SetInDesign>False</SetInDesign>
+          <OriginalSubNodeIndex>2</OriginalSubNodeIndex>
+          <DestinationSubNodeIndex>2</DestinationSubNodeIndex>
+          <FieldName>tres</FieldName>
+        </MapFieldItem>
+        <MapFieldItem>
+          <SetInDesign>True</SetInDesign>
+          <OriginalSubNodeIndex>3</OriginalSubNodeIndex>
+          <DestinationSubNodeIndex>4</DestinationSubNodeIndex>
+          <FieldName>CopyFirstOfConceptoDetalleDescuento</FieldName>
+        </MapFieldItem>
+        <MapFieldItem>
+          <SetInDesign>False</SetInDesign>
+          <OriginalSubNodeIndex>4</OriginalSubNodeIndex>
+          <DestinationSubNodeIndex>3</DestinationSubNodeIndex>
+          <FieldName>CopyLAstOfValorDetalleDescuento</FieldName>
+        </MapFieldItem>
+      </SortFieldDefiniton>
+    </FieldReordering>
+  </DataTransformer>
+  <DataOutput>
+    <Id>DataOutput1</Id>
+    <Name>DataOutput1</Name>
+    <ModulePos X="38" Y="12"/>
+    <FileName>%n.%e</FileName>
+    <TextCodec>UTF-8</TextCodec>
+    <FileType>CSV</FileType>
+    <Delimiter>,</Delimiter>
+    <TextQualifier>&quot;</TextQualifier>
+    <Repository/>
+    <RepositoryMode>Append</RepositoryMode>
+  </DataOutput>
+  <Connect>
+    <From>XMLDataInput1</From>
+    <FromIndex>0</FromIndex>
+    <To>DataTransformer1</To>
+    <ToIndex>0</ToIndex>
+  </Connect>
+  <Connect>
+    <From>DataTransformer1</From>
+    <FromIndex>0</FromIndex>
+    <To>DataOutput1</To>
+    <ToIndex>0</ToIndex>
+  </Connect>
+</WorkFlow>

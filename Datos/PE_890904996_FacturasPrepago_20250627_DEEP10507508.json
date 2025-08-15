@@ -1,0 +1,1040 @@
+{
+    "Documents": [
+        {
+            "IdUnico": "DEEP10507508",
+            "Canal_Datos": "PE",
+            "Ordenamiento": "0000001",
+            "Agrupamiento": "0000001",
+            "Nombre": "MARIANO ANTONIO AVILA ANGULO",
+            "Direccion": "190665200319905000",
+            "Ciudad": "Turbo",
+            "Departamento": "Antioquia",
+            "Barrio": "",
+            "Nit": "8173666",
+            "Factura": "DEEP10507508",
+            "FechaProceso": "6/27/2025",
+            "UCID": "DEEP10507508",
+            "Producto": "FacturasPrepago",
+            "Segmento": "FacturasPrepago",
+            "IdProceso": "1106220",
+            "Archivo": "JSON On-demand",
+            "Cufe": "31faf6ff1ffdccf67621d7eec41060dfa8e516b7fc47c5e0c770997b76b98b58872d8e99ca1eef6c3d17de23da160162",
+            "QR": "NumFac=DEEP10507508FecFac=2025-06-27HorFac=10:44:28-05:00NitFac=890904996DocAdq=8173666ValFac=9482.62ValIva=0.00ValOtroIm=0.00ValTolFac=4500.00CUDE=31faf6ff1ffdccf67621d7eec41060dfa8e516b7fc47c5e0c770997b76b98b58872d8e99ca1eef6c3d17de23da160162QRCode=https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=31faf6ff1ffdccf67621d7eec41060dfa8e516b7fc47c5e0c770997b76b98b58872d8e99ca1eef6c3d17de23da160162",
+            "statusCode": "200",
+            "statusMessage": "La Documento equivalente - Servicios públicos domiciliarios DEEP10507508, ha sido autorizada.",
+            "statusDescription": "Procesado Correctamente.",
+            "Date": "6/27/2025 10:44:00 AM",
+            "validationDate": "2025-06-27",
+            "validationTime": "10:44:32-05:00",
+            "uuidReference": "",
+            "udid": "b32e3ec076b2876385b0e601aca84673",
+            "Paquete": "19851",
+            "PaqueteSheet": "0019851",
+            "Ciclo": "25",
+            "ChannelServicesSPD": [
+                {
+                    "Producto": "",
+                    "ValorProducto": "",
+                    "conceptoDetalle": "ENERGIA PREPAGO MERCADO REG",
+                    "NumeroMedidor": "14497506346",
+                    "ConsumoPromedio": "12.70",
+                    "Category_ServiceSPD": "RESIDENCIAL",
+                    "Estrato_ServiceSPD": "1",
+                    "valorUnidadConsumo": "11.34",
+                    "CostoUnidadConsumo": "836.50",
+                    "TotalValorConsumo": "9482.62",
+                    "TotalValorTablaConceptos": "4500.00",
+                    "ChannelDetallesDescuento": [
+                        {
+                            "ConceptoDetalleDescuento": "SUBSIDIO",
+                            "ValorDetalleDescuento": "4982.62"
+                        }
+                    ],
+                    "ChannelNotasServicesSPD": [
+                        {
+                            "DescripcionNotaServices": "Producto",
+                            "ValorNotaServices": "131984636"
+                        },
+                        {
+                            "DescripcionNotaServices": "SaldoDeuda",
+                            "ValorNotaServices": "2170379.22"
+                        }
+                    ],
+                    "ChannelNotasServicesSPD_SubscriberConsumption": [
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "PeriodoEnergía",
+                            "ValorNotaServices_SubscriberConsumption": "6-2025"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Operador",
+                            "ValorNotaServices_SubscriberConsumption": "EPM"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "DirOperador",
+                            "ValorNotaServices_SubscriberConsumption": "CARRERA 58 NRO 42 125"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "TelOperador",
+                            "ValorNotaServices_SubscriberConsumption": "(604)4444115-018000415115"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "NIU",
+                            "ValorNotaServices_SubscriberConsumption": "190665200319905000"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Circuito",
+                            "ValorNotaServices_SubscriberConsumption": "410-11"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Transformador",
+                            "ValorNotaServices_SubscriberConsumption": "853756"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Grupo",
+                            "ValorNotaServices_SubscriberConsumption": "33"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "DiuGara",
+                            "ValorNotaServices_SubscriberConsumption": "78.00"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "FiuGara",
+                            "ValorNotaServices_SubscriberConsumption": "31.00"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Diu",
+                            "ValorNotaServices_SubscriberConsumption": "28.00"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Fiu",
+                            "ValorNotaServices_SubscriberConsumption": "16.00"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Cec",
+                            "ValorNotaServices_SubscriberConsumption": "0.00"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Cecf",
+                            "ValorNotaServices_SubscriberConsumption": "0.00"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "t",
+                            "ValorNotaServices_SubscriberConsumption": "20.00"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Dt",
+                            "ValorNotaServices_SubscriberConsumption": "328.00"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Tcompe",
+                            "ValorNotaServices_SubscriberConsumption": "0.00"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Hc",
+                            "ValorNotaServices_SubscriberConsumption": "0.00"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Vc",
+                            "ValorNotaServices_SubscriberConsumption": "0.00"
+                        }
+                    ],
+                    "ChannelGraficaConsumo": [
+                        {
+                            "TotalInvoicedQuantity_Consummonth": "11.34",
+                            "UnitCode_TotalInvoicedQuantity_Consummonth": "KWH",
+                            "StartDate_Consummonth": "",
+                            "EndDate_Consummonth": "Junio-27-2025",
+                            "PeriodPayableAmount_Consummonth": "9482.56"
+                        },
+                        {
+                            "TotalInvoicedQuantity_Consummonth": "13.69",
+                            "UnitCode_TotalInvoicedQuantity_Consummonth": "KWH",
+                            "StartDate_Consummonth": "",
+                            "EndDate_Consummonth": "Junio-23-2025",
+                            "PeriodPayableAmount_Consummonth": "11447.50"
+                        },
+                        {
+                            "TotalInvoicedQuantity_Consummonth": "18.14",
+                            "UnitCode_TotalInvoicedQuantity_Consummonth": "KWH",
+                            "StartDate_Consummonth": "",
+                            "EndDate_Consummonth": "Junio-16-2025",
+                            "PeriodPayableAmount_Consummonth": "15172.44"
+                        },
+                        {
+                            "TotalInvoicedQuantity_Consummonth": "13.15",
+                            "UnitCode_TotalInvoicedQuantity_Consummonth": "KWH",
+                            "StartDate_Consummonth": "",
+                            "EndDate_Consummonth": "Junio-11-2025",
+                            "PeriodPayableAmount_Consummonth": "10999.98"
+                        },
+                        {
+                            "TotalInvoicedQuantity_Consummonth": "13.60",
+                            "UnitCode_TotalInvoicedQuantity_Consummonth": "KWH",
+                            "StartDate_Consummonth": "",
+                            "EndDate_Consummonth": "Junio-06-2025",
+                            "PeriodPayableAmount_Consummonth": "11378.91"
+                        },
+                        {
+                            "TotalInvoicedQuantity_Consummonth": "11.41",
+                            "UnitCode_TotalInvoicedQuantity_Consummonth": "KWH",
+                            "StartDate_Consummonth": "",
+                            "EndDate_Consummonth": "Mayo-31-2025",
+                            "PeriodPayableAmount_Consummonth": "10159.21"
+                        },
+                        {
+                            "TotalInvoicedQuantity_Consummonth": "13.24",
+                            "UnitCode_TotalInvoicedQuantity_Consummonth": "KWH",
+                            "StartDate_Consummonth": "",
+                            "EndDate_Consummonth": "Mayo-27-2025",
+                            "PeriodPayableAmount_Consummonth": "11784.01"
+                        },
+                        {
+                            "TotalInvoicedQuantity_Consummonth": "11.41",
+                            "UnitCode_TotalInvoicedQuantity_Consummonth": "KWH",
+                            "StartDate_Consummonth": "",
+                            "EndDate_Consummonth": "Mayo-22-2025",
+                            "PeriodPayableAmount_Consummonth": "10159.21"
+                        },
+                        {
+                            "TotalInvoicedQuantity_Consummonth": "11.41",
+                            "UnitCode_TotalInvoicedQuantity_Consummonth": "KWH",
+                            "StartDate_Consummonth": "",
+                            "EndDate_Consummonth": "Mayo-19-2025",
+                            "PeriodPayableAmount_Consummonth": "10159.21"
+                        }
+                    ]
+                },
+                {
+                    "Producto": "",
+                    "ValorProducto": "",
+                    "conceptoDetalle": "ENERGIA PREPAGO MERCADO REG",
+                    "NumeroMedidor": "14497506346",
+                    "ConsumoPromedio": "12.70",
+                    "Category_ServiceSPD": "RESIDENCIAL",
+                    "Estrato_ServiceSPD": "2",
+                    "valorUnidadConsumo": "11.34",
+                    "CostoUnidadConsumo": "836.50",
+                    "TotalValorConsumo": "9482.62",
+                    "TotalValorTablaConceptos": "4500.00",
+                    "ChannelDetallesDescuento": [
+                        {
+                            "ConceptoDetalleDescuento": "SUBSIDIO",
+                            "ValorDetalleDescuento": "4982.62"
+                        }
+                    ],
+                    "ChannelNotasServicesSPD": [
+                        {
+                            "DescripcionNotaServices": "Producto",
+                            "ValorNotaServices": "131984636"
+                        },
+                        {
+                            "DescripcionNotaServices": "SaldoDeuda",
+                            "ValorNotaServices": "2170379.22"
+                        }
+                    ],
+                    "ChannelNotasServicesSPD_SubscriberConsumption": [
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "PeriodoEnergía",
+                            "ValorNotaServices_SubscriberConsumption": "6-2025"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Operador",
+                            "ValorNotaServices_SubscriberConsumption": "EPM"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "DirOperador",
+                            "ValorNotaServices_SubscriberConsumption": "CARRERA 58 NRO 42 125"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "TelOperador",
+                            "ValorNotaServices_SubscriberConsumption": "(604)4444115-018000415115"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "NIU",
+                            "ValorNotaServices_SubscriberConsumption": "190665200319905000"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Circuito",
+                            "ValorNotaServices_SubscriberConsumption": "410-11"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Transformador",
+                            "ValorNotaServices_SubscriberConsumption": "853756"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Grupo",
+                            "ValorNotaServices_SubscriberConsumption": "33"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "DiuGara",
+                            "ValorNotaServices_SubscriberConsumption": "78.00"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "FiuGara",
+                            "ValorNotaServices_SubscriberConsumption": "31.00"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Diu",
+                            "ValorNotaServices_SubscriberConsumption": "28.00"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Fiu",
+                            "ValorNotaServices_SubscriberConsumption": "16.00"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Cec",
+                            "ValorNotaServices_SubscriberConsumption": "0.00"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Cecf",
+                            "ValorNotaServices_SubscriberConsumption": "0.00"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "t",
+                            "ValorNotaServices_SubscriberConsumption": "20.00"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Dt",
+                            "ValorNotaServices_SubscriberConsumption": "328.00"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Tcompe",
+                            "ValorNotaServices_SubscriberConsumption": "0.00"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Hc",
+                            "ValorNotaServices_SubscriberConsumption": "0.00"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Vc",
+                            "ValorNotaServices_SubscriberConsumption": "0.00"
+                        }
+                    ],
+                    "ChannelGraficaConsumo": [
+                        {
+                            "TotalInvoicedQuantity_Consummonth": "11.34",
+                            "UnitCode_TotalInvoicedQuantity_Consummonth": "KWH",
+                            "StartDate_Consummonth": "",
+                            "EndDate_Consummonth": "Junio-27-2025",
+                            "PeriodPayableAmount_Consummonth": "9482.56"
+                        },
+                        {
+                            "TotalInvoicedQuantity_Consummonth": "13.69",
+                            "UnitCode_TotalInvoicedQuantity_Consummonth": "KWH",
+                            "StartDate_Consummonth": "",
+                            "EndDate_Consummonth": "Junio-23-2025",
+                            "PeriodPayableAmount_Consummonth": "11447.50"
+                        },
+                        {
+                            "TotalInvoicedQuantity_Consummonth": "18.14",
+                            "UnitCode_TotalInvoicedQuantity_Consummonth": "KWH",
+                            "StartDate_Consummonth": "",
+                            "EndDate_Consummonth": "Junio-16-2025",
+                            "PeriodPayableAmount_Consummonth": "15172.44"
+                        },
+                        {
+                            "TotalInvoicedQuantity_Consummonth": "13.15",
+                            "UnitCode_TotalInvoicedQuantity_Consummonth": "KWH",
+                            "StartDate_Consummonth": "",
+                            "EndDate_Consummonth": "Junio-11-2025",
+                            "PeriodPayableAmount_Consummonth": "10999.98"
+                        },
+                        {
+                            "TotalInvoicedQuantity_Consummonth": "13.60",
+                            "UnitCode_TotalInvoicedQuantity_Consummonth": "KWH",
+                            "StartDate_Consummonth": "",
+                            "EndDate_Consummonth": "Junio-06-2025",
+                            "PeriodPayableAmount_Consummonth": "11378.91"
+                        },
+                        {
+                            "TotalInvoicedQuantity_Consummonth": "11.41",
+                            "UnitCode_TotalInvoicedQuantity_Consummonth": "KWH",
+                            "StartDate_Consummonth": "",
+                            "EndDate_Consummonth": "Mayo-31-2025",
+                            "PeriodPayableAmount_Consummonth": "10159.21"
+                        },
+                        {
+                            "TotalInvoicedQuantity_Consummonth": "13.24",
+                            "UnitCode_TotalInvoicedQuantity_Consummonth": "KWH",
+                            "StartDate_Consummonth": "",
+                            "EndDate_Consummonth": "Mayo-27-2025",
+                            "PeriodPayableAmount_Consummonth": "11784.01"
+                        },
+                        {
+                            "TotalInvoicedQuantity_Consummonth": "11.41",
+                            "UnitCode_TotalInvoicedQuantity_Consummonth": "KWH",
+                            "StartDate_Consummonth": "",
+                            "EndDate_Consummonth": "Mayo-22-2025",
+                            "PeriodPayableAmount_Consummonth": "10159.21"
+                        },
+                        {
+                            "TotalInvoicedQuantity_Consummonth": "11.41",
+                            "UnitCode_TotalInvoicedQuantity_Consummonth": "KWH",
+                            "StartDate_Consummonth": "",
+                            "EndDate_Consummonth": "Mayo-19-2025",
+                            "PeriodPayableAmount_Consummonth": "10159.21"
+                        }
+                    ]
+                }
+            ],
+            "ChannelNotasNivelPrincipal": [
+                {
+                    "DescripcionNota": "contrato",
+                    "ValorNota": "13038335"
+                },
+                {
+                    "DescripcionNota": "corte",
+                    "ValorNota": "25"
+                },
+                {
+                    "DescripcionNota": "Numero de documento",
+                    "ValorNota": "1458996978"
+                },
+                {
+                    "DescripcionNota": "ValorTotalAPagar",
+                    "ValorNota": "5000.00"
+                },
+                {
+                    "DescripcionNota": "FacturaDe",
+                    "ValorNota": "Junio de 2025"
+                },
+                {
+                    "DescripcionNota": "referente_pago",
+                    "ValorNota": "1083943650-87"
+                },
+                {
+                    "DescripcionNota": "CuentasVencidas",
+                    "ValorNota": "0.00"
+                },
+                {
+                    "DescripcionNota": "SaldosAFavor",
+                    "ValorNota": "0.00"
+                },
+                {
+                    "DescripcionNota": "MenorValorAplicado",
+                    "ValorNota": "0.00"
+                },
+                {
+                    "DescripcionNota": "Financiacion",
+                    "ValorNota": "500.00"
+                },
+                {
+                    "DescripcionNota": "AjusteAlPeso",
+                    "ValorNota": "0.00"
+                },
+                {
+                    "DescripcionNota": "ConceptoRecarga1",
+                    "ValorNota": "Compra"
+                },
+                {
+                    "DescripcionNota": "ValorRecarga1",
+                    "ValorNota": "5000.00"
+                },
+                {
+                    "DescripcionNota": "ConceptoRecarga2",
+                    "ValorNota": "Abono"
+                },
+                {
+                    "DescripcionNota": "ValorRecarga2",
+                    "ValorNota": "-500.00"
+                },
+                {
+                    "DescripcionNota": "NetoaRecargar",
+                    "ValorNota": "4500.00"
+                },
+                {
+                    "DescripcionNota": "ValorTotal",
+                    "ValorNota": "5000.00"
+                },
+                {
+                    "DescripcionNota": "PuntoRecarga",
+                    "ValorNota": "GANA"
+                },
+                {
+                    "DescripcionNota": "NitRecarga",
+                    "ValorNota": "9000815596"
+                },
+                {
+                    "DescripcionNota": "OficinaRecarga",
+                    "ValorNota": "SAN PEDRO"
+                }
+            ],
+            "Referente": "108394365087",
+            "NumeroDocumentoDIAN": "DEEP10507508",
+            "IssueDate": "2025-06-27",
+            "IssueTime": "10:44:28-05:00",
+            "TipoDocumento": "60",
+            "Qr": "NumFac=DEEP10507508FecFac=2025-06-27HorFac=10:44:28-05:00NitFac=890904996DocAdq=8173666ValFac=9482.62ValIva=0.00ValOtroIm=0.00ValTolFac=4500.00CUDE=31faf6ff1ffdccf67621d7eec41060dfa8e516b7fc47c5e0c770997b76b98b58872d8e99ca1eef6c3d17de23da160162QRCode=https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=31faf6ff1ffdccf67621d7eec41060dfa8e516b7fc47c5e0c770997b76b98b58872d8e99ca1eef6c3d17de23da160162",
+            "FechaGeneracion": "2025-06-27 10:44:28-05:00",
+            "NombreUsuario": "MARIANO ANTONIO AVILA ANGULO",
+            "NitUsuario": "8173666",
+            "NitEmisor": "890904996",
+            "RazonSocialEmisor": "MARIANO ANTONIO AVILA ANGULO",
+            "NumeroCompleto": "DEEP10507508",
+            "NombreComercialEmisor": "EMPRESAS PUBLICAS DE MEDELLIN",
+            "trackId": "DEEP10507508",
+            "NombreArchivo": "",
+            "Cedula": "8173666",
+            "ciudad_Departamento": "Turbo - Antioquia",
+            "Direccion_RepGrafica": "190665200319905000 - Turbo - Antioquia",
+            "Clase": "",
+            "Clase_Estrato": "",
+            "Telefono": "",
+            "fechaCorte": "27/06/2025",
+            "mesCorte": "2025.06",
+            "mesFactura": "06",
+            "anioFactura": "2025",
+            "mesanioFactura": "062025",
+            "mesanioFactura_NomPE": "202506",
+            "TipoEnvio": "PE",
+            "ReferenciaPago": "8173666",
+            "DocumentoRelacionado": "NO_DEFINIDO",
+            "Opcional1": "NO_DEFINIDO",
+            "Opcional2": "NO_DEFINIDO",
+            "Opcional3": "NO_DEFINIDO",
+            "Correria": "NO_DEFINIDO",
+            "FechaVencimiento": "",
+            "FechaInsercion": "",
+            "Glacier": "0",
+            "ArchivedId": "",
+            "IdentificadorUnico_PE": "",
+            "hideDocument": "",
+            "detalleProducto": "FacturasPrepago",
+            "Email": "",
+            "EmailFE": "",
+            "Contrato": "13038335",
+            "CuponPago": "DEEP10507508",
+            "TotalPagar": "4500.00",
+            "Channel": "PE",
+            "ChannelEN": "",
+            "PlantillaEmail": "608",
+            "PrefijoNombrePDF": "ds",
+            "NitEmisorPadded": "0890904996",
+            "CodigoProveedorTecnologico": "021",
+            "AnioNombrePDF": "25",
+            "ConsecutivoDocumentoNombrePDF": "DEEP10507508",
+            "NombrePDF": "ds089090499602125DEEP10507508.pdf",
+            "NombrePDFPE": "ds089090499602125DEEP10507508_FacturasPrepago_202506.pdf",
+            "NombrePDFSinExtension": "ds089090499602125DEEP10507508",
+            "RutaPDF": "/storage/Outputs/20250627/890904996_FacturasPrepago_20250627.EN"
+        },
+        {
+            "IdUnico": "DEEP10507508",
+            "Canal_Datos": "PE",
+            "Ordenamiento": "0000001",
+            "Agrupamiento": "0000001",
+            "Nombre": "MARIANO ANTONIO AVILA ANGULO",
+            "Direccion": "190665200319905000",
+            "Ciudad": "Turbo",
+            "Departamento": "Antioquia",
+            "Barrio": "",
+            "Nit": "8173666",
+            "Factura": "DEEP10507508",
+            "FechaProceso": "6/27/2025",
+            "UCID": "DEEP10507508",
+            "Producto": "FacturasPrepago",
+            "Segmento": "FacturasPrepago",
+            "IdProceso": "1106220",
+            "Archivo": "JSON On-demand",
+            "Cufe": "31faf6ff1ffdccf67621d7eec41060dfa8e516b7fc47c5e0c770997b76b98b58872d8e99ca1eef6c3d17de23da160162",
+            "QR": "NumFac=DEEP10507508FecFac=2025-06-27HorFac=10:44:28-05:00NitFac=890904996DocAdq=8173666ValFac=9482.62ValIva=0.00ValOtroIm=0.00ValTolFac=4500.00CUDE=31faf6ff1ffdccf67621d7eec41060dfa8e516b7fc47c5e0c770997b76b98b58872d8e99ca1eef6c3d17de23da160162QRCode=https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=31faf6ff1ffdccf67621d7eec41060dfa8e516b7fc47c5e0c770997b76b98b58872d8e99ca1eef6c3d17de23da160162",
+            "statusCode": "200",
+            "statusMessage": "La Documento equivalente - Servicios públicos domiciliarios DEEP10507508, ha sido autorizada.",
+            "statusDescription": "Procesado Correctamente.",
+            "Date": "6/27/2025 10:44:00 AM",
+            "validationDate": "2025-06-27",
+            "validationTime": "10:44:32-05:00",
+            "uuidReference": "",
+            "udid": "b32e3ec076b2876385b0e601aca84673",
+            "Paquete": "19851",
+            "PaqueteSheet": "0019851",
+            "Ciclo": "25",
+            "ChannelServicesSPD": [
+                {
+                    "Producto": "",
+                    "ValorProducto": "",
+                    "conceptoDetalle": "ENERGIA PREPAGO MERCADO REG",
+                    "NumeroMedidor": "14497506346",
+                    "ConsumoPromedio": "12.70",
+                    "Category_ServiceSPD": "RESIDENCIAL",
+                    "Estrato_ServiceSPD": "2",
+                    "valorUnidadConsumo": "11.34",
+                    "CostoUnidadConsumo": "836.50",
+                    "TotalValorConsumo": "9482.62",
+                    "TotalValorTablaConceptos": "4500.00",
+                    "ChannelDetallesDescuento": [
+                        {
+                            "ConceptoDetalleDescuento": "SUBSIDIO",
+                            "ValorDetalleDescuento": "4982.62"
+                        }
+                    ],
+                    "ChannelNotasServicesSPD": [
+                        {
+                            "DescripcionNotaServices": "Producto",
+                            "ValorNotaServices": "131984636"
+                        },
+                        {
+                            "DescripcionNotaServices": "SaldoDeuda",
+                            "ValorNotaServices": "2170379.22"
+                        }
+                    ],
+                    "ChannelNotasServicesSPD_SubscriberConsumption": [
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "PeriodoEnergía",
+                            "ValorNotaServices_SubscriberConsumption": "6-2025"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Operador",
+                            "ValorNotaServices_SubscriberConsumption": "EPM"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "DirOperador",
+                            "ValorNotaServices_SubscriberConsumption": "CARRERA 58 NRO 42 125"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "TelOperador",
+                            "ValorNotaServices_SubscriberConsumption": "(604)4444115-018000415115"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "NIU",
+                            "ValorNotaServices_SubscriberConsumption": "190665200319905000"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Circuito",
+                            "ValorNotaServices_SubscriberConsumption": "410-11"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Transformador",
+                            "ValorNotaServices_SubscriberConsumption": "853756"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Grupo",
+                            "ValorNotaServices_SubscriberConsumption": "33"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "DiuGara",
+                            "ValorNotaServices_SubscriberConsumption": "78.00"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "FiuGara",
+                            "ValorNotaServices_SubscriberConsumption": "31.00"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Diu",
+                            "ValorNotaServices_SubscriberConsumption": "28.00"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Fiu",
+                            "ValorNotaServices_SubscriberConsumption": "16.00"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Cec",
+                            "ValorNotaServices_SubscriberConsumption": "0.00"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Cecf",
+                            "ValorNotaServices_SubscriberConsumption": "0.00"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "t",
+                            "ValorNotaServices_SubscriberConsumption": "20.00"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Dt",
+                            "ValorNotaServices_SubscriberConsumption": "328.00"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Tcompe",
+                            "ValorNotaServices_SubscriberConsumption": "0.00"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Hc",
+                            "ValorNotaServices_SubscriberConsumption": "0.00"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Vc",
+                            "ValorNotaServices_SubscriberConsumption": "0.00"
+                        }
+                    ],
+                    "ChannelGraficaConsumo": [
+                        {
+                            "TotalInvoicedQuantity_Consummonth": "11.34",
+                            "UnitCode_TotalInvoicedQuantity_Consummonth": "KWH",
+                            "StartDate_Consummonth": "",
+                            "EndDate_Consummonth": "Junio-27-2025",
+                            "PeriodPayableAmount_Consummonth": "9482.56"
+                        },
+                        {
+                            "TotalInvoicedQuantity_Consummonth": "13.69",
+                            "UnitCode_TotalInvoicedQuantity_Consummonth": "KWH",
+                            "StartDate_Consummonth": "",
+                            "EndDate_Consummonth": "Junio-23-2025",
+                            "PeriodPayableAmount_Consummonth": "11447.50"
+                        },
+                        {
+                            "TotalInvoicedQuantity_Consummonth": "18.14",
+                            "UnitCode_TotalInvoicedQuantity_Consummonth": "KWH",
+                            "StartDate_Consummonth": "",
+                            "EndDate_Consummonth": "Junio-16-2025",
+                            "PeriodPayableAmount_Consummonth": "15172.44"
+                        },
+                        {
+                            "TotalInvoicedQuantity_Consummonth": "13.15",
+                            "UnitCode_TotalInvoicedQuantity_Consummonth": "KWH",
+                            "StartDate_Consummonth": "",
+                            "EndDate_Consummonth": "Junio-11-2025",
+                            "PeriodPayableAmount_Consummonth": "10999.98"
+                        },
+                        {
+                            "TotalInvoicedQuantity_Consummonth": "13.60",
+                            "UnitCode_TotalInvoicedQuantity_Consummonth": "KWH",
+                            "StartDate_Consummonth": "",
+                            "EndDate_Consummonth": "Junio-06-2025",
+                            "PeriodPayableAmount_Consummonth": "11378.91"
+                        },
+                        {
+                            "TotalInvoicedQuantity_Consummonth": "11.41",
+                            "UnitCode_TotalInvoicedQuantity_Consummonth": "KWH",
+                            "StartDate_Consummonth": "",
+                            "EndDate_Consummonth": "Mayo-31-2025",
+                            "PeriodPayableAmount_Consummonth": "10159.21"
+                        },
+                        {
+                            "TotalInvoicedQuantity_Consummonth": "13.24",
+                            "UnitCode_TotalInvoicedQuantity_Consummonth": "KWH",
+                            "StartDate_Consummonth": "",
+                            "EndDate_Consummonth": "Mayo-27-2025",
+                            "PeriodPayableAmount_Consummonth": "11784.01"
+                        },
+                        {
+                            "TotalInvoicedQuantity_Consummonth": "11.41",
+                            "UnitCode_TotalInvoicedQuantity_Consummonth": "KWH",
+                            "StartDate_Consummonth": "",
+                            "EndDate_Consummonth": "Mayo-22-2025",
+                            "PeriodPayableAmount_Consummonth": "10159.21"
+                        },
+                        {
+                            "TotalInvoicedQuantity_Consummonth": "11.41",
+                            "UnitCode_TotalInvoicedQuantity_Consummonth": "KWH",
+                            "StartDate_Consummonth": "",
+                            "EndDate_Consummonth": "Mayo-19-2025",
+                            "PeriodPayableAmount_Consummonth": "10159.21"
+                        }
+                    ]
+                },
+                {
+                    "Producto": "",
+                    "ValorProducto": "",
+                    "conceptoDetalle": "ENERGIA PREPAGO MERCADO REG",
+                    "NumeroMedidor": "14497506346",
+                    "ConsumoPromedio": "12.70",
+                    "Category_ServiceSPD": "RESIDENCIAL",
+                    "Estrato_ServiceSPD": "1",
+                    "valorUnidadConsumo": "11.34",
+                    "CostoUnidadConsumo": "836.50",
+                    "TotalValorConsumo": "9482.62",
+                    "TotalValorTablaConceptos": "4500.00",
+                    "ChannelDetallesDescuento": [
+                        {
+                            "ConceptoDetalleDescuento": "SUBSIDIO",
+                            "ValorDetalleDescuento": "4982.62"
+                        }
+                    ],
+                    "ChannelNotasServicesSPD": [
+                        {
+                            "DescripcionNotaServices": "Producto",
+                            "ValorNotaServices": "131984636"
+                        },
+                        {
+                            "DescripcionNotaServices": "SaldoDeuda",
+                            "ValorNotaServices": "2170379.22"
+                        }
+                    ],
+                    "ChannelNotasServicesSPD_SubscriberConsumption": [
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "PeriodoEnergía",
+                            "ValorNotaServices_SubscriberConsumption": "6-2025"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Operador",
+                            "ValorNotaServices_SubscriberConsumption": "EPM"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "DirOperador",
+                            "ValorNotaServices_SubscriberConsumption": "CARRERA 58 NRO 42 125"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "TelOperador",
+                            "ValorNotaServices_SubscriberConsumption": "(604)4444115-018000415115"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "NIU",
+                            "ValorNotaServices_SubscriberConsumption": "190665200319905000"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Circuito",
+                            "ValorNotaServices_SubscriberConsumption": "410-11"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Transformador",
+                            "ValorNotaServices_SubscriberConsumption": "853756"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Grupo",
+                            "ValorNotaServices_SubscriberConsumption": "33"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "DiuGara",
+                            "ValorNotaServices_SubscriberConsumption": "78.00"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "FiuGara",
+                            "ValorNotaServices_SubscriberConsumption": "31.00"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Diu",
+                            "ValorNotaServices_SubscriberConsumption": "28.00"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Fiu",
+                            "ValorNotaServices_SubscriberConsumption": "16.00"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Cec",
+                            "ValorNotaServices_SubscriberConsumption": "0.00"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Cecf",
+                            "ValorNotaServices_SubscriberConsumption": "0.00"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "t",
+                            "ValorNotaServices_SubscriberConsumption": "20.00"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Dt",
+                            "ValorNotaServices_SubscriberConsumption": "328.00"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Tcompe",
+                            "ValorNotaServices_SubscriberConsumption": "0.00"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Hc",
+                            "ValorNotaServices_SubscriberConsumption": "0.00"
+                        },
+                        {
+                            "DescripcionNotaServices_SubscriberConsumption": "Vc",
+                            "ValorNotaServices_SubscriberConsumption": "0.00"
+                        }
+                    ],
+                    "ChannelGraficaConsumo": [
+                        {
+                            "TotalInvoicedQuantity_Consummonth": "11.34",
+                            "UnitCode_TotalInvoicedQuantity_Consummonth": "KWH",
+                            "StartDate_Consummonth": "",
+                            "EndDate_Consummonth": "Junio-27-2025",
+                            "PeriodPayableAmount_Consummonth": "9482.56"
+                        },
+                        {
+                            "TotalInvoicedQuantity_Consummonth": "13.69",
+                            "UnitCode_TotalInvoicedQuantity_Consummonth": "KWH",
+                            "StartDate_Consummonth": "",
+                            "EndDate_Consummonth": "Junio-23-2025",
+                            "PeriodPayableAmount_Consummonth": "11447.50"
+                        },
+                        {
+                            "TotalInvoicedQuantity_Consummonth": "18.14",
+                            "UnitCode_TotalInvoicedQuantity_Consummonth": "KWH",
+                            "StartDate_Consummonth": "",
+                            "EndDate_Consummonth": "Junio-16-2025",
+                            "PeriodPayableAmount_Consummonth": "15172.44"
+                        },
+                        {
+                            "TotalInvoicedQuantity_Consummonth": "13.15",
+                            "UnitCode_TotalInvoicedQuantity_Consummonth": "KWH",
+                            "StartDate_Consummonth": "",
+                            "EndDate_Consummonth": "Junio-11-2025",
+                            "PeriodPayableAmount_Consummonth": "10999.98"
+                        },
+                        {
+                            "TotalInvoicedQuantity_Consummonth": "13.60",
+                            "UnitCode_TotalInvoicedQuantity_Consummonth": "KWH",
+                            "StartDate_Consummonth": "",
+                            "EndDate_Consummonth": "Junio-06-2025",
+                            "PeriodPayableAmount_Consummonth": "11378.91"
+                        },
+                        {
+                            "TotalInvoicedQuantity_Consummonth": "11.41",
+                            "UnitCode_TotalInvoicedQuantity_Consummonth": "KWH",
+                            "StartDate_Consummonth": "",
+                            "EndDate_Consummonth": "Mayo-31-2025",
+                            "PeriodPayableAmount_Consummonth": "10159.21"
+                        },
+                        {
+                            "TotalInvoicedQuantity_Consummonth": "13.24",
+                            "UnitCode_TotalInvoicedQuantity_Consummonth": "KWH",
+                            "StartDate_Consummonth": "",
+                            "EndDate_Consummonth": "Mayo-27-2025",
+                            "PeriodPayableAmount_Consummonth": "11784.01"
+                        },
+                        {
+                            "TotalInvoicedQuantity_Consummonth": "11.41",
+                            "UnitCode_TotalInvoicedQuantity_Consummonth": "KWH",
+                            "StartDate_Consummonth": "",
+                            "EndDate_Consummonth": "Mayo-22-2025",
+                            "PeriodPayableAmount_Consummonth": "10159.21"
+                        },
+                        {
+                            "TotalInvoicedQuantity_Consummonth": "11.41",
+                            "UnitCode_TotalInvoicedQuantity_Consummonth": "KWH",
+                            "StartDate_Consummonth": "",
+                            "EndDate_Consummonth": "Mayo-19-2025",
+                            "PeriodPayableAmount_Consummonth": "10159.21"
+                        }
+                    ]
+                }
+            ],
+            "ChannelNotasNivelPrincipal": [
+                {
+                    "DescripcionNota": "contrato",
+                    "ValorNota": "13038335"
+                },
+                {
+                    "DescripcionNota": "corte",
+                    "ValorNota": "25"
+                },
+                {
+                    "DescripcionNota": "Numero de documento",
+                    "ValorNota": "1458996978"
+                },
+                {
+                    "DescripcionNota": "ValorTotalAPagar",
+                    "ValorNota": "5000.00"
+                },
+                {
+                    "DescripcionNota": "FacturaDe",
+                    "ValorNota": "Junio de 2025"
+                },
+                {
+                    "DescripcionNota": "referente_pago",
+                    "ValorNota": "1083943650-87"
+                },
+                {
+                    "DescripcionNota": "CuentasVencidas",
+                    "ValorNota": "0.00"
+                },
+                {
+                    "DescripcionNota": "SaldosAFavor",
+                    "ValorNota": "0.00"
+                },
+                {
+                    "DescripcionNota": "MenorValorAplicado",
+                    "ValorNota": "0.00"
+                },
+                {
+                    "DescripcionNota": "Financiacion",
+                    "ValorNota": "500.00"
+                },
+                {
+                    "DescripcionNota": "AjusteAlPeso",
+                    "ValorNota": "0.00"
+                },
+                {
+                    "DescripcionNota": "ConceptoRecarga1",
+                    "ValorNota": "Compra"
+                },
+                {
+                    "DescripcionNota": "ValorRecarga1",
+                    "ValorNota": "5000.00"
+                },
+                {
+                    "DescripcionNota": "ConceptoRecarga2",
+                    "ValorNota": "Abono"
+                },
+                {
+                    "DescripcionNota": "ValorRecarga2",
+                    "ValorNota": "-500.00"
+                },
+                {
+                    "DescripcionNota": "NetoaRecargar",
+                    "ValorNota": "4500.00"
+                },
+                {
+                    "DescripcionNota": "ValorTotal",
+                    "ValorNota": "5000.00"
+                },
+                {
+                    "DescripcionNota": "PuntoRecarga",
+                    "ValorNota": "GANA"
+                },
+                {
+                    "DescripcionNota": "NitRecarga",
+                    "ValorNota": "9000815596"
+                },
+                {
+                    "DescripcionNota": "OficinaRecarga",
+                    "ValorNota": "SAN PEDRO"
+                }
+            ],
+            "Referente": "108394365087",
+            "NumeroDocumentoDIAN": "DEEP10507508",
+            "IssueDate": "2025-06-27",
+            "IssueTime": "10:44:28-05:00",
+            "TipoDocumento": "60",
+            "Qr": "NumFac=DEEP10507508FecFac=2025-06-27HorFac=10:44:28-05:00NitFac=890904996DocAdq=8173666ValFac=9482.62ValIva=0.00ValOtroIm=0.00ValTolFac=4500.00CUDE=31faf6ff1ffdccf67621d7eec41060dfa8e516b7fc47c5e0c770997b76b98b58872d8e99ca1eef6c3d17de23da160162QRCode=https://catalogo-vpfe.dian.gov.co/document/searchqr?documentkey=31faf6ff1ffdccf67621d7eec41060dfa8e516b7fc47c5e0c770997b76b98b58872d8e99ca1eef6c3d17de23da160162",
+            "FechaGeneracion": "2025-06-27 10:44:28-05:00",
+            "NombreUsuario": "MARIANO ANTONIO AVILA ANGULO",
+            "NitUsuario": "8173666",
+            "NitEmisor": "890904996",
+            "RazonSocialEmisor": "MARIANO ANTONIO AVILA ANGULO",
+            "NumeroCompleto": "DEEP10507508",
+            "NombreComercialEmisor": "EMPRESAS PUBLICAS DE MEDELLIN",
+            "trackId": "DEEP10507508",
+            "NombreArchivo": "",
+            "Cedula": "8173666",
+            "ciudad_Departamento": "Turbo - Antioquia",
+            "Direccion_RepGrafica": "190665200319905000 - Turbo - Antioquia",
+            "Clase": "",
+            "Clase_Estrato": "",
+            "Telefono": "",
+            "fechaCorte": "27/06/2025",
+            "mesCorte": "2025.06",
+            "mesFactura": "06",
+            "anioFactura": "2025",
+            "mesanioFactura": "062025",
+            "mesanioFactura_NomPE": "202506",
+            "TipoEnvio": "PE",
+            "ReferenciaPago": "8173666",
+            "DocumentoRelacionado": "NO_DEFINIDO",
+            "Opcional1": "NO_DEFINIDO",
+            "Opcional2": "NO_DEFINIDO",
+            "Opcional3": "NO_DEFINIDO",
+            "Correria": "NO_DEFINIDO",
+            "FechaVencimiento": "",
+            "FechaInsercion": "",
+            "Glacier": "0",
+            "ArchivedId": "",
+            "IdentificadorUnico_PE": "",
+            "hideDocument": "",
+            "detalleProducto": "FacturasPrepago",
+            "Email": "",
+            "EmailFE": "",
+            "Contrato": "13038335",
+            "CuponPago": "DEEP10507508",
+            "TotalPagar": "4500.00",
+            "Channel": "PE",
+            "ChannelEN": "",
+            "PlantillaEmail": "608",
+            "PrefijoNombrePDF": "ds",
+            "NitEmisorPadded": "0890904996",
+            "CodigoProveedorTecnologico": "021",
+            "AnioNombrePDF": "25",
+            "ConsecutivoDocumentoNombrePDF": "DEEP10507508",
+            "NombrePDF": "ds089090499602125DEEP10507508.pdf",
+            "NombrePDFPE": "ds089090499602125DEEP10507508_FacturasPrepago_202506.pdf",
+            "NombrePDFSinExtension": "ds089090499602125DEEP10507508",
+            "RutaPDF": "/storage/Outputs/20250627/890904996_FacturasPrepago_20250627.EN"
+        }
+    ]
+}
