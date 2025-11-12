@@ -21,7 +21,7 @@ def process_elements_by_object(config, object_id, page_width, page_height, c, pa
         element_object = element_objects.get(element_id)  
 
 
-        if (name == "FlowArea 2"):
+        if (name == "PiePagina"):
             pass
             #print("Pausa")
 

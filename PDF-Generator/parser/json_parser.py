@@ -300,7 +300,7 @@ def perform_cruce_de_datos_con_left_join(a_data, b_data, a_key_path, b_key_path)
     a_key_path_parts = a_key_path.split('.')
     for item_principal in a_data:
         register = {}
-        register["Documents"] = item_principal
+        register[const.PRINCIPAL_ARRAY] = item_principal
         _recursively_join(register, a_key_path_parts, secondary_index, b_field_name)
         
         '''
@@ -545,7 +545,9 @@ def apply_transformation(full_register,transformation_class,field_path_to_transf
             '''
         
         elif transformation_class == "CaseConvFCV":
-            pass
+            from transformer.case_converter import convert_string
+            case_type = fcv_props.find("Type").text
+            parent[key] = convert_string(original_value, case_type)
 
 def parse_workflow_definition(workflow_definition_node):
     """
@@ -1022,7 +1024,7 @@ def json_parser(json_path, all_elements_workflow, elements_to_preprocess, connec
         raise ValueError("Formato de 'Documents' no reconocido")
 
     full_context = json_data.copy()
-    full_context["Documents"] = documents
+    full_context[const.PRINCIPAL_ARRAY] = documents
     output_structures = {}
 
     #Realizar el proceso de los modulos que se deben preprocesar
@@ -1048,9 +1050,9 @@ def json_parser(json_path, all_elements_workflow, elements_to_preprocess, connec
                             get_default_value(node_type, default_value)
                         )
                     
-                    for register in full_context["Documents"]:
+                    for register in full_context[const.PRINCIPAL_ARRAY]:
                         full_register = {}
-                        full_register["Documents"] = register 
+                        full_register[const.PRINCIPAL_ARRAY] = register 
                         transformations = module.find("Transformations")
 
                         #Realizar la creacion de los nuevos campos especiales
@@ -1071,12 +1073,14 @@ def json_parser(json_path, all_elements_workflow, elements_to_preprocess, connec
                                 array_mode   
                             )                                                                            
                             
-
+                        # TODO
                         for transformation in transformations:
-                            transformation_class = transformation.find("FCVClassName").text
-                            field_path_to_transform = transformation.get('DotName')
-                            fcv_props = transformation.find('FCVProps')
-                            apply_transformation(full_register,transformation_class,field_path_to_transform,fcv_props)
+                            transformation_class_object = transformation.find("FCVClassName")
+                            if transformation_class_object is not None:
+                                transformation_class = transformation_class_object.text
+                                field_path_to_transform = transformation.get('DotName')
+                                fcv_props = transformation.find('FCVProps')
+                                apply_transformation(full_register,transformation_class,field_path_to_transform,fcv_props)
 
                     
                 elif module_type == "DataFilter":
@@ -1095,7 +1099,7 @@ def json_parser(json_path, all_elements_workflow, elements_to_preprocess, connec
                     full_path_a = selected_none_a.get("FullPathName")
                     full_path_b = selected_none_b.get("FullPathName")                  
                     
-                    a_data = full_context.get("Documents", [])
+                    a_data = full_context.get(const.PRINCIPAL_ARRAY, [])
                     
                     '''
                     <Connect>
@@ -1135,7 +1139,7 @@ def json_parser(json_path, all_elements_workflow, elements_to_preprocess, connec
                         raise ValueError("No se encontró el campo 'Field' en el módulo TextReplacer")
 
                 else:
-                    print(f"Tipo de módulo desconocido: {module_type}")
+                    print(f"Tipo de módulo no configurado: {module_type}")
                     #raise ValueError(f"Tipo de módulo desconocido: {module_type}")
                 with open('D:\Pruebas.json', 'w', encoding='utf-8') as f:
                     json.dump(full_context, f, ensure_ascii=False)

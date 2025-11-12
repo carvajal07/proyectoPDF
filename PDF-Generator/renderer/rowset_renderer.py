@@ -1,5 +1,5 @@
 from core.utils import convert_units
-from core.utils import evaluate_condition_v2
+from core.utils import evaluate_condition
 from renderer.cell_renderer import process_cell
 
 from reportlab.lib import colors
@@ -29,7 +29,7 @@ def process_rowset(config, rowset_element, page_height, page_width, context=None
                 row, min_height, cell_styles = process_rowset(config,all_elements.get(subrow.text),page_height,page_width,context=context,c=c,col_widths=col_widths)
 
                 return row, min_height, cell_styles
-            elif evaluate_condition_v2(condition, register):
+            elif evaluate_condition(condition, register):
                 row, min_height, cell_styles = process_rowset(config,all_elements.get(subrow.text),page_height,page_width,context=context,c=c,col_widths=col_widths)
                 
                 return row, min_height, cell_styles

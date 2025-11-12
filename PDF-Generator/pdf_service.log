@@ -1374,3 +1374,1484 @@ Traceback (most recent call last):
                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AttributeError: 'NoneType' object has no attribute 'text'
 2025-08-06 14:44:37,654 [INFO] Servicio finalizado
+2025-11-05 11:41:06,641 [INFO] Inicio del servicio Generador PDF
+2025-11-05 11:41:06,641 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-05 11:41:07,169 [ERROR] Error en la ejecución del servicio: [Errno 2] No such file or directory: 'D:/ProyectoComunicaciones/ProyectoPDFGit/Datos/PE_890904996_FacturasPrepago_20250627_DEEP10507508_2.json'
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 41, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\loader\input_loader.py", line 41, in load_input
+    full_context, documents = json_parser(json_path, all_elements_workflow, list_to_preprocess, connections)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\parser\json_parser.py", line 1012, in json_parser
+    with open(json_path, 'r', encoding="UTF-8") as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'D:/ProyectoComunicaciones/ProyectoPDFGit/Datos/PE_890904996_FacturasPrepago_20250627_DEEP10507508_2.json'
+2025-11-05 11:41:07,179 [INFO] Servicio finalizado
+2025-11-05 11:47:18,027 [INFO] Inicio del servicio Generador PDF
+2025-11-05 11:47:18,027 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-05 11:49:29,524 [INFO] Inicio del servicio Generador PDF
+2025-11-05 11:49:29,524 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-05 11:52:26,562 [INFO] Inicio del servicio Generador PDF
+2025-11-05 11:52:26,563 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-05 11:53:10,332 [INFO] Inicio del servicio Generador PDF
+2025-11-05 11:53:10,332 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-05 12:10:31,205 [INFO] Inicio del servicio Generador PDF
+2025-11-05 12:10:31,207 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-05 12:15:28,580 [INFO] Inicio del servicio Generador PDF
+2025-11-05 12:15:28,581 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-05 12:25:15,762 [INFO] Inicio del servicio Generador PDF
+2025-11-05 12:25:15,763 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-05 12:28:12,747 [INFO] Inicio del servicio Generador PDF
+2025-11-05 12:28:12,747 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-05 12:37:02,345 [INFO] Inicio del servicio Generador PDF
+2025-11-05 12:37:02,345 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-05 12:37:17,292 [ERROR] Error en la ejecución del servicio: cannot access local variable 'convert_string' where it is not associated with a value
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 41, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\loader\input_loader.py", line 41, in load_input
+    full_context, documents = json_parser(json_path, all_elements_workflow, list_to_preprocess, connections)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\parser\json_parser.py", line 1080, in json_parser
+    apply_transformation(full_register,transformation_class,field_path_to_transform,fcv_props)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\parser\json_parser.py", line 549, in apply_transformation
+    parent[key] = convert_string(original_value, case_type)
+                  ^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'convert_string' where it is not associated with a value
+2025-11-05 12:37:17,303 [INFO] Servicio finalizado
+2025-11-05 12:37:33,873 [INFO] Inicio del servicio Generador PDF
+2025-11-05 12:37:33,874 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-05 12:37:52,535 [INFO] Inicio del servicio Generador PDF
+2025-11-05 12:37:52,535 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-05 12:39:24,294 [INFO] Inicio del servicio Generador PDF
+2025-11-05 12:39:24,295 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-05 15:10:21,126 [INFO] Inicio del servicio Generador PDF
+2025-11-05 15:10:21,126 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-05 15:10:21,948 [ERROR] Error en la ejecución del servicio: Formato de 'Documents' no reconocido
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 44, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\loader\input_loader.py", line 41, in load_input
+    full_context, documents = json_parser(json_path, all_elements_workflow, list_to_preprocess, connections)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\parser\json_parser.py", line 1024, in json_parser
+    raise ValueError("Formato de 'Documents' no reconocido")
+ValueError: Formato de 'Documents' no reconocido
+2025-11-05 15:10:21,960 [INFO] Servicio finalizado
+2025-11-05 15:12:09,530 [INFO] Inicio del servicio Generador PDF
+2025-11-05 15:12:09,530 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-05 15:12:10,056 [ERROR] Error en la ejecución del servicio: Formato de 'Documents' no reconocido
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 44, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\loader\input_loader.py", line 41, in load_input
+    full_context, documents = json_parser(json_path, all_elements_workflow, list_to_preprocess, connections)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\parser\json_parser.py", line 1024, in json_parser
+    raise ValueError("Formato de 'Documents' no reconocido")
+ValueError: Formato de 'Documents' no reconocido
+2025-11-05 15:12:10,071 [INFO] Servicio finalizado
+2025-11-05 15:13:14,920 [INFO] Inicio del servicio Generador PDF
+2025-11-05 15:13:14,920 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-05 15:13:32,965 [INFO] Inicio del servicio Generador PDF
+2025-11-05 15:13:32,965 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-05 15:16:54,083 [INFO] Inicio del servicio Generador PDF
+2025-11-05 15:16:54,083 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-05 15:17:32,911 [INFO] Inicio del servicio Generador PDF
+2025-11-05 15:17:32,912 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-05 15:22:47,798 [INFO] Inicio del servicio Generador PDF
+2025-11-05 15:22:47,798 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-06 06:52:33,549 [INFO] Inicio del servicio Generador PDF
+2025-11-06 06:52:33,549 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-06 06:52:57,986 [ERROR] Error en la ejecución del servicio: ERROR: No se encontró la clave 'RutaLogoSegmentoVar' en el path 'Records -> RutaLogoSegmentoVar'
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 44, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\loader\input_loader.py", line 54, in load_input
+    images_cache = register_images(config_dicts["Image"], data_dicts["Variable"], full_context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\styles\images.py", line 15, in register_images
+    path = get_variable_value(variable_id, variables, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\core\utils.py", line 60, in get_variable_value
+    return get_value_from_path(context, full_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\core\utils.py", line 48, in get_value_from_path
+    raise ValueError(f"ERROR: No se encontró la clave '{key}' en el path '{' -> '.join(path)}'")
+ValueError: ERROR: No se encontró la clave 'RutaLogoSegmentoVar' en el path 'Records -> RutaLogoSegmentoVar'
+2025-11-06 06:52:58,002 [INFO] Servicio finalizado
+2025-11-06 06:52:59,951 [INFO] Inicio del servicio Generador PDF
+2025-11-06 06:52:59,951 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-06 06:53:24,647 [ERROR] Error en la ejecución del servicio: ERROR: No se encontró la clave 'RutaLogoSegmentoVar' en el path 'Records -> RutaLogoSegmentoVar'
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 44, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\loader\input_loader.py", line 54, in load_input
+    images_cache = register_images(config_dicts["Image"], data_dicts["Variable"], full_context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\styles\images.py", line 15, in register_images
+    path = get_variable_value(variable_id, variables, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\core\utils.py", line 60, in get_variable_value
+    return get_value_from_path(context, full_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\core\utils.py", line 48, in get_value_from_path
+    raise ValueError(f"ERROR: No se encontró la clave '{key}' en el path '{' -> '.join(path)}'")
+ValueError: ERROR: No se encontró la clave 'RutaLogoSegmentoVar' en el path 'Records -> RutaLogoSegmentoVar'
+2025-11-06 06:53:24,647 [INFO] Servicio finalizado
+2025-11-06 06:54:00,537 [INFO] Inicio del servicio Generador PDF
+2025-11-06 06:54:00,537 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-06 06:54:23,938 [ERROR] Error en la ejecución del servicio: ERROR: No se encontró la clave 'RutaLogoSegmentoVar' en el path 'Records -> RutaLogoSegmentoVar'
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 44, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\loader\input_loader.py", line 54, in load_input
+    images_cache = register_images(config_dicts["Image"], data_dicts["Variable"], full_context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\styles\images.py", line 15, in register_images
+    path = get_variable_value(variable_id, variables, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\core\utils.py", line 60, in get_variable_value
+    return get_value_from_path(context, full_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\core\utils.py", line 48, in get_value_from_path
+    raise ValueError(f"ERROR: No se encontró la clave '{key}' en el path '{' -> '.join(path)}'")
+ValueError: ERROR: No se encontró la clave 'RutaLogoSegmentoVar' en el path 'Records -> RutaLogoSegmentoVar'
+2025-11-06 06:54:23,954 [INFO] Servicio finalizado
+2025-11-06 06:54:25,529 [INFO] Inicio del servicio Generador PDF
+2025-11-06 06:54:25,530 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-06 06:54:45,432 [INFO] Servicio finalizado
+2025-11-06 06:55:43,372 [INFO] Inicio del servicio Generador PDF
+2025-11-06 06:55:43,372 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-06 06:56:51,281 [INFO] Inicio del servicio Generador PDF
+2025-11-06 06:56:51,281 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-06 06:56:58,162 [INFO] Servicio finalizado
+2025-11-06 06:57:05,837 [INFO] Inicio del servicio Generador PDF
+2025-11-06 06:57:05,837 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-06 06:58:28,441 [INFO] Inicio del servicio Generador PDF
+2025-11-06 06:58:28,441 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-06 06:59:00,480 [INFO] Servicio finalizado
+2025-11-06 06:59:03,824 [INFO] Inicio del servicio Generador PDF
+2025-11-06 06:59:03,824 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-06 06:59:34,001 [INFO] Servicio finalizado
+2025-11-06 07:00:03,635 [INFO] Inicio del servicio Generador PDF
+2025-11-06 07:00:03,635 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-06 07:01:22,703 [INFO] Inicio del servicio Generador PDF
+2025-11-06 07:01:22,703 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-06 07:01:46,686 [INFO] Servicio finalizado
+2025-11-06 07:06:34,182 [INFO] Inicio del servicio Generador PDF
+2025-11-06 07:06:34,182 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-06 07:06:59,776 [INFO] Servicio finalizado
+2025-11-06 07:07:03,806 [INFO] Inicio del servicio Generador PDF
+2025-11-06 07:07:03,806 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-06 07:07:28,626 [INFO] Servicio finalizado
+2025-11-06 07:07:32,761 [INFO] Inicio del servicio Generador PDF
+2025-11-06 07:07:32,761 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-06 07:08:23,128 [ERROR] Error en la ejecución del servicio: ERROR: No se encontró la clave 'RutaLogoSegmentoVar' en el path 'Records -> RutaLogoSegmentoVar'
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 45, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\loader\input_loader.py", line 54, in load_input
+    images_cache = register_images(config_dicts["Image"], data_dicts["Variable"], full_context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\styles\images.py", line 15, in register_images
+    path = get_variable_value(variable_id, variables, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\core\utils.py", line 60, in get_variable_value
+    return get_value_from_path(context, full_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\core\utils.py", line 48, in get_value_from_path
+    raise ValueError(f"ERROR: No se encontró la clave '{key}' en el path '{' -> '.join(path)}'")
+ValueError: ERROR: No se encontró la clave 'RutaLogoSegmentoVar' en el path 'Records -> RutaLogoSegmentoVar'
+2025-11-06 07:08:23,144 [INFO] Servicio finalizado
+2025-11-06 07:08:32,700 [INFO] Inicio del servicio Generador PDF
+2025-11-06 07:08:32,700 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-06 07:09:24,821 [ERROR] Error en la ejecución del servicio: ERROR: No se encontró la clave 'RutaLogoSegmentoVar' en el path 'Records -> RutaLogoSegmentoVar'
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 45, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\loader\input_loader.py", line 54, in load_input
+    images_cache = register_images(config_dicts["Image"], data_dicts["Variable"], full_context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\styles\images.py", line 15, in register_images
+    path = get_variable_value(variable_id, variables, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\core\utils.py", line 60, in get_variable_value
+    return get_value_from_path(context, full_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\core\utils.py", line 48, in get_value_from_path
+    raise ValueError(f"ERROR: No se encontró la clave '{key}' en el path '{' -> '.join(path)}'")
+ValueError: ERROR: No se encontró la clave 'RutaLogoSegmentoVar' en el path 'Records -> RutaLogoSegmentoVar'
+2025-11-06 07:09:24,832 [INFO] Servicio finalizado
+2025-11-06 07:16:25,314 [INFO] Inicio del servicio Generador PDF
+2025-11-06 07:16:25,315 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-06 07:17:25,782 [ERROR] Error en la ejecución del servicio: ERROR: No se encontró la clave 'RutaLogoSegmentoVar' en el path 'Records -> RutaLogoSegmentoVar'
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 47, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\loader\input_loader.py", line 54, in load_input
+    images_cache = register_images(config_dicts["Image"], data_dicts["Variable"], full_context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\styles\images.py", line 15, in register_images
+    path = get_variable_value(variable_id, variables, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\core\utils.py", line 60, in get_variable_value
+    return get_value_from_path(context, full_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\core\utils.py", line 48, in get_value_from_path
+    raise ValueError(f"ERROR: No se encontró la clave '{key}' en el path '{' -> '.join(path)}'")
+ValueError: ERROR: No se encontró la clave 'RutaLogoSegmentoVar' en el path 'Records -> RutaLogoSegmentoVar'
+2025-11-06 07:17:25,804 [INFO] Servicio finalizado
+2025-11-06 07:23:03,727 [INFO] Inicio del servicio Generador PDF
+2025-11-06 07:23:03,727 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-06 07:36:16,540 [INFO] Inicio del servicio Generador PDF
+2025-11-06 07:36:16,541 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-06 07:45:16,258 [INFO] Inicio del servicio Generador PDF
+2025-11-06 07:45:16,258 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-06 07:49:38,540 [INFO] Inicio del servicio Generador PDF
+2025-11-06 07:49:38,540 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-06 07:50:45,027 [ERROR] Error en la ejecución del servicio: ERROR: No se encontró la clave 'RutaLogoSegmentoVar' en el path 'Records -> RutaLogoSegmentoVar'
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 47, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\loader\input_loader.py", line 54, in load_input
+    images_cache = register_images(config_dicts["Image"], data_dicts["Variable"], full_context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\styles\images.py", line 15, in register_images
+    path = get_variable_value(variable_id, variables, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\core\utils.py", line 60, in get_variable_value
+    return get_value_from_path(context, full_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\core\utils.py", line 48, in get_value_from_path
+    raise ValueError(f"ERROR: No se encontró la clave '{key}' en el path '{' -> '.join(path)}'")
+ValueError: ERROR: No se encontró la clave 'RutaLogoSegmentoVar' en el path 'Records -> RutaLogoSegmentoVar'
+2025-11-06 07:50:45,047 [INFO] Servicio finalizado
+2025-11-06 08:37:53,500 [INFO] Inicio del servicio Generador PDF
+2025-11-06 08:37:53,500 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-06 08:38:38,036 [ERROR] Error en la ejecución del servicio: ERROR: No se encontró la clave 'RutaLogoSegmentoVar' en el path 'Records -> RutaLogoSegmentoVar'
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 47, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\loader\input_loader.py", line 54, in load_input
+    images_cache = register_images(config_dicts["Image"], data_dicts["Variable"], full_context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\styles\images.py", line 15, in register_images
+    path = get_variable_value(variable_id, variables, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\core\utils.py", line 60, in get_variable_value
+    return get_value_from_path(context, full_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\core\utils.py", line 48, in get_value_from_path
+    raise ValueError(f"ERROR: No se encontró la clave '{key}' en el path '{' -> '.join(path)}'")
+ValueError: ERROR: No se encontró la clave 'RutaLogoSegmentoVar' en el path 'Records -> RutaLogoSegmentoVar'
+2025-11-06 08:38:38,052 [INFO] Servicio finalizado
+2025-11-06 08:38:46,862 [INFO] Inicio del servicio Generador PDF
+2025-11-06 08:38:46,862 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-06 08:39:31,265 [ERROR] Error en la ejecución del servicio: ERROR: No se encontró la clave 'RutaLogoSegmentoVar' en el path 'Records -> RutaLogoSegmentoVar'
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 47, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\loader\input_loader.py", line 54, in load_input
+    images_cache = register_images(config_dicts["Image"], data_dicts["Variable"], full_context)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\styles\images.py", line 15, in register_images
+    path = get_variable_value(variable_id, variables, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\core\utils.py", line 60, in get_variable_value
+    return get_value_from_path(context, full_path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\core\utils.py", line 48, in get_value_from_path
+    raise ValueError(f"ERROR: No se encontró la clave '{key}' en el path '{' -> '.join(path)}'")
+ValueError: ERROR: No se encontró la clave 'RutaLogoSegmentoVar' en el path 'Records -> RutaLogoSegmentoVar'
+2025-11-06 08:39:31,265 [INFO] Servicio finalizado
+2025-11-06 08:39:32,034 [INFO] Inicio del servicio Generador PDF
+2025-11-06 08:39:32,034 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-10 13:17:29,923 [INFO] Inicio del servicio Generador PDF
+2025-11-10 13:17:29,932 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-10 13:24:48,021 [INFO] Inicio del servicio Generador PDF
+2025-11-10 13:24:48,021 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-10 13:27:52,265 [INFO] Inicio del servicio Generador PDF
+2025-11-10 13:27:52,267 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-10 13:33:36,459 [INFO] Inicio del servicio Generador PDF
+2025-11-10 13:33:36,459 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-10 13:40:12,920 [INFO] Inicio del servicio Generador PDF
+2025-11-10 13:40:12,936 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-10 13:59:25,969 [INFO] Inicio del servicio Generador PDF
+2025-11-10 13:59:25,969 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-10 14:06:34,284 [INFO] Inicio del servicio Generador PDF
+2025-11-10 14:06:34,284 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-10 14:22:34,700 [INFO] Inicio del servicio Generador PDF
+2025-11-10 14:22:34,707 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-10 14:27:49,392 [INFO] Inicio del servicio Generador PDF
+2025-11-10 14:27:49,398 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-11 11:58:19,688 [INFO] Inicio del servicio Generador PDF
+2025-11-11 11:58:19,688 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-11 11:59:03,341 [ERROR] Error en la ejecución del servicio: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Proveedor de canalizaciones con nombre: No se pudo abrir una conexión con SQL Server [64].  (64) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Ha finalizado el tiempo de espera de inicio de sesión (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Error relacionado con la red o específico de instancia al establecer conexión con el servidor SQL Server. El servidor no se encuentra o no está accesible. Compruebe si el nombre de la instancia es correcto y si SQL Server está configurado para permitir conexiones remotas. Para obtener más información, vea los Libros en pantalla de SQL Server. (64)')
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 47, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\loader\input_loader.py", line 18, in load_input
+    workflow = xml_read(customer, product)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\parser\xml_parser.py", line 87, in xml_read
+    xml_string = get_xml(customer, product)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\parser\xml_parser.py", line 8, in get_xml
+    conn = get_connection("PruebaMapeo")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\infra\db.py", line 16, in get_connection
+    return pyodbc.connect(conn_str)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Proveedor de canalizaciones con nombre: No se pudo abrir una conexión con SQL Server [64].  (64) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Ha finalizado el tiempo de espera de inicio de sesión (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Error relacionado con la red o específico de instancia al establecer conexión con el servidor SQL Server. El servidor no se encuentra o no está accesible. Compruebe si el nombre de la instancia es correcto y si SQL Server está configurado para permitir conexiones remotas. Para obtener más información, vea los Libros en pantalla de SQL Server. (64)')
+2025-11-11 11:59:03,385 [INFO] Servicio finalizado
+2025-11-11 11:59:21,498 [INFO] Inicio del servicio Generador PDF
+2025-11-11 11:59:21,502 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-11 12:00:22,004 [ERROR] Error en la ejecución del servicio: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Proveedor de canalizaciones con nombre: No se pudo abrir una conexión con SQL Server [64].  (64) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Ha finalizado el tiempo de espera de inicio de sesión (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Error relacionado con la red o específico de instancia al establecer conexión con el servidor SQL Server. El servidor no se encuentra o no está accesible. Compruebe si el nombre de la instancia es correcto y si SQL Server está configurado para permitir conexiones remotas. Para obtener más información, vea los Libros en pantalla de SQL Server. (64)')
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 47, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\loader\input_loader.py", line 18, in load_input
+    workflow = xml_read(customer, product)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\parser\xml_parser.py", line 87, in xml_read
+    xml_string = get_xml(customer, product)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\parser\xml_parser.py", line 8, in get_xml
+    conn = get_connection("PruebaMapeo")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\infra\db.py", line 16, in get_connection
+    return pyodbc.connect(conn_str)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Proveedor de canalizaciones con nombre: No se pudo abrir una conexión con SQL Server [64].  (64) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Ha finalizado el tiempo de espera de inicio de sesión (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Error relacionado con la red o específico de instancia al establecer conexión con el servidor SQL Server. El servidor no se encuentra o no está accesible. Compruebe si el nombre de la instancia es correcto y si SQL Server está configurado para permitir conexiones remotas. Para obtener más información, vea los Libros en pantalla de SQL Server. (64)')
+2025-11-11 12:00:22,020 [INFO] Servicio finalizado
+2025-11-11 12:36:24,143 [INFO] Inicio del servicio Generador PDF
+2025-11-11 12:36:24,158 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-11 12:37:55,524 [ERROR] Error en la ejecución del servicio: process_page() takes 3 positional arguments but 4 were given
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 53, in main
+    process_document(config, document, i)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_document.py", line 75, in process_document
+    process_page(config, page_element, c, config)
+TypeError: process_page() takes 3 positional arguments but 4 were given
+2025-11-11 12:37:57,187 [INFO] Servicio finalizado
+2025-11-11 12:38:20,952 [INFO] Inicio del servicio Generador PDF
+2025-11-11 12:38:20,952 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-11 12:48:05,873 [INFO] Inicio del servicio Generador PDF
+2025-11-11 12:48:05,873 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-11 12:50:05,721 [INFO] Inicio del servicio Generador PDF
+2025-11-11 12:50:05,721 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-11 12:54:33,803 [INFO] Inicio del servicio Generador PDF
+2025-11-11 12:54:33,803 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-11 12:57:35,198 [ERROR] Error en la ejecución del servicio: process_page() takes 3 positional arguments but 4 were given
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 53, in main
+    process_document(config, document, i)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_document.py", line 75, in process_document
+    process_page(config, page_element, c, config)
+TypeError: process_page() takes 3 positional arguments but 4 were given
+2025-11-11 12:58:01,190 [INFO] Inicio del servicio Generador PDF
+2025-11-11 12:58:01,191 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-11 13:52:30,397 [INFO] Inicio del servicio Generador PDF
+2025-11-11 13:52:30,398 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-11 13:52:37,149 [ERROR] Error en la ejecución del servicio: "No se encontró 'Records.Current.Nombre_Cod_Fondo_2.isEmpty()' en el contexto."
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 53, in main
+    process_document(config, document, i)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_document.py", line 76, in process_document
+    process_page(config, page_element, c)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_page.py", line 18, in process_page
+    process_elements_by_object(config, page_id, page_width, page_height, c)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_elements.py", line 29, in process_elements_by_object
+    process_flows_areas(config, element_object, page_height, page_width, c, parent_offset=(offset_x,offset_y), element=element)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\renderer\flowarea_renderer.py", line 86, in process_flows_areas
+    para, min_height_default = process_flow(config, flow, page_height, page_width, c=c, parent_offset=(offset_x,offset_y),max_width=s_x)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\renderer\flow_renderer.py", line 138, in process_flow
+    table = process_table(config,element,page_height,page_width,context=context,c=c,max_width=max_width)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\renderer\table_renderer.py", line 180, in process_table
+    row, min_height, cell_styles = process_rowset(config,all_elements.get(subrow.text),page_height,page_width,c=c,col_widths=col_widths)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\renderer\rowset_renderer.py", line 32, in process_rowset
+    elif evaluate_condition_v2(condition, register):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\core\utils.py", line 518, in evaluate_condition_v2
+    return safe_eval(condition_str)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\core\utils.py", line 467, in safe_eval
+    return not safe_eval(inner)
+               ^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\core\utils.py", line 471, in safe_eval
+    return eval_single(expr)
+           ^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\core\utils.py", line 460, in eval_single
+    val = get_value_from_path(expr)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\core\utils.py", line 431, in get_value_from_path
+    raise KeyError(f"No se encontró '{path}' en el contexto.")
+KeyError: "No se encontró 'Records.Current.Nombre_Cod_Fondo_2.isEmpty()' en el contexto."
+2025-11-11 13:52:37,186 [INFO] Servicio finalizado
+2025-11-11 13:54:18,926 [INFO] Inicio del servicio Generador PDF
+2025-11-11 13:54:18,926 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-11 13:54:25,887 [ERROR] Error en la ejecución del servicio: "No se encontró 'Records.Current.Nombre_Cod_Fondo_2.isEmpty()' en el contexto."
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 53, in main
+    process_document(config, document, i)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_document.py", line 76, in process_document
+    process_page(config, page_element, c)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_page.py", line 18, in process_page
+    process_elements_by_object(config, page_id, page_width, page_height, c)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_elements.py", line 29, in process_elements_by_object
+    process_flows_areas(config, element_object, page_height, page_width, c, parent_offset=(offset_x,offset_y), element=element)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\renderer\flowarea_renderer.py", line 86, in process_flows_areas
+    para, min_height_default = process_flow(config, flow, page_height, page_width, c=c, parent_offset=(offset_x,offset_y),max_width=s_x)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\renderer\flow_renderer.py", line 138, in process_flow
+    table = process_table(config,element,page_height,page_width,context=context,c=c,max_width=max_width)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\renderer\table_renderer.py", line 180, in process_table
+    row, min_height, cell_styles = process_rowset(config,all_elements.get(subrow.text),page_height,page_width,c=c,col_widths=col_widths)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\renderer\rowset_renderer.py", line 32, in process_rowset
+    elif evaluate_condition_v2(condition, register):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\core\utils.py", line 518, in evaluate_condition_v2
+    return safe_eval(condition_str)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\core\utils.py", line 467, in safe_eval
+    return not safe_eval(inner)
+               ^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\core\utils.py", line 471, in safe_eval
+    return eval_single(expr)
+           ^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\core\utils.py", line 460, in eval_single
+    val = get_value_from_path(expr)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\core\utils.py", line 431, in get_value_from_path
+    raise KeyError(f"No se encontró '{path}' en el contexto.")
+KeyError: "No se encontró 'Records.Current.Nombre_Cod_Fondo_2.isEmpty()' en el contexto."
+2025-11-11 13:54:25,900 [INFO] Servicio finalizado
+2025-11-11 13:54:41,020 [INFO] Inicio del servicio Generador PDF
+2025-11-11 13:54:41,021 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-11 14:11:15,028 [INFO] Inicio del servicio Generador PDF
+2025-11-11 14:11:15,034 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-11 14:11:22,863 [ERROR] Error en la ejecución del servicio: "No se encontró 'Records.Current.Nombre_Cod_Fondo_2.isEmpty()' en el contexto."
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 53, in main
+    process_document(config, document, i)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_document.py", line 76, in process_document
+    process_page(config, page_element, c)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_page.py", line 18, in process_page
+    process_elements_by_object(config, page_id, page_width, page_height, c)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_elements.py", line 29, in process_elements_by_object
+    process_flows_areas(config, element_object, page_height, page_width, c, parent_offset=(offset_x,offset_y), element=element)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\renderer\flowarea_renderer.py", line 85, in process_flows_areas
+    para, min_height_default = process_flow(config, flow, page_height, page_width, c=c, parent_offset=(offset_x,offset_y),max_width=s_x)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\renderer\flow_renderer.py", line 138, in process_flow
+    table = process_table(config,element,page_height,page_width,context=context,c=c,max_width=max_width)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\renderer\table_renderer.py", line 180, in process_table
+    row, min_height, cell_styles = process_rowset(config,all_elements.get(subrow.text),page_height,page_width,c=c,col_widths=col_widths)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\renderer\rowset_renderer.py", line 32, in process_rowset
+    elif evaluate_condition_v2(condition, register):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\core\utils.py", line 529, in evaluate_condition_v2
+    return safe_eval(condition_str)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\core\utils.py", line 478, in safe_eval
+    return not safe_eval(inner)
+               ^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\core\utils.py", line 482, in safe_eval
+    return eval_single(expr)
+           ^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\core\utils.py", line 471, in eval_single
+    val = get_value_from_path(expr)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\core\utils.py", line 442, in get_value_from_path
+    raise KeyError(f"No se encontró '{path}' en el contexto.")
+KeyError: "No se encontró 'Records.Current.Nombre_Cod_Fondo_2.isEmpty()' en el contexto."
+2025-11-11 14:11:22,885 [INFO] Servicio finalizado
+2025-11-11 14:11:33,586 [INFO] Inicio del servicio Generador PDF
+2025-11-11 14:11:33,586 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-11 14:14:10,503 [INFO] Inicio del servicio Generador PDF
+2025-11-11 14:14:10,503 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-11 14:15:56,596 [INFO] Inicio del servicio Generador PDF
+2025-11-11 14:15:56,596 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-11 14:18:10,277 [INFO] Inicio del servicio Generador PDF
+2025-11-11 14:18:10,279 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-11 14:19:01,066 [ERROR] Error en la ejecución del servicio: Error evaluando isEmpty: DATA.Records.Current.Nombre_Cod_Fondo_2.isEmpty() \u2192 evaluate_condition_v2.<locals>.<lambda>() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\core\utils.py", line 460, in eval_single
+    return method_func(actual, expected)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: evaluate_condition_v2.<locals>.<lambda>() takes 1 positional argument but 2 were given
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 53, in main
+    process_document(config, document, i)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_document.py", line 76, in process_document
+    process_page(config, page_element, c)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_page.py", line 18, in process_page
+    process_elements_by_object(config, page_id, page_width, page_height, c)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_elements.py", line 29, in process_elements_by_object
+    process_flows_areas(config, element_object, page_height, page_width, c, parent_offset=(offset_x,offset_y), element=element)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\renderer\flowarea_renderer.py", line 85, in process_flows_areas
+    para, min_height_default = process_flow(config, flow, page_height, page_width, c=c, parent_offset=(offset_x,offset_y),max_width=s_x)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\renderer\flow_renderer.py", line 138, in process_flow
+    table = process_table(config,element,page_height,page_width,context=context,c=c,max_width=max_width)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\renderer\table_renderer.py", line 180, in process_table
+    row, min_height, cell_styles = process_rowset(config,all_elements.get(subrow.text),page_height,page_width,c=c,col_widths=col_widths)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\renderer\rowset_renderer.py", line 32, in process_rowset
+    elif evaluate_condition_v2(condition, register):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\core\utils.py", line 532, in evaluate_condition_v2
+    return safe_eval(condition_str)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\core\utils.py", line 481, in safe_eval
+    return not safe_eval(inner)
+               ^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\core\utils.py", line 485, in safe_eval
+    return eval_single(expr)
+           ^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\core\utils.py", line 462, in eval_single
+    raise ValueError(f"Error evaluando {method_name}: {expr} \u2192 {e}")
+ValueError: Error evaluando isEmpty: DATA.Records.Current.Nombre_Cod_Fondo_2.isEmpty() \u2192 evaluate_condition_v2.<locals>.<lambda>() takes 1 positional argument but 2 were given
+2025-11-11 14:19:01,089 [INFO] Servicio finalizado
+2025-11-11 14:20:43,787 [INFO] Inicio del servicio Generador PDF
+2025-11-11 14:20:43,787 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-11 14:44:33,343 [INFO] Inicio del servicio Generador PDF
+2025-11-11 14:44:33,343 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-11 14:45:09,617 [ERROR] Error en la ejecución del servicio: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Proveedor de canalizaciones con nombre: No se pudo abrir una conexión con SQL Server [64].  (64) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Ha finalizado el tiempo de espera de inicio de sesión (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Error relacionado con la red o específico de instancia al establecer conexión con el servidor SQL Server. El servidor no se encuentra o no está accesible. Compruebe si el nombre de la instancia es correcto y si SQL Server está configurado para permitir conexiones remotas. Para obtener más información, vea los Libros en pantalla de SQL Server. (64)')
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 47, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\loader\input_loader.py", line 18, in load_input
+    workflow = xml_read(customer, product)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\parser\xml_parser.py", line 87, in xml_read
+    xml_string = get_xml(customer, product)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\parser\xml_parser.py", line 8, in get_xml
+    conn = get_connection("PruebaMapeo")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\infra\db.py", line 16, in get_connection
+    return pyodbc.connect(conn_str)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Proveedor de canalizaciones con nombre: No se pudo abrir una conexión con SQL Server [64].  (64) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Ha finalizado el tiempo de espera de inicio de sesión (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Error relacionado con la red o específico de instancia al establecer conexión con el servidor SQL Server. El servidor no se encuentra o no está accesible. Compruebe si el nombre de la instancia es correcto y si SQL Server está configurado para permitir conexiones remotas. Para obtener más información, vea los Libros en pantalla de SQL Server. (64)')
+2025-11-11 14:45:09,619 [INFO] Servicio finalizado
+2025-11-11 14:45:16,528 [INFO] Inicio del servicio Generador PDF
+2025-11-11 14:45:16,528 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-11 14:45:31,750 [ERROR] Error en la ejecución del servicio: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Proveedor de canalizaciones con nombre: No se pudo abrir una conexión con SQL Server [53].  (53) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Ha finalizado el tiempo de espera de inicio de sesión (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Error relacionado con la red o específico de instancia al establecer conexión con el servidor SQL Server. El servidor no se encuentra o no está accesible. Compruebe si el nombre de la instancia es correcto y si SQL Server está configurado para permitir conexiones remotas. Para obtener más información, vea los Libros en pantalla de SQL Server. (53)')
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 47, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\loader\input_loader.py", line 18, in load_input
+    workflow = xml_read(customer, product)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\parser\xml_parser.py", line 87, in xml_read
+    xml_string = get_xml(customer, product)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\parser\xml_parser.py", line 8, in get_xml
+    conn = get_connection("PruebaMapeo")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\infra\db.py", line 16, in get_connection
+    return pyodbc.connect(conn_str)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Proveedor de canalizaciones con nombre: No se pudo abrir una conexión con SQL Server [53].  (53) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Ha finalizado el tiempo de espera de inicio de sesión (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Error relacionado con la red o específico de instancia al establecer conexión con el servidor SQL Server. El servidor no se encuentra o no está accesible. Compruebe si el nombre de la instancia es correcto y si SQL Server está configurado para permitir conexiones remotas. Para obtener más información, vea los Libros en pantalla de SQL Server. (53)')
+2025-11-11 14:45:31,759 [INFO] Servicio finalizado
+2025-11-11 14:45:45,077 [INFO] Inicio del servicio Generador PDF
+2025-11-11 14:45:45,077 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-11 14:46:21,370 [ERROR] Error en la ejecución del servicio: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Proveedor de canalizaciones con nombre: No se pudo abrir una conexión con SQL Server [64].  (64) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Ha finalizado el tiempo de espera de inicio de sesión (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Error relacionado con la red o específico de instancia al establecer conexión con el servidor SQL Server. El servidor no se encuentra o no está accesible. Compruebe si el nombre de la instancia es correcto y si SQL Server está configurado para permitir conexiones remotas. Para obtener más información, vea los Libros en pantalla de SQL Server. (64)')
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 47, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\loader\input_loader.py", line 18, in load_input
+    workflow = xml_read(customer, product)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\parser\xml_parser.py", line 87, in xml_read
+    xml_string = get_xml(customer, product)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\parser\xml_parser.py", line 8, in get_xml
+    conn = get_connection("PruebaMapeo")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\infra\db.py", line 16, in get_connection
+    return pyodbc.connect(conn_str)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Proveedor de canalizaciones con nombre: No se pudo abrir una conexión con SQL Server [64].  (64) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Ha finalizado el tiempo de espera de inicio de sesión (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Error relacionado con la red o específico de instancia al establecer conexión con el servidor SQL Server. El servidor no se encuentra o no está accesible. Compruebe si el nombre de la instancia es correcto y si SQL Server está configurado para permitir conexiones remotas. Para obtener más información, vea los Libros en pantalla de SQL Server. (64)')
+2025-11-11 14:46:21,381 [INFO] Servicio finalizado
+2025-11-11 14:46:42,265 [INFO] Inicio del servicio Generador PDF
+2025-11-11 14:46:42,267 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-11 14:47:18,563 [ERROR] Error en la ejecución del servicio: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Proveedor de canalizaciones con nombre: No se pudo abrir una conexión con SQL Server [64].  (64) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Ha finalizado el tiempo de espera de inicio de sesión (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Error relacionado con la red o específico de instancia al establecer conexión con el servidor SQL Server. El servidor no se encuentra o no está accesible. Compruebe si el nombre de la instancia es correcto y si SQL Server está configurado para permitir conexiones remotas. Para obtener más información, vea los Libros en pantalla de SQL Server. (64)')
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 47, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\loader\input_loader.py", line 18, in load_input
+    workflow = xml_read(customer, product)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\parser\xml_parser.py", line 87, in xml_read
+    xml_string = get_xml(customer, product)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\parser\xml_parser.py", line 8, in get_xml
+    conn = get_connection("PruebaMapeo")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\infra\db.py", line 16, in get_connection
+    return pyodbc.connect(conn_str)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Proveedor de canalizaciones con nombre: No se pudo abrir una conexión con SQL Server [64].  (64) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Ha finalizado el tiempo de espera de inicio de sesión (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Error relacionado con la red o específico de instancia al establecer conexión con el servidor SQL Server. El servidor no se encuentra o no está accesible. Compruebe si el nombre de la instancia es correcto y si SQL Server está configurado para permitir conexiones remotas. Para obtener más información, vea los Libros en pantalla de SQL Server. (64)')
+2025-11-11 14:47:18,578 [INFO] Servicio finalizado
+2025-11-11 14:47:43,644 [INFO] Inicio del servicio Generador PDF
+2025-11-11 14:47:43,644 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-11 14:48:19,940 [ERROR] Error en la ejecución del servicio: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Proveedor de canalizaciones con nombre: No se pudo abrir una conexión con SQL Server [64].  (64) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Ha finalizado el tiempo de espera de inicio de sesión (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Error relacionado con la red o específico de instancia al establecer conexión con el servidor SQL Server. El servidor no se encuentra o no está accesible. Compruebe si el nombre de la instancia es correcto y si SQL Server está configurado para permitir conexiones remotas. Para obtener más información, vea los Libros en pantalla de SQL Server. (64)')
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 47, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\loader\input_loader.py", line 18, in load_input
+    workflow = xml_read(customer, product)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\parser\xml_parser.py", line 87, in xml_read
+    xml_string = get_xml(customer, product)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\parser\xml_parser.py", line 8, in get_xml
+    conn = get_connection("PruebaMapeo")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\infra\db.py", line 16, in get_connection
+    return pyodbc.connect(conn_str)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Proveedor de canalizaciones con nombre: No se pudo abrir una conexión con SQL Server [64].  (64) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Ha finalizado el tiempo de espera de inicio de sesión (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Error relacionado con la red o específico de instancia al establecer conexión con el servidor SQL Server. El servidor no se encuentra o no está accesible. Compruebe si el nombre de la instancia es correcto y si SQL Server está configurado para permitir conexiones remotas. Para obtener más información, vea los Libros en pantalla de SQL Server. (64)')
+2025-11-11 14:48:19,940 [INFO] Servicio finalizado
+2025-11-11 14:48:24,497 [INFO] Inicio del servicio Generador PDF
+2025-11-11 14:48:24,497 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-11 14:48:39,734 [ERROR] Error en la ejecución del servicio: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Proveedor de canalizaciones con nombre: No se pudo abrir una conexión con SQL Server [53].  (53) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Ha finalizado el tiempo de espera de inicio de sesión (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Error relacionado con la red o específico de instancia al establecer conexión con el servidor SQL Server. El servidor no se encuentra o no está accesible. Compruebe si el nombre de la instancia es correcto y si SQL Server está configurado para permitir conexiones remotas. Para obtener más información, vea los Libros en pantalla de SQL Server. (53)')
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 47, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\loader\input_loader.py", line 18, in load_input
+    workflow = xml_read(customer, product)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\parser\xml_parser.py", line 87, in xml_read
+    xml_string = get_xml(customer, product)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\parser\xml_parser.py", line 8, in get_xml
+    conn = get_connection("PruebaMapeo")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\infra\db.py", line 16, in get_connection
+    return pyodbc.connect(conn_str)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Proveedor de canalizaciones con nombre: No se pudo abrir una conexión con SQL Server [53].  (53) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Ha finalizado el tiempo de espera de inicio de sesión (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Error relacionado con la red o específico de instancia al establecer conexión con el servidor SQL Server. El servidor no se encuentra o no está accesible. Compruebe si el nombre de la instancia es correcto y si SQL Server está configurado para permitir conexiones remotas. Para obtener más información, vea los Libros en pantalla de SQL Server. (53)')
+2025-11-11 14:48:39,734 [INFO] Servicio finalizado
+2025-11-11 14:48:47,142 [INFO] Inicio del servicio Generador PDF
+2025-11-11 14:48:47,142 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-11 14:49:07,393 [INFO] Inicio del servicio Generador PDF
+2025-11-11 14:49:07,393 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-11 14:49:23,429 [ERROR] Error en la ejecución del servicio: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Proveedor de canalizaciones con nombre: No se pudo abrir una conexión con SQL Server [53].  (53) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Ha finalizado el tiempo de espera de inicio de sesión (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Error relacionado con la red o específico de instancia al establecer conexión con el servidor SQL Server. El servidor no se encuentra o no está accesible. Compruebe si el nombre de la instancia es correcto y si SQL Server está configurado para permitir conexiones remotas. Para obtener más información, vea los Libros en pantalla de SQL Server. (53)')
+Traceback (most recent call last):
+  File "D:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 47, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Proyectos\proyectoPDF\PDF-Generator\loader\input_loader.py", line 18, in load_input
+    workflow = xml_read(customer, product)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Proyectos\proyectoPDF\PDF-Generator\parser\xml_parser.py", line 87, in xml_read
+    xml_string = get_xml(customer, product)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Proyectos\proyectoPDF\PDF-Generator\parser\xml_parser.py", line 8, in get_xml
+    conn = get_connection("PruebaMapeo")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Proyectos\proyectoPDF\PDF-Generator\infra\db.py", line 16, in get_connection
+    return pyodbc.connect(conn_str)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Proveedor de canalizaciones con nombre: No se pudo abrir una conexión con SQL Server [53].  (53) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Ha finalizado el tiempo de espera de inicio de sesión (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Error relacionado con la red o específico de instancia al establecer conexión con el servidor SQL Server. El servidor no se encuentra o no está accesible. Compruebe si el nombre de la instancia es correcto y si SQL Server está configurado para permitir conexiones remotas. Para obtener más información, vea los Libros en pantalla de SQL Server. (53)')
+2025-11-11 14:49:23,441 [INFO] Servicio finalizado
+2025-11-11 14:49:23,443 [ERROR] Error en la ejecución del servicio: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Proveedor de canalizaciones con nombre: No se pudo abrir una conexión con SQL Server [64].  (64) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Ha finalizado el tiempo de espera de inicio de sesión (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Error relacionado con la red o específico de instancia al establecer conexión con el servidor SQL Server. El servidor no se encuentra o no está accesible. Compruebe si el nombre de la instancia es correcto y si SQL Server está configurado para permitir conexiones remotas. Para obtener más información, vea los Libros en pantalla de SQL Server. (64)')
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 47, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\loader\input_loader.py", line 18, in load_input
+    workflow = xml_read(customer, product)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\parser\xml_parser.py", line 87, in xml_read
+    xml_string = get_xml(customer, product)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\parser\xml_parser.py", line 8, in get_xml
+    conn = get_connection("PruebaMapeo")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\infra\db.py", line 16, in get_connection
+    return pyodbc.connect(conn_str)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Proveedor de canalizaciones con nombre: No se pudo abrir una conexión con SQL Server [64].  (64) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Ha finalizado el tiempo de espera de inicio de sesión (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Error relacionado con la red o específico de instancia al establecer conexión con el servidor SQL Server. El servidor no se encuentra o no está accesible. Compruebe si el nombre de la instancia es correcto y si SQL Server está configurado para permitir conexiones remotas. Para obtener más información, vea los Libros en pantalla de SQL Server. (64)')
+2025-11-11 14:49:23,450 [INFO] Servicio finalizado
+2025-11-11 14:50:07,571 [INFO] Inicio del servicio Generador PDF
+2025-11-11 14:50:07,571 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-11 14:50:22,353 [INFO] Inicio del servicio Generador PDF
+2025-11-11 14:50:22,354 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-11 14:50:58,620 [ERROR] Error en la ejecución del servicio: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Proveedor de canalizaciones con nombre: No se pudo abrir una conexión con SQL Server [64].  (64) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Ha finalizado el tiempo de espera de inicio de sesión (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Error relacionado con la red o específico de instancia al establecer conexión con el servidor SQL Server. El servidor no se encuentra o no está accesible. Compruebe si el nombre de la instancia es correcto y si SQL Server está configurado para permitir conexiones remotas. Para obtener más información, vea los Libros en pantalla de SQL Server. (64)')
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 47, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\loader\input_loader.py", line 18, in load_input
+    workflow = xml_read(customer, product)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\parser\xml_parser.py", line 87, in xml_read
+    xml_string = get_xml(customer, product)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\parser\xml_parser.py", line 8, in get_xml
+    conn = get_connection("PruebaMapeo")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\infra\db.py", line 16, in get_connection
+    return pyodbc.connect(conn_str)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Proveedor de canalizaciones con nombre: No se pudo abrir una conexión con SQL Server [64].  (64) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Ha finalizado el tiempo de espera de inicio de sesión (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Error relacionado con la red o específico de instancia al establecer conexión con el servidor SQL Server. El servidor no se encuentra o no está accesible. Compruebe si el nombre de la instancia es correcto y si SQL Server está configurado para permitir conexiones remotas. Para obtener más información, vea los Libros en pantalla de SQL Server. (64)')
+2025-11-11 14:50:58,636 [INFO] Servicio finalizado
+2025-11-11 14:52:40,380 [INFO] Inicio del servicio Generador PDF
+2025-11-11 14:52:40,396 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-11 14:53:21,983 [ERROR] Error en la ejecución del servicio: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Proveedor de canalizaciones con nombre: No se pudo abrir una conexión con SQL Server [64].  (64) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Ha finalizado el tiempo de espera de inicio de sesión (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Error relacionado con la red o específico de instancia al establecer conexión con el servidor SQL Server. El servidor no se encuentra o no está accesible. Compruebe si el nombre de la instancia es correcto y si SQL Server está configurado para permitir conexiones remotas. Para obtener más información, vea los Libros en pantalla de SQL Server. (64)')
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 47, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\loader\input_loader.py", line 18, in load_input
+    workflow = xml_read(customer, product)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\parser\xml_parser.py", line 87, in xml_read
+    xml_string = get_xml(customer, product)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\parser\xml_parser.py", line 8, in get_xml
+    conn = get_connection("PruebaMapeo")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\infra\db.py", line 16, in get_connection
+    return pyodbc.connect(conn_str)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Proveedor de canalizaciones con nombre: No se pudo abrir una conexión con SQL Server [64].  (64) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Ha finalizado el tiempo de espera de inicio de sesión (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Error relacionado con la red o específico de instancia al establecer conexión con el servidor SQL Server. El servidor no se encuentra o no está accesible. Compruebe si el nombre de la instancia es correcto y si SQL Server está configurado para permitir conexiones remotas. Para obtener más información, vea los Libros en pantalla de SQL Server. (64)')
+2025-11-11 14:53:21,983 [INFO] Servicio finalizado
+2025-11-11 14:53:35,725 [INFO] Inicio del servicio Generador PDF
+2025-11-11 14:53:35,725 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-11 14:54:33,099 [ERROR] Error en la ejecución del servicio: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Proveedor de canalizaciones con nombre: No se pudo abrir una conexión con SQL Server [64].  (64) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Ha finalizado el tiempo de espera de inicio de sesión (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Error relacionado con la red o específico de instancia al establecer conexión con el servidor SQL Server. El servidor no se encuentra o no está accesible. Compruebe si el nombre de la instancia es correcto y si SQL Server está configurado para permitir conexiones remotas. Para obtener más información, vea los Libros en pantalla de SQL Server. (64)')
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 47, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\loader\input_loader.py", line 18, in load_input
+    workflow = xml_read(customer, product)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\parser\xml_parser.py", line 87, in xml_read
+    xml_string = get_xml(customer, product)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\parser\xml_parser.py", line 8, in get_xml
+    conn = get_connection("PruebaMapeo")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\infra\db.py", line 16, in get_connection
+    return pyodbc.connect(conn_str)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]Proveedor de canalizaciones con nombre: No se pudo abrir una conexión con SQL Server [64].  (64) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Ha finalizado el tiempo de espera de inicio de sesión (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Error relacionado con la red o específico de instancia al establecer conexión con el servidor SQL Server. El servidor no se encuentra o no está accesible. Compruebe si el nombre de la instancia es correcto y si SQL Server está configurado para permitir conexiones remotas. Para obtener más información, vea los Libros en pantalla de SQL Server. (64)')
+2025-11-11 14:54:35,786 [INFO] Servicio finalizado
+2025-11-11 14:54:46,728 [INFO] Inicio del servicio Generador PDF
+2025-11-11 14:54:46,728 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-11 14:56:20,644 [INFO] Inicio del servicio Generador PDF
+2025-11-11 14:56:20,645 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-11 14:59:10,838 [ERROR] Error en la ejecución del servicio: Error evaluando equalCaseInsensitive: if(DATA.Records.Current.Canal_Datos.containsCaseInsensitive("MU")==false  and  DATA.Records.Current.Canal_Datos.equalCaseInsensitive("EN")==false  and  DATA.Records.Current.Canal_Datos.equalCaseInsensitive("PE")==false)
+   {
+    return true;
+   }
+else
+   {
+    return false;
+   } \u2192 'No se encontró \'if(Records.Canal_Datos.containsCaseInsensitive("MU")==false  and  Records.Canal_Datos\' en el contexto.'
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\core\utils.py", line 459, in eval_single
+    actual = get_value_from_path(field)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\core\utils.py", line 445, in get_value_from_path
+    raise KeyError(f"No se encontró '{path}' en el contexto.")
+KeyError: 'No se encontró \'if(Records.Canal_Datos.containsCaseInsensitive("MU")==false  and  Records.Canal_Datos\' en el contexto.'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 53, in main
+    process_document(config, document, i)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_document.py", line 76, in process_document
+    process_page(config, page_element, c)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_page.py", line 18, in process_page
+    process_elements_by_object(config, page_id, page_width, page_height, c)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_elements.py", line 29, in process_elements_by_object
+    process_flows_areas(config, element_object, page_height, page_width, c, parent_offset=(offset_x,offset_y), element=element)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\renderer\flowarea_renderer.py", line 85, in process_flows_areas
+    para, min_height_default = process_flow(config, flow, page_height, page_width, c=c, parent_offset=(offset_x,offset_y),max_width=s_x)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\renderer\flow_renderer.py", line 33, in process_flow
+    if evaluate_condition_v2(condition, register):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\core\utils.py", line 530, in evaluate_condition_v2
+    return all(safe_eval(p) for p in parts)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\core\utils.py", line 530, in <genexpr>
+    return all(safe_eval(p) for p in parts)
+               ^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\core\utils.py", line 485, in safe_eval
+    return eval_single(expr)
+           ^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\core\utils.py", line 462, in eval_single
+    raise ValueError(f"Error evaluando {method_name}: {expr} \u2192 {e}")
+ValueError: Error evaluando equalCaseInsensitive: if(DATA.Records.Current.Canal_Datos.containsCaseInsensitive("MU")==false  and  DATA.Records.Current.Canal_Datos.equalCaseInsensitive("EN")==false  and  DATA.Records.Current.Canal_Datos.equalCaseInsensitive("PE")==false)
+   {
+    return true;
+   }
+else
+   {
+    return false;
+   } \u2192 'No se encontró \'if(Records.Canal_Datos.containsCaseInsensitive("MU")==false  and  Records.Canal_Datos\' en el contexto.'
+2025-11-11 14:59:10,868 [INFO] Servicio finalizado
+2025-11-11 15:00:30,822 [INFO] Inicio del servicio Generador PDF
+2025-11-11 15:00:30,822 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-11 15:01:30,862 [INFO] Inicio del servicio Generador PDF
+2025-11-11 15:01:30,862 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-11 15:01:37,859 [ERROR] Error en la ejecución del servicio: module 'core.constants' has no attribute 'VALID_IMAGE_EXTENSIONS'
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 53, in main
+    process_document(config, document, i)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_document.py", line 76, in process_document
+    process_page(config, page_element, c)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_page.py", line 18, in process_page
+    process_elements_by_object(config, page_id, page_width, page_height, c)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_elements.py", line 40, in process_elements_by_object
+    process_image_objects(config, element_object, image_element, images_cache, page_height, c, parent_offset=(offset_x,offset_y))
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\renderer\image_renderer.py", line 67, in process_image_objects
+    if path.lower().endswith(const.VALID_IMAGE_EXTENSIONS):
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'core.constants' has no attribute 'VALID_IMAGE_EXTENSIONS'
+2025-11-11 15:01:37,875 [INFO] Servicio finalizado
+2025-11-11 15:03:01,829 [INFO] Inicio del servicio Generador PDF
+2025-11-11 15:03:01,829 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-11 15:07:56,448 [INFO] Inicio del servicio Generador PDF
+2025-11-11 15:07:56,448 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-11 15:08:06,041 [ERROR] Error en la ejecución del servicio: 
+paragraph text '<para><font name="Roboto-Medium-Regular" size="7.000003779999999" color="#4a4a49">Colfondos S.A. Pensiones y Cesant\xedas. Sociedad administradora de fondos de pensiones y cesant\xedas. L\xedneas Contact Center Bogot\xe1 6017484888, Medell\xedn 6046042888,</font></para>' caused exception Can't map determine family/bold/italic for roboto-medium-regular
+Traceback (most recent call last):
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\paraparser.py", line 3218, in parse
+    self.feed(text)
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\html\parser.py", line 110, in feed
+    self.goahead(0)
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\html\parser.py", line 170, in goahead
+    k = self.parse_starttag(i)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\html\parser.py", line 337, in parse_starttag
+    self.handle_starttag(tag, attrs)
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\paraparser.py", line 3241, in handle_starttag
+    start(attrs or {})
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\paraparser.py", line 2824, in start_font
+    A['fontName'], A['bold'], A['italic'] = ps2tt(A['fontName'])
+                                            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\lib\fonts.py", line 78, in ps2tt
+    raise ValueError("Can't map determine family/bold/italic for %s" % psfn)
+ValueError: Can't map determine family/bold/italic for roboto-medium-regular
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 53, in main
+    process_document(config, document, i)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_document.py", line 76, in process_document
+    process_page(config, page_element, c)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_page.py", line 29, in process_page
+    process_page(config, page_element, c)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_page.py", line 29, in process_page
+    process_page(config, page_element, c)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_page.py", line 18, in process_page
+    process_elements_by_object(config, page_id, page_width, page_height, c)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_elements.py", line 29, in process_elements_by_object
+    process_flows_areas(config, element_object, page_height, page_width, c, parent_offset=(offset_x,offset_y), element=element)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\renderer\flowarea_renderer.py", line 85, in process_flows_areas
+    para, min_height_default = process_flow(config, flow, page_height, page_width, c=c, parent_offset=(offset_x,offset_y),max_width=s_x)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\renderer\flow_renderer.py", line 326, in process_flow
+    para.append(Paragraph(full_text, para_style))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\paragraph.py", line 1859, in __init__
+    self._setup(text, style, bulletText or getattr(style,'bulletText',None), frags, cleanBlockQuotedText)
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\paragraph.py", line 1880, in _setup
+    style, frags, bulletTextFrags = _parser.parse(text,style)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\paraparser.py", line 3220, in parse
+    annotateException('\nparagraph text %s caused exception' % ascii(text))
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\lib\utils.py", line 1176, in annotateException
+    rl_reraise(t,t(sep.join((_ for _ in (msg,str(v),postMsg) if _))),b)
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\lib\utils.py", line 138, in rl_reraise
+    raise v.with_traceback(b)
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\paraparser.py", line 3218, in parse
+    self.feed(text)
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\html\parser.py", line 110, in feed
+    self.goahead(0)
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\html\parser.py", line 170, in goahead
+    k = self.parse_starttag(i)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\html\parser.py", line 337, in parse_starttag
+    self.handle_starttag(tag, attrs)
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\paraparser.py", line 3241, in handle_starttag
+    start(attrs or {})
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\paraparser.py", line 2824, in start_font
+    A['fontName'], A['bold'], A['italic'] = ps2tt(A['fontName'])
+                                            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\lib\fonts.py", line 78, in ps2tt
+    raise ValueError("Can't map determine family/bold/italic for %s" % psfn)
+ValueError: 
+paragraph text '<para><font name="Roboto-Medium-Regular" size="7.000003779999999" color="#4a4a49">Colfondos S.A. Pensiones y Cesant\xedas. Sociedad administradora de fondos de pensiones y cesant\xedas. L\xedneas Contact Center Bogot\xe1 6017484888, Medell\xedn 6046042888,</font></para>' caused exception Can't map determine family/bold/italic for roboto-medium-regular
+2025-11-11 15:08:06,091 [INFO] Servicio finalizado
+2025-11-11 15:12:32,721 [INFO] Inicio del servicio Generador PDF
+2025-11-11 15:12:32,721 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-11 15:12:40,686 [ERROR] Error en la ejecución del servicio: 
+paragraph text '<para><font name="Roboto-Medium-Regular" size="7.000003779999999" color="#4a4a49">Colfondos S.A. Pensiones y Cesant\xedas. Sociedad administradora de fondos de pensiones y cesant\xedas. L\xedneas Contact Center Bogot\xe1 6017484888, Medell\xedn 6046042888,</font></para>' caused exception Can't map determine family/bold/italic for roboto-medium-regular
+Traceback (most recent call last):
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\paraparser.py", line 3218, in parse
+    self.feed(text)
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\html\parser.py", line 110, in feed
+    self.goahead(0)
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\html\parser.py", line 170, in goahead
+    k = self.parse_starttag(i)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\html\parser.py", line 337, in parse_starttag
+    self.handle_starttag(tag, attrs)
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\paraparser.py", line 3241, in handle_starttag
+    start(attrs or {})
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\paraparser.py", line 2824, in start_font
+    A['fontName'], A['bold'], A['italic'] = ps2tt(A['fontName'])
+                                            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\lib\fonts.py", line 78, in ps2tt
+    raise ValueError("Can't map determine family/bold/italic for %s" % psfn)
+ValueError: Can't map determine family/bold/italic for roboto-medium-regular
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 53, in main
+    process_document(config, document, i)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_document.py", line 76, in process_document
+    process_page(config, page_element, c)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_page.py", line 31, in process_page
+    process_page(config, page_element, c)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_page.py", line 31, in process_page
+    process_page(config, page_element, c)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_page.py", line 20, in process_page
+    process_elements_by_object(config, page_id, page_width, page_height, c)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_elements.py", line 29, in process_elements_by_object
+    process_flows_areas(config, element_object, page_height, page_width, c, parent_offset=(offset_x,offset_y), element=element)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\renderer\flowarea_renderer.py", line 85, in process_flows_areas
+    para, min_height_default = process_flow(config, flow, page_height, page_width, c=c, parent_offset=(offset_x,offset_y),max_width=s_x)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\renderer\flow_renderer.py", line 326, in process_flow
+    para.append(Paragraph(full_text, para_style))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\paragraph.py", line 1859, in __init__
+    self._setup(text, style, bulletText or getattr(style,'bulletText',None), frags, cleanBlockQuotedText)
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\paragraph.py", line 1880, in _setup
+    style, frags, bulletTextFrags = _parser.parse(text,style)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\paraparser.py", line 3220, in parse
+    annotateException('\nparagraph text %s caused exception' % ascii(text))
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\lib\utils.py", line 1176, in annotateException
+    rl_reraise(t,t(sep.join((_ for _ in (msg,str(v),postMsg) if _))),b)
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\lib\utils.py", line 138, in rl_reraise
+    raise v.with_traceback(b)
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\paraparser.py", line 3218, in parse
+    self.feed(text)
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\html\parser.py", line 110, in feed
+    self.goahead(0)
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\html\parser.py", line 170, in goahead
+    k = self.parse_starttag(i)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\html\parser.py", line 337, in parse_starttag
+    self.handle_starttag(tag, attrs)
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\paraparser.py", line 3241, in handle_starttag
+    start(attrs or {})
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\paraparser.py", line 2824, in start_font
+    A['fontName'], A['bold'], A['italic'] = ps2tt(A['fontName'])
+                                            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\lib\fonts.py", line 78, in ps2tt
+    raise ValueError("Can't map determine family/bold/italic for %s" % psfn)
+ValueError: 
+paragraph text '<para><font name="Roboto-Medium-Regular" size="7.000003779999999" color="#4a4a49">Colfondos S.A. Pensiones y Cesant\xedas. Sociedad administradora de fondos de pensiones y cesant\xedas. L\xedneas Contact Center Bogot\xe1 6017484888, Medell\xedn 6046042888,</font></para>' caused exception Can't map determine family/bold/italic for roboto-medium-regular
+2025-11-11 15:12:40,741 [INFO] Servicio finalizado
+2025-11-11 15:17:37,894 [INFO] Inicio del servicio Generador PDF
+2025-11-11 15:17:37,894 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-11 15:29:45,076 [INFO] Inicio del servicio Generador PDF
+2025-11-11 15:29:45,076 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-11 15:29:53,853 [ERROR] Error en la ejecución del servicio: 
+paragraph text '<para><font name="Roboto-Medium-Regular" size="7.000003779999999" color="#4a4a49">Colfondos S.A. Pensiones y Cesant\xedas. Sociedad administradora de fondos de pensiones y cesant\xedas. L\xedneas Contact Center Bogot\xe1 6017484888, Medell\xedn 6046042888,</font></para>' caused exception Can't map determine family/bold/italic for roboto-medium-regular
+Traceback (most recent call last):
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\paraparser.py", line 3218, in parse
+    self.feed(text)
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\html\parser.py", line 110, in feed
+    self.goahead(0)
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\html\parser.py", line 170, in goahead
+    k = self.parse_starttag(i)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\html\parser.py", line 337, in parse_starttag
+    self.handle_starttag(tag, attrs)
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\paraparser.py", line 3241, in handle_starttag
+    start(attrs or {})
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\paraparser.py", line 2824, in start_font
+    A['fontName'], A['bold'], A['italic'] = ps2tt(A['fontName'])
+                                            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\lib\fonts.py", line 78, in ps2tt
+    raise ValueError("Can't map determine family/bold/italic for %s" % psfn)
+ValueError: Can't map determine family/bold/italic for roboto-medium-regular
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 53, in main
+    process_document(config, document, i)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_document.py", line 76, in process_document
+    process_page(config, page_element, c)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_page.py", line 31, in process_page
+    process_page(config, page_element, c)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_page.py", line 31, in process_page
+    process_page(config, page_element, c)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_page.py", line 20, in process_page
+    process_elements_by_object(config, page_id, page_width, page_height, c)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_elements.py", line 29, in process_elements_by_object
+    process_flows_areas(config, element_object, page_height, page_width, c, parent_offset=(offset_x,offset_y), element=element)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\renderer\flowarea_renderer.py", line 85, in process_flows_areas
+    para, min_height_default = process_flow(config, flow, page_height, page_width, c=c, parent_offset=(offset_x,offset_y),max_width=s_x)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\renderer\flow_renderer.py", line 326, in process_flow
+    para.append(Paragraph(full_text, para_style))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\paragraph.py", line 1859, in __init__
+    self._setup(text, style, bulletText or getattr(style,'bulletText',None), frags, cleanBlockQuotedText)
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\paragraph.py", line 1880, in _setup
+    style, frags, bulletTextFrags = _parser.parse(text,style)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\paraparser.py", line 3220, in parse
+    annotateException('\nparagraph text %s caused exception' % ascii(text))
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\lib\utils.py", line 1176, in annotateException
+    rl_reraise(t,t(sep.join((_ for _ in (msg,str(v),postMsg) if _))),b)
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\lib\utils.py", line 138, in rl_reraise
+    raise v.with_traceback(b)
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\paraparser.py", line 3218, in parse
+    self.feed(text)
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\html\parser.py", line 110, in feed
+    self.goahead(0)
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\html\parser.py", line 170, in goahead
+    k = self.parse_starttag(i)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\html\parser.py", line 337, in parse_starttag
+    self.handle_starttag(tag, attrs)
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\paraparser.py", line 3241, in handle_starttag
+    start(attrs or {})
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\paraparser.py", line 2824, in start_font
+    A['fontName'], A['bold'], A['italic'] = ps2tt(A['fontName'])
+                                            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\lib\fonts.py", line 78, in ps2tt
+    raise ValueError("Can't map determine family/bold/italic for %s" % psfn)
+ValueError: 
+paragraph text '<para><font name="Roboto-Medium-Regular" size="7.000003779999999" color="#4a4a49">Colfondos S.A. Pensiones y Cesant\xedas. Sociedad administradora de fondos de pensiones y cesant\xedas. L\xedneas Contact Center Bogot\xe1 6017484888, Medell\xedn 6046042888,</font></para>' caused exception Can't map determine family/bold/italic for roboto-medium-regular
+2025-11-11 15:29:53,897 [INFO] Servicio finalizado
+2025-11-12 06:25:48,302 [INFO] Inicio del servicio Generador PDF
+2025-11-12 06:25:48,302 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-12 06:29:59,995 [ERROR] Error en la ejecución del servicio: 
+paragraph text '<para><font name="Roboto-Medium-Regular" size="7.000003779999999" color="#4a4a49">Colfondos S.A. Pensiones y Cesant\xedas. Sociedad administradora de fondos de pensiones y cesant\xedas. L\xedneas Contact Center Bogot\xe1 6017484888, Medell\xedn 6046042888,</font></para>' caused exception Can't map determine family/bold/italic for roboto-medium-regular
+Traceback (most recent call last):
+  File "c:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\paraparser.py", line 3218, in parse
+    self.feed(text)
+  File "c:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\html\parser.py", line 110, in feed
+    self.goahead(0)
+  File "c:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\html\parser.py", line 170, in goahead
+    k = self.parse_starttag(i)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\html\parser.py", line 337, in parse_starttag
+    self.handle_starttag(tag, attrs)
+  File "c:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\paraparser.py", line 3241, in handle_starttag
+    start(attrs or {})
+  File "c:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\paraparser.py", line 2824, in start_font
+    A['fontName'], A['bold'], A['italic'] = ps2tt(A['fontName'])
+                                            ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\lib\fonts.py", line 78, in ps2tt
+    raise ValueError("Can't map determine family/bold/italic for %s" % psfn)
+ValueError: Can't map determine family/bold/italic for roboto-medium-regular
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 53, in main
+    process_document(config, document, i)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_document.py", line 76, in process_document
+    process_page(config, page_element, c)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_page.py", line 31, in process_page
+    process_page(config, page_element, c)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_page.py", line 31, in process_page
+    process_page(config, page_element, c)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_page.py", line 20, in process_page
+    process_elements_by_object(config, page_id, page_width, page_height, c)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_elements.py", line 29, in process_elements_by_object
+    process_flows_areas(config, element_object, page_height, page_width, c, parent_offset=(offset_x,offset_y), element=element)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\renderer\flowarea_renderer.py", line 85, in process_flows_areas
+    para, min_height_default = process_flow(config, flow, page_height, page_width, c=c, parent_offset=(offset_x,offset_y),max_width=s_x)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\renderer\flow_renderer.py", line 326, in process_flow
+    para.append(Paragraph(full_text, para_style))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\paragraph.py", line 1859, in __init__
+    self._setup(text, style, bulletText or getattr(style,'bulletText',None), frags, cleanBlockQuotedText)
+  File "c:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\paragraph.py", line 1880, in _setup
+    style, frags, bulletTextFrags = _parser.parse(text,style)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\paraparser.py", line 3220, in parse
+    annotateException('\nparagraph text %s caused exception' % ascii(text))
+  File "c:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\lib\utils.py", line 1176, in annotateException
+    rl_reraise(t,t(sep.join((_ for _ in (msg,str(v),postMsg) if _))),b)
+  File "c:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\lib\utils.py", line 138, in rl_reraise
+    raise v.with_traceback(b)
+  File "c:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\paraparser.py", line 3218, in parse
+    self.feed(text)
+  File "c:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\html\parser.py", line 110, in feed
+    self.goahead(0)
+  File "c:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\html\parser.py", line 170, in goahead
+    k = self.parse_starttag(i)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\html\parser.py", line 337, in parse_starttag
+    self.handle_starttag(tag, attrs)
+  File "c:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\paraparser.py", line 3241, in handle_starttag
+    start(attrs or {})
+  File "c:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\paraparser.py", line 2824, in start_font
+    A['fontName'], A['bold'], A['italic'] = ps2tt(A['fontName'])
+                                            ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\lib\fonts.py", line 78, in ps2tt
+    raise ValueError("Can't map determine family/bold/italic for %s" % psfn)
+ValueError: 
+paragraph text '<para><font name="Roboto-Medium-Regular" size="7.000003779999999" color="#4a4a49">Colfondos S.A. Pensiones y Cesant\xedas. Sociedad administradora de fondos de pensiones y cesant\xedas. L\xedneas Contact Center Bogot\xe1 6017484888, Medell\xedn 6046042888,</font></para>' caused exception Can't map determine family/bold/italic for roboto-medium-regular
+2025-11-12 06:30:00,045 [INFO] Servicio finalizado
+2025-11-12 06:30:15,889 [INFO] Inicio del servicio Generador PDF
+2025-11-12 06:30:15,889 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-12 06:32:30,346 [ERROR] Error en la ejecución del servicio: 
+paragraph text '<para><font name="Roboto-Medium-Regular" size="7.000003779999999" color="#4a4a49">Colfondos S.A. Pensiones y Cesant\xedas. Sociedad administradora de fondos de pensiones y cesant\xedas. L\xedneas Contact Center Bogot\xe1 6017484888, Medell\xedn 6046042888,</font></para>' caused exception Can't map determine family/bold/italic for roboto-medium-regular
+Traceback (most recent call last):
+  File "c:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\paraparser.py", line 3218, in parse
+    self.feed(text)
+  File "c:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\html\parser.py", line 110, in feed
+    self.goahead(0)
+  File "c:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\html\parser.py", line 170, in goahead
+    k = self.parse_starttag(i)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\html\parser.py", line 337, in parse_starttag
+    self.handle_starttag(tag, attrs)
+  File "c:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\paraparser.py", line 3241, in handle_starttag
+    start(attrs or {})
+  File "c:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\paraparser.py", line 2824, in start_font
+    A['fontName'], A['bold'], A['italic'] = ps2tt(A['fontName'])
+                                            ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\lib\fonts.py", line 78, in ps2tt
+    raise ValueError("Can't map determine family/bold/italic for %s" % psfn)
+ValueError: Can't map determine family/bold/italic for roboto-medium-regular
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 53, in main
+    process_document(config, document, i)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_document.py", line 76, in process_document
+    process_page(config, page_element, c)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_page.py", line 31, in process_page
+    process_page(config, page_element, c)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_page.py", line 31, in process_page
+    process_page(config, page_element, c)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_page.py", line 20, in process_page
+    process_elements_by_object(config, page_id, page_width, page_height, c)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_elements.py", line 29, in process_elements_by_object
+    process_flows_areas(config, element_object, page_height, page_width, c, parent_offset=(offset_x,offset_y), element=element)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\renderer\flowarea_renderer.py", line 85, in process_flows_areas
+    para, min_height_default = process_flow(config, flow, page_height, page_width, c=c, parent_offset=(offset_x,offset_y),max_width=s_x)
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\renderer\flow_renderer.py", line 326, in process_flow
+    para.append(Paragraph(full_text, para_style))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\paragraph.py", line 1859, in __init__
+    self._setup(text, style, bulletText or getattr(style,'bulletText',None), frags, cleanBlockQuotedText)
+  File "c:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\paragraph.py", line 1880, in _setup
+    style, frags, bulletTextFrags = _parser.parse(text,style)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\paraparser.py", line 3220, in parse
+    annotateException('\nparagraph text %s caused exception' % ascii(text))
+  File "c:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\lib\utils.py", line 1176, in annotateException
+    rl_reraise(t,t(sep.join((_ for _ in (msg,str(v),postMsg) if _))),b)
+  File "c:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\lib\utils.py", line 138, in rl_reraise
+    raise v.with_traceback(b)
+  File "c:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\paraparser.py", line 3218, in parse
+    self.feed(text)
+  File "c:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\html\parser.py", line 110, in feed
+    self.goahead(0)
+  File "c:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\html\parser.py", line 170, in goahead
+    k = self.parse_starttag(i)
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\html\parser.py", line 337, in parse_starttag
+    self.handle_starttag(tag, attrs)
+  File "c:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\paraparser.py", line 3241, in handle_starttag
+    start(attrs or {})
+  File "c:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\platypus\paraparser.py", line 2824, in start_font
+    A['fontName'], A['bold'], A['italic'] = ps2tt(A['fontName'])
+                                            ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\jhon.carvajal\AppData\Local\Programs\Python\Python311\Lib\site-packages\reportlab\lib\fonts.py", line 78, in ps2tt
+    raise ValueError("Can't map determine family/bold/italic for %s" % psfn)
+ValueError: 
+paragraph text '<para><font name="Roboto-Medium-Regular" size="7.000003779999999" color="#4a4a49">Colfondos S.A. Pensiones y Cesant\xedas. Sociedad administradora de fondos de pensiones y cesant\xedas. L\xedneas Contact Center Bogot\xe1 6017484888, Medell\xedn 6046042888,</font></para>' caused exception Can't map determine family/bold/italic for roboto-medium-regular
+2025-11-12 06:32:30,367 [INFO] Servicio finalizado
+2025-11-12 06:32:50,258 [INFO] Inicio del servicio Generador PDF
+2025-11-12 06:32:50,258 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-12 06:36:29,661 [INFO] Inicio del servicio Generador PDF
+2025-11-12 06:36:29,661 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-12 06:54:58,173 [INFO] Inicio del servicio Generador PDF
+2025-11-12 06:54:58,173 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-12 07:01:04,679 [INFO] Inicio del servicio Generador PDF
+2025-11-12 07:01:04,679 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-12 07:01:53,271 [INFO] Inicio del servicio Generador PDF
+2025-11-12 07:01:53,271 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-12 07:09:14,898 [INFO] Inicio del servicio Generador PDF
+2025-11-12 07:09:14,898 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-12 08:14:29,276 [INFO] Inicio del servicio Generador PDF
+2025-11-12 08:14:29,276 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-12 10:16:50,062 [INFO] Inicio del servicio Generador PDF
+2025-11-12 10:16:50,062 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-12 10:17:01,828 [ERROR] Error en la ejecución del servicio: 'str' object has no attribute 'text'
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 53, in main
+    process_document(config, document, i)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_document.py", line 76, in process_document
+    process_page(config, page_element, c)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_page.py", line 31, in process_page
+    process_page(config, page_element, c)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_page.py", line 31, in process_page
+    process_page(config, page_element, c)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_page.py", line 58, in process_page
+    page_element = config.config_dicts['Page'].get(page_id.text)
+                                                   ^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'text'
+2025-11-12 10:17:01,833 [INFO] Servicio finalizado
+2025-11-12 10:19:46,399 [INFO] Inicio del servicio Generador PDF
+2025-11-12 10:19:46,399 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-12 10:21:36,021 [INFO] Inicio del servicio Generador PDF
+2025-11-12 10:21:36,021 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-12 10:21:46,274 [ERROR] Error en la ejecución del servicio: 'str' object has no attribute 'text'
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 53, in main
+    process_document(config, document, i)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_document.py", line 76, in process_document
+    process_page(config, page_element, c)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_page.py", line 31, in process_page
+    process_page(config, page_element, c)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_page.py", line 31, in process_page
+    process_page(config, page_element, c)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_page.py", line 58, in process_page
+    page_element = config.config_dicts['Page'].get(page_id.text)
+                                                   ^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'text'
+2025-11-12 10:21:46,276 [INFO] Servicio finalizado
+2025-11-12 10:43:06,837 [INFO] Inicio del servicio Generador PDF
+2025-11-12 10:43:06,837 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-12 10:43:17,705 [ERROR] Error en la ejecución del servicio: 'str' object has no attribute 'text'
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 53, in main
+    process_document(config, document, i)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_document.py", line 76, in process_document
+    process_page(config, page_element, c)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_page.py", line 31, in process_page
+    process_page(config, page_element, c)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_page.py", line 31, in process_page
+    process_page(config, page_element, c)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_page.py", line 58, in process_page
+    page_element = config.config_dicts['Page'].get(page_id.text)
+                                                   ^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'text'
+2025-11-12 10:43:17,717 [INFO] Servicio finalizado
+2025-11-12 10:46:01,436 [INFO] Inicio del servicio Generador PDF
+2025-11-12 10:46:01,436 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-12 10:46:01,738 [ERROR] Error en la ejecución del servicio: [Errno 2] No such file or directory: 'D:/ProyectoComunicaciones/ProyectoPDFGit/Datos/1_PE_860007336_FacturasWS_20250620_37F7155071DA4B57E0632A64A8C03854_Transform.json'
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 46, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\loader\input_loader.py", line 41, in load_input
+    full_context, documents = json_parser(json_path, all_elements_workflow, list_to_preprocess, connections)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\parser\json_parser.py", line 1014, in json_parser
+    with open(json_path, 'r', encoding="UTF-8") as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'D:/ProyectoComunicaciones/ProyectoPDFGit/Datos/1_PE_860007336_FacturasWS_20250620_37F7155071DA4B57E0632A64A8C03854_Transform.json'
+2025-11-12 10:46:01,757 [INFO] Servicio finalizado
+2025-11-12 10:47:05,045 [INFO] Inicio del servicio Generador PDF
+2025-11-12 10:47:05,045 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-12 10:47:05,333 [ERROR] Error en la ejecución del servicio: [Errno 2] No such file or directory: 'D:/ProyectoComunicaciones/ProyectoPDFGit/Datos/1_PE_860007336_FacturasWS_20250620_37F7155071DA4B57E0632A64A8C03854_Transform.json'
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 46, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\loader\input_loader.py", line 41, in load_input
+    full_context, documents = json_parser(json_path, all_elements_workflow, list_to_preprocess, connections)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\parser\json_parser.py", line 1014, in json_parser
+    with open(json_path, 'r', encoding="UTF-8") as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'D:/ProyectoComunicaciones/ProyectoPDFGit/Datos/1_PE_860007336_FacturasWS_20250620_37F7155071DA4B57E0632A64A8C03854_Transform.json'
+2025-11-12 10:47:05,339 [INFO] Servicio finalizado
+2025-11-12 10:47:28,862 [INFO] Inicio del servicio Generador PDF
+2025-11-12 10:47:28,862 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-12 10:47:29,220 [ERROR] Error en la ejecución del servicio: [Errno 2] No such file or directory: 'D:/ProyectoComunicaciones/ProyectoPDFGit/Datos/1_PE_860007336_FacturasWS_20250620_37F7155071DA4B57E0632A64A8C03854_Transform.json'
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 46, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\loader\input_loader.py", line 41, in load_input
+    full_context, documents = json_parser(json_path, all_elements_workflow, list_to_preprocess, connections)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\parser\json_parser.py", line 1014, in json_parser
+    with open(json_path, 'r', encoding="UTF-8") as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'D:/ProyectoComunicaciones/ProyectoPDFGit/Datos/1_PE_860007336_FacturasWS_20250620_37F7155071DA4B57E0632A64A8C03854_Transform.json'
+2025-11-12 10:47:29,220 [INFO] Servicio finalizado
+2025-11-12 10:47:48,967 [INFO] Inicio del servicio Generador PDF
+2025-11-12 10:47:48,967 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-12 10:47:49,225 [ERROR] Error en la ejecución del servicio: Formato de 'Documents' no reconocido
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 46, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\loader\input_loader.py", line 41, in load_input
+    full_context, documents = json_parser(json_path, all_elements_workflow, list_to_preprocess, connections)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\parser\json_parser.py", line 1024, in json_parser
+    raise ValueError("Formato de 'Documents' no reconocido")
+ValueError: Formato de 'Documents' no reconocido
+2025-11-12 10:47:49,229 [INFO] Servicio finalizado
+2025-11-12 10:51:15,835 [INFO] Inicio del servicio Generador PDF
+2025-11-12 10:51:15,835 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-12 10:53:13,302 [INFO] Inicio del servicio Generador PDF
+2025-11-12 10:53:13,302 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-12 10:53:15,129 [INFO] Servicio finalizado
+2025-11-12 10:54:57,544 [INFO] Inicio del servicio Generador PDF
+2025-11-12 10:54:57,544 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-12 10:54:59,489 [INFO] Servicio finalizado
+2025-11-12 10:55:22,441 [INFO] Inicio del servicio Generador PDF
+2025-11-12 10:55:22,441 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-12 10:55:22,657 [ERROR] Error en la ejecución del servicio: [Errno 2] No such file or directory: 'D:/ProyectoComunicaciones/ProyectoPDFGit/Datos/1_PE_860007336_FacturasWS_20250620_37F7155071DA4B57E0632A64A8C03854_Transform.json'
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 46, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\loader\input_loader.py", line 41, in load_input
+    full_context, documents = json_parser(json_path, all_elements_workflow, list_to_preprocess, connections)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\parser\json_parser.py", line 1014, in json_parser
+    with open(json_path, 'r', encoding="UTF-8") as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'D:/ProyectoComunicaciones/ProyectoPDFGit/Datos/1_PE_860007336_FacturasWS_20250620_37F7155071DA4B57E0632A64A8C03854_Transform.json'
+2025-11-12 10:55:22,657 [INFO] Servicio finalizado
+2025-11-12 10:56:01,541 [INFO] Inicio del servicio Generador PDF
+2025-11-12 10:56:01,541 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-12 10:56:01,958 [ERROR] Error en la ejecución del servicio: 'NoneType' object has no attribute 'text'
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 46, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\loader\input_loader.py", line 41, in load_input
+    full_context, documents = json_parser(json_path, all_elements_workflow, list_to_preprocess, connections)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\parser\json_parser.py", line 1078, in json_parser
+    transformation_class = transformation.find("FCVClassName").text
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'text'
+2025-11-12 10:56:01,958 [INFO] Servicio finalizado
+2025-11-12 10:59:46,515 [INFO] Inicio del servicio Generador PDF
+2025-11-12 10:59:46,515 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-12 10:59:46,991 [ERROR] Error en la ejecución del servicio: 'NoneType' object has no attribute 'text'
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 46, in main
+    config = load_input(pathInput, customer, product)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\loader\input_loader.py", line 41, in load_input
+    full_context, documents = json_parser(json_path, all_elements_workflow, list_to_preprocess, connections)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\parser\json_parser.py", line 1080, in json_parser
+    transformation_class = transformation.find("FCVClassName").text
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'text'
+2025-11-12 10:59:47,011 [INFO] Servicio finalizado
+2025-11-12 11:02:39,240 [INFO] Inicio del servicio Generador PDF
+2025-11-12 11:02:39,240 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-12 11:02:43,493 [ERROR] Error en la ejecución del servicio: 'NoneType' object has no attribute 'find'
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 52, in main
+    process_document(config, document, i)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_document.py", line 82, in process_document
+    process_page(config, page_element, c)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_page.py", line 31, in process_page
+    process_page(config, page_element, c)
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\pdf\process_page.py", line 9, in process_page
+    width = page.find('Width').text
+            ^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'find'
+2025-11-12 11:02:43,493 [INFO] Servicio finalizado
+2025-11-12 11:07:44,885 [INFO] Inicio del servicio Generador PDF
+2025-11-12 11:07:44,886 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-12 11:09:07,112 [INFO] Inicio del servicio Generador PDF
+2025-11-12 11:09:07,113 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-12 11:09:10,262 [INFO] Servicio finalizado
+2025-11-12 11:17:58,409 [INFO] Inicio del servicio Generador PDF
+2025-11-12 11:17:58,409 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-12 11:18:01,918 [INFO] Servicio finalizado
+2025-11-12 11:18:51,612 [INFO] Inicio del servicio Generador PDF
+2025-11-12 11:18:51,612 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-12 11:18:54,714 [INFO] Servicio finalizado
+2025-11-12 11:20:27,116 [INFO] Inicio del servicio Generador PDF
+2025-11-12 11:20:27,116 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-12 11:20:30,082 [ERROR] Error en la ejecución del servicio: too many values to unpack (expected 2)
+Traceback (most recent call last):
+  File "d:\Proyectos\proyectoPDF\PDF-Generator\main.py", line 52, in main
+    for j, document in documents:
+        ^^^^^^^^^^^
+ValueError: too many values to unpack (expected 2)
+2025-11-12 11:20:30,084 [INFO] Servicio finalizado
+2025-11-12 11:21:32,278 [INFO] Inicio del servicio Generador PDF
+2025-11-12 11:21:32,279 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-12 11:21:35,632 [INFO] Servicio finalizado
+2025-11-12 11:21:55,888 [INFO] Inicio del servicio Generador PDF
+2025-11-12 11:21:55,888 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-12 11:22:09,057 [INFO] Servicio finalizado
+2025-11-12 11:24:44,501 [INFO] Inicio del servicio Generador PDF
+2025-11-12 11:24:44,501 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-12 11:24:48,556 [INFO] Servicio finalizado
+2025-11-12 11:26:06,372 [INFO] Inicio del servicio Generador PDF
+2025-11-12 11:26:06,372 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-12 11:26:10,124 [INFO] Servicio finalizado
+2025-11-12 11:38:14,861 [INFO] Inicio del servicio Generador PDF
+2025-11-12 11:38:14,861 [INFO] Ejecutando en modo pruebas, no se iniciará el servidor HTTP ni la cola
+2025-11-12 11:38:16,821 [INFO] Servicio finalizado

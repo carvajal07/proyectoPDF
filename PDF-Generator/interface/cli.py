@@ -2,6 +2,7 @@ import sys
 import argparse
 import logging
 import json
+import core.constants as const
 from interface.xml_fetcher import get_layout_xml
 
 import xml.etree.ElementTree as ET
@@ -27,7 +28,7 @@ def run_cli_if_args():
         layout = ET.fromstring(layout_str)
         layout_element = layout.find("Layout")
 
-        for doc in data_json["Documents"]:
+        for doc in data_json[const.PRINCIPAL_ARRAY]:
             pass
 
         logging.info("PDF generado correctamente")

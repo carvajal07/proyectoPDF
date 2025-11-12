@@ -1,7 +1,7 @@
 import re
 import copy
 from core.utils import convert_units
-from core.utils import evaluate_condition_v2
+from core.utils import evaluate_condition
 from core.utils import get_variable_value
 from renderer.table_renderer import process_table
 
@@ -30,7 +30,7 @@ def process_flow(config, flow_element, page_height, page_width, context=None, c=
                 #Capturar la condicion del atributo Value
                 condition = flow_condition_element.get('Value')
                 
-                if evaluate_condition_v2(condition, register):
+                if evaluate_condition(condition, register):
                     #Hacer cambio del flow element por el flow que cumple la condicion
                     new_flow_id = flow_condition_element.text
                     if new_flow_id is None:
@@ -323,7 +323,10 @@ def process_flow(config, flow_element, page_height, page_width, context=None, c=
                 pass
                 #print("Pausa")
 
-            para.append(Paragraph(full_text, para_style))
+            try:
+                para.append(Paragraph(full_text, para_style))
+            except Exception as e:
+                print(e)
                 #Reestablecer valor modificado
                 #para_style.spaceAfter = space_after
         return para, font_size

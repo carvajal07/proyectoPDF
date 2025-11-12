@@ -1,7 +1,9 @@
 import os
 from core.utils import convert_units
 from core.utils import get_variable_value
+from core.utils import evaluate_condition_v2
 from reportlab.lib.utils import ImageReader
+import core.constants as const
 from PIL import Image
 import fitz
 
@@ -33,6 +35,23 @@ def process_image_objects(config, imagearea_element, image_element, images_cache
         full_context = config.full_context
         path = get_variable_value(variable_id, variables, full_context)
         #path = get_variable_value(variable_id)
+    elif image_type == "InlCond":
+        pass
+        '''
+        image_conditions = image.findall("ImageCondition")
+        for image_condition in image_conditions:
+            object_condition = image_condition.find("Condition")
+            image_id = image_condition.find("ImageId").text
+            if object_condition is not None:
+                condition = object_condition.text
+                # Evaluar condicion de la  imagen
+                full_context = config.full_context
+                if evaluate_condition_v2(condition, register):
+            else:
+                image = images.get(image_id)
+                image_type = image.find('ImageType').text
+                path = get_path(image_type, image, images, variables, data)
+        '''
     elif image_type == "Simple":
         image_location = image_element.find("ImageLocation").text
         _, path = image_location.split(',')
@@ -45,7 +64,7 @@ def process_image_objects(config, imagearea_element, image_element, images_cache
     #Si no tengo imagen en cache, buscarla en el XML
     if img is None:                                               
         if os.path.exists(path):
-            if path.lower().endswith(('.jpg', '.jpeg', '.png')):
+            if path.lower().endswith(const.VALID_IMAGE_EXTENSIONS):
                 img = ImageReader(path)
             elif path.lower().endswith('.pdf'):
                 pdf_doc = fitz.open(path)

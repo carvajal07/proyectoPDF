@@ -71,7 +71,6 @@ def process_chart(chart_element, c, parent_offset=(0,0)):
         pie.labels = labels if any(labels) else [str(i+1) for i in range(len(values))]
         drawing.add(pie)
     else:
-        # Puedes agregar más tipos según lo que permita reportlab o tus necesidades
         raise NotImplementedError(f"Tipo de gráfico no soportado: {chart_type}")
 
     # 7. Dibujar el chart en el PDF en la posición adecuada

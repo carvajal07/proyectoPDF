@@ -4,12 +4,11 @@ from core.utils import convert_units
 from reportlab.platypus import Frame
 
 def process_flows_areas(config, flowarea_element, page_height, page_width, c, parent_offset=(0,0), element=False):
-    id_flow_area = flowarea_element.find("Id").text
-
-    if id_flow_area == "177": #Este es el element, se deben aplicar estos offset a todos sus hijos
+    flow_area_id = flowarea_element.find('Id').text
+    if flow_area_id == "177": #Este es el element, se deben aplicar estos offset a todos sus hijos
         #Hijos:
         #    178,179,180 y 181 shape
-        print(f"offset flowarea: {id_flow_area}")
+        print(f"offset flowarea: {flow_area_id}")
         print(f"x:{parent_offset[0]}")
         print(f"y:{parent_offset[1]}")
     #x:37.12502004750002
@@ -17,8 +16,8 @@ def process_flows_areas(config, flowarea_element, page_height, page_width, c, pa
 
     #ids_flow_areas = ids_flow_areas_by_pages.get(page_id)
 
+    flowing = flowarea_element.find('FlowingToNextPage')
     
-    flow_area_id = flowarea_element.find('Id').text
     flow_id = flowarea_element.find('FlowId').text
     flow_border_id = flowarea_element.find("BorderStyleId").text        
 

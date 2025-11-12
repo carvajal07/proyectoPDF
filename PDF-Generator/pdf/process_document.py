@@ -3,24 +3,26 @@ from types import SimpleNamespace
 import core.constants as const
 from pdf.process_page import process_page
 from core.utils import get_variable_value
+from core.utils import evaluate_condition
 
-def process_document(config, document, i):
+def process_document(config, document,path_output, i):
     """Función auxiliar para generar un PDF en un proceso separado"""
     layout = config.layout
     full_context = config.full_context
 
     pages = layout.find('Pages') 
 
-    full_context["Documents"] = document
+    full_context[const.PRINCIPAL_ARRAY] = document
 
     
     pdf_name = document.get("NombrePDF", None)
     print(pdf_name)
     if pdf_name is None:
         print("No se encontro la variable para el nombre del PDF")
+        pdf_name = "Pruebas.pdf"
         return
 
-    pdf_path = f"D:\\ProyectoComunicaciones\\ProyectoPDFGit\\{i}_{pdf_name}"
+    pdf_path = f"{path_output}\\{i}_{pdf_name}"
     c = canvas.Canvas(pdf_path)
                                 
     # Procesar páginas
@@ -57,30 +59,31 @@ def process_document(config, document, i):
             
         elif (condition_type_pages == "InlCond"):
             print("Inicio de proceso de paginas con InlCond")
+            page_condition_elements = pages.findall("PageCondition")
+            for page_condition_element in page_condition_elements:
+                condition = page_condition_element.find("Condition").text
+                full_context = config.full_context
+                if evaluate_condition(condition, full_context):                
+                    page_id = page_condition_element.find("PageId").text
+                    break
+
         else:
             # - Integer
             # - Interval
             print(f'Condicion de tipo "{condition_type_pages}" no implementada')
         
         page_element = config.config_dicts['Page'].get(page_id)
-        process_page(config, page_element, c, config)
-        c.showPage()
-
-        #Probar la captura de la siguiente pagina
-        next_page_id_element = page_element.find("NextPageId")
-        if next_page_id_element is not None:                
-            page_element = config.config_dicts['Page'].get(next_page_id_element.text)
-            process_page(config, page_element, c, config)
-            c.showPage()
+        
+        process_page(config, page_element, c)
         
     elif (selection_type == "Simple"):
         #print("Inicio de proceso de paginas simples")
         for page_element in config.config_dicts['Page'].values():                
             process_page(config, page_element, c)
-            c.showPage()
         
     else:
         print(f'Metodo de Page order "{selection_type}" no disponible')
+    
     try:                   
         c.save()
     except Exception as e:

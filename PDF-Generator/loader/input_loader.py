@@ -9,7 +9,7 @@ from models.load_input_result import LoadInputResult
 from loader.preprocessing import topological_sort
 from styles.images import register_images
 
-def load_input(json_path, customer, product) -> LoadInputResult:
+def load_input(json_path, customer, product, pruebas) -> LoadInputResult:
     """
     Carga el JSON y el layout XML completo desde sus fuentes.
     Retorna un objeto LoadInputResult con toda la información estructurada.
@@ -51,7 +51,7 @@ def load_input(json_path, customer, product) -> LoadInputResult:
     )
 
     # Realizo inicialmente el registro de las imagenes del primer registro
-    images_cache = register_images(config_dicts["Image"], data_dicts["Variable"], full_context)
+    #images_cache = register_images(config_dicts["Image"], data_dicts["Variable"], full_context)
     
     return LoadInputResult(
         layout=layout,
@@ -65,5 +65,5 @@ def load_input(json_path, customer, product) -> LoadInputResult:
         fonts_reportlabs=fonts_reportlabs,
         colors_reportlabs=colors_reportlabs,
         borderstyle_reportlabs=borderstyle_reportlabs,
-        images_cache=images_cache
+        images_cache={}
     )
