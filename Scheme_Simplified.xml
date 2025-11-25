@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  XML SIMPLIFICADO PARA GENERACIÓN DE PDF
+
+  Este XML contiene SOLO las propiedades y nodos que se usan realmente en el código.
+  Se han eliminado todas las propiedades que no se leen en el procesamiento.
+
+  ESTRUCTURA GENERAL:
+  - Todos los elementos tienen: Id, Name (si tienen ParentId), ParentId (si son hijos), IndexInParent (si son hijos)
+  - Las propiedades específicas varían según el tipo de elemento
+-->
+<WorkFlow>
+  <Layout>
+    <Id>Layout1</Id>
+    <Name>Layout</Name>
+    <Layout>
+
+      <!-- ==================== VARIABLES ==================== -->
+      <!--
+        Propiedades usadas:
+        - Id: Identificador único
+        - Name: Nombre de la variable
+        - ParentId: ID del padre en jerarquía
+        - IndexInParent: Orden dentro del padre
+      -->
+      <Variable>
+        <Id>0</Id>
+        <Name>Documents</Name>
+        <ParentId>Def.Data</ParentId>
+        <IndexInParent>0</IndexInParent>
+      </Variable>
+
+      <Variable>
+        <Id>1</Id>
+        <Name>Campo1</Name>
+        <ParentId>0</ParentId>
+        <IndexInParent>0</IndexInParent>
+      </Variable>
+
+      <!-- ==================== PAGE ==================== -->
+      <!--
+        Propiedades usadas en elementos con ParentId:
+        - Id, Name, ParentId, IndexInParent
+
+        Propiedades usadas en configuración (sin ParentId):
+        - Id
+        - Width: Ancho de página
+        - Height: Alto de página
+        - ConditionType: Tipo de condición (Simple/Variable/Condition/InlCond)
+        - NextPageId: ID de la siguiente página (opcional)
+        - Pages (subnodo): Lista de páginas
+        - SelectionType: Tipo de selección
+        - FirstPageId: ID de primera página
+        - DefaultPageId: ID de página por defecto
+        - PageCondition (subnodos): Condiciones de página
+          - ConditionId: ID de condición
+          - PageId: ID de página
+          - Condition: Expresión de condición
+      -->
+      <Page>
+        <Id>159</Id>
+        <Name>FacturaFrente</Name>
+        <ParentId>Def.Pages</ParentId>
+        <IndexInParent>0</IndexInParent>
+      </Page>
+
+      <Page>
+        <Id>159</Id>
+        <ConditionType>Simple</ConditionType>
+        <Width>0.21590000000000001</Width>
+        <Height>0.27939999999999998</Height>
+        <NextPageId/>
+        <!-- Propiedades adicionales para Pages con SelectionType -->
+        <Pages>
+          <SelectionType>Simple</SelectionType>
+          <FirstPageId>159</FirstPageId>
+          <!-- Para SelectionType = Condition -->
+          <PageCondition>
+            <ConditionId>123</ConditionId>
+            <PageId>159</PageId>
+          </PageCondition>
+          <DefaultPageId>159</DefaultPageId>
+        </Pages>
+      </Page>
+
+      <!-- ==================== FLOWAREA ==================== -->
+      <!--
+        Propiedades usadas:
+        - Id, Name, ParentId, IndexInParent (si tiene ParentId)
+        - Pos (atributos X, Y): Posición
+        - Size (atributos X, Y): Tamaño
+        - FlowId: ID del flujo de contenido
+        - BorderStyleId: ID del estilo de borde (opcional)
+        - FlowingToNextPage: Si fluye a siguiente página (opcional)
+      -->
+      <FlowArea>
+        <Id>160</Id>
+        <Name>Titulo</Name>
+        <ParentId>159</ParentId>
+        <IndexInParent>0</IndexInParent>
+      </FlowArea>
+
+      <FlowArea>
+        <Id>160</Id>
+        <Pos X="0.049410937500000029" Y="0.011739062500000008"/>
+        <Size X="0.11787187500000007" Y="0.014750520833333332"/>
+        <FlowId>179</FlowId>
+        <BorderStyleId/>
+        <FlowingToNextPage>False</FlowingToNextPage>
+      </FlowArea>
+
+      <!-- ==================== FLOW ==================== -->
+      <!--
+        Propiedades usadas en elementos con ParentId:
+        - Id, Name, ParentId, IndexInParent
+
+        Propiedades usadas en configuración:
+        - Id
+        - Type: Simple/InlCond/Variable
+        - FlowContent: Contenido del flujo
+          - P (párrafos) con atributo Id: ID del ParaStyle
+            - T (texto) con atributo Id: ID del TextStyle
+              - Contenido de texto
+              - O (objeto) con atributo Id: ID del objeto (Variable, Table, etc)
+        - Condition (para Type=InlCond): Condiciones
+          - Atributo Value: Expresión de condición
+          - FlowContent dentro de cada Condition
+        - Default (para Type=InlCond): Contenido por defecto
+          - FlowContent
+      -->
+      <Flow>
+        <Id>179</Id>
+        <Name>Flow 1</Name>
+        <ParentId>Def.FlowGroup</ParentId>
+        <IndexInParent>0</IndexInParent>
+      </Flow>
+
+      <Flow>
+        <Id>179</Id>
+        <Type>Simple</Type>
+        <FlowContent>
+          <P Id="317">
+            <T Id="Def.TextStyle">Texto de ejemplo</T>
+            <T Id="Def.TextStyle">
+              <O Id="1"/>
+            </T>
+          </P>
+        </FlowContent>
+      </Flow>
+
+      <!-- Flow con condiciones -->
+      <Flow>
+        <Id>180</Id>
+        <Type>InlCond</Type>
+        <Condition Value="campo1 == 'A'">
+          <FlowContent>
+            <P Id="317"><T Id="Def.TextStyle">Opción A</T></P>
+          </FlowContent>
+        </Condition>
+        <Condition Value="campo1 == 'B'">
+          <FlowContent>
+            <P Id="317"><T Id="Def.TextStyle">Opción B</T></P>
+          </FlowContent>
+        </Condition>
+        <Default>
+          <FlowContent>
+            <P Id="317"><T Id="Def.TextStyle">Por defecto</T></P>
+          </FlowContent>
+        </Default>
+      </Flow>
+
+      <!-- ==================== TABLE ==================== -->
+      <!--
+        Propiedades usadas en elementos con ParentId:
+        - Id, Name, ParentId, IndexInParent
+
+        Propiedades usadas en configuración:
+        - Id
+        - BordersType: Tipo de bordes
+        - HorizontalCellSpacing: Espaciado horizontal
+        - VerticalCellSpacing: Espaciado vertical
+        - TableAlignment: Alineación (Left/Center/Right)
+        - ColumnWidths (múltiples): Anchos de columnas
+          - PercentWidth: Ancho en porcentaje
+          - MinWidth: Ancho mínimo
+        - RowSetId: ID del RowSet raíz
+        - RowSetType: Tipo de RowSet (usado al procesar)
+        - SubRowId: IDs de sub-filas (usado al procesar)
+        - VariableId: ID de variable (para tablas repetidas)
+        - RowSetCondition: Condiciones de RowSet
+          - Condition: Expresión de condición
+      -->
+      <Table>
+        <Id>336</Id>
+        <Name>Table 1</Name>
+        <ParentId>Def.TableGroup</ParentId>
+        <IndexInParent>0</IndexInParent>
+      </Table>
+
+      <Table>
+        <Id>336</Id>
+        <BordersType>MergeBorders</BordersType>
+        <HorizontalCellSpacing>0</HorizontalCellSpacing>
+        <VerticalCellSpacing>0</VerticalCellSpacing>
+        <TableAlignment>Left</TableAlignment>
+        <ColumnWidths>
+          <MinWidth>0.001</MinWidth>
+          <PercentWidth>0.25</PercentWidth>
+        </ColumnWidths>
+        <ColumnWidths>
+          <MinWidth>0.001</MinWidth>
+          <PercentWidth>0.75</PercentWidth>
+        </ColumnWidths>
+        <RowSetId>341</RowSetId>
+      </Table>
+
+      <!-- ==================== ROWSET ==================== -->
+      <!--
+        Propiedades usadas en elementos con ParentId:
+        - Id, Name, ParentId, IndexInParent
+
+        Propiedades usadas en configuración:
+        - Id
+        - RowSetType: InlCond/RowSet/Row
+        - RowSetCondition (para InlCond): Condiciones
+          - Condition: Expresión
+          - SubRowId: IDs de filas
+        - SubRowId: IDs de sub-filas (múltiples)
+        - MinHeight: Altura mínima de fila
+        - CellVerticalAlignment: Alineación vertical
+        - BorderId: ID del borde
+      -->
+      <RowSet>
+        <Id>341</Id>
+        <Name>RowSet 1</Name>
+        <ParentId>Def.TableGroup</ParentId>
+        <IndexInParent>0</IndexInParent>
+      </RowSet>
+
+      <RowSet>
+        <Id>341</Id>
+        <RowSetType>RowSet</RowSetType>
+        <SubRowId>342</SubRowId>
+        <SubRowId>343</SubRowId>
+        <MinHeight>0.01</MinHeight>
+        <CellVerticalAlignment>Top</CellVerticalAlignment>
+        <BorderId/>
+      </RowSet>
+
+      <!-- ==================== CELL ==================== -->
+      <!--
+        Propiedades usadas:
+        - Id, Name, ParentId, IndexInParent (si tiene ParentId)
+        - FlowId: ID del flujo de contenido
+        - BorderId: ID del borde (opcional)
+      -->
+      <Cell>
+        <Id>400</Id>
+        <Name>Cell 1</Name>
+        <ParentId>342</ParentId>
+        <IndexInParent>0</IndexInParent>
+      </Cell>
+
+      <Cell>
+        <Id>400</Id>
+        <FlowId>179</FlowId>
+        <BorderId/>
+      </Cell>
+
+      <!-- ==================== FONT ==================== -->
+      <!--
+        Propiedades usadas:
+        - Id (con atributo Name): Identificador
+        - Name: Nombre de la fuente
+        - FontName: Nombre interno de la fuente
+        - SubFont (múltiples): Variantes de la fuente
+          - Atributo Name: Nombre de la variante
+          - FontLocation: Ruta al archivo de fuente
+      -->
+      <Font>
+        <Id Name="Arial">Def.Font</Id>
+        <Name>Arial</Name>
+        <FontName>Arial</FontName>
+        <SubFont Name="Regular">
+          <FontLocation>vcs://Produccion/General/Fonts/arial.ttf</FontLocation>
+        </SubFont>
+        <SubFont Name="Bold">
+          <FontLocation>vcs://Produccion/General/Fonts/arialbd.ttf</FontLocation>
+        </SubFont>
+      </Font>
+
+      <!-- ==================== COLOR ==================== -->
+      <!--
+        Propiedades usadas en elementos con ParentId:
+        - Id, Name, ParentId, IndexInParent
+
+        Propiedades usadas en configuración:
+        - Id (con atributo Name para config)
+        - RGB: Valores RGB (formato: "R,G,B")
+      -->
+      <Color>
+        <Id>330</Id>
+        <Name>Black 1</Name>
+        <ParentId>Def.ColorGroup</ParentId>
+        <IndexInParent>1</IndexInParent>
+      </Color>
+
+      <Color>
+        <Id Name="Black">Def.Color</Id>
+        <RGB>0,0,0</RGB>
+      </Color>
+
+      <!-- ==================== PARASTYLE (Estilo de Párrafo) ==================== -->
+      <!--
+        Propiedades usadas:
+        - Id (con atributo Name)
+        - AncestorId: ID del estilo padre (opcional)
+        - LeftIndent: Sangría izquierda
+        - RightIndent: Sangría derecha
+        - FirstLineLeftIndent: Sangría de primera línea
+        - SpaceBefore: Espacio antes
+        - SpaceAfter: Espacio después
+        - LineSpacing: Espaciado entre líneas
+        - Widow: Control de viudas
+        - Orphan: Control de huérfanas
+        - KeepWithNext: Mantener con siguiente
+        - KeepLinesTogether: Mantener líneas juntas
+        - DontWrap: No envolver
+        - HAlign: Alineación horizontal (Left/Center/Right/Justify)
+      -->
+      <ParaStyle>
+        <Id Name="Normal">Def.ParaStyle</Id>
+        <AncestorId/>
+        <LeftIndent>0</LeftIndent>
+        <RightIndent>0</RightIndent>
+        <FirstLineLeftIndent>0</FirstLineLeftIndent>
+        <SpaceBefore>0</SpaceBefore>
+        <SpaceAfter>0</SpaceAfter>
+        <LineSpacing>0</LineSpacing>
+        <Widow>1</Widow>
+        <Orphan>1</Orphan>
+        <KeepWithNext>False</KeepWithNext>
+        <KeepLinesTogether>No</KeepLinesTogether>
+        <DontWrap>False</DontWrap>
+        <HAlign>Left</HAlign>
+      </ParaStyle>
+
+      <!-- ==================== TEXTSTYLE (Estilo de Texto) ==================== -->
+      <!--
+        Propiedades usadas (también se accede desde Flow -> T):
+        - Id (con atributo Name para config)
+        - AncestorId: ID del estilo padre (opcional)
+        - FontSize: Tamaño de fuente
+        - FillStyleId: ID del estilo de relleno (color)
+        - FontId: ID de la fuente
+        - SubFont: Nombre de la variante de fuente
+        - UsePercentDecent: Usar descenso porcentual (usado en font-fitting)
+        - PercentFontDecent: Porcentaje de descenso
+        - PointFontDecent: Puntos de descenso
+        - IterationCount: Contador de iteraciones (usado en font-fitting)
+      -->
+      <TextStyle>
+        <Id Name="Arial-12">Def.TextStyle</Id>
+        <AncestorId/>
+        <FontSize>0.004233333333333333</FontSize>
+        <FillStyleId>Def.BlackFill</FillStyleId>
+        <FontId>Def.Font</FontId>
+        <SubFont>Regular</SubFont>
+      </TextStyle>
+
+      <!-- ==================== BORDERSTYLE ==================== -->
+      <!--
+        Propiedades usadas en elementos con ParentId:
+        - Id, Name, ParentId, IndexInParent
+
+        Propiedades usadas en configuración:
+        - Id (con atributo Name)
+        - ColorId: ID del color (usado en border_renderer)
+        - TopLine, BottomLine, LeftLine, RightLine: Líneas de borde
+          - FillStyle: Estilo de relleno (dentro de cada línea)
+          - LineWidth: Ancho de línea
+        - LeftRightLine, RightLeftLine: Líneas diagonales
+          - FillStyle, LineWidth
+        - UpperLeftCorner, RightTopCorner, LowerRightCorner, LowerLeftCorner: Esquinas
+          - FillStyle, LineWidth
+        - UpperLeftCornerType, UpperRightCornerType, LowerRightCornerType, LowerLeftCornerType: Tipos de esquina
+          - CornerRadius (atributos X, Y): Radio de esquina
+        - FillStyleId: ID de estilo de relleno (opcional)
+      -->
+      <BorderStyle>
+        <Id>325</Id>
+        <Name>BorderStyle 1</Name>
+        <ParentId>Def.BorderStyleGroup</ParentId>
+        <IndexInParent>1</IndexInParent>
+      </BorderStyle>
+
+      <BorderStyle>
+        <Id Name="BorderStyle">Def.BorderStyle</Id>
+        <ColorId>330</ColorId>
+        <FillStyleId/>
+        <TopLine>
+          <FillStyle/>
+          <LineWidth>0.0002</LineWidth>
+        </TopLine>
+        <BottomLine>
+          <FillStyle/>
+          <LineWidth>0.0002</LineWidth>
+        </BottomLine>
+        <LeftLine>
+          <FillStyle/>
+          <LineWidth>0.0002</LineWidth>
+        </LeftLine>
+        <RightLine>
+          <FillStyle/>
+          <LineWidth>0.0002</LineWidth>
+        </RightLine>
+        <LeftRightLine>
+          <FillStyle/>
+          <LineWidth>0.0002</LineWidth>
+        </LeftRightLine>
+        <RightLeftLine>
+          <FillStyle/>
+          <LineWidth>0.0002</LineWidth>
+        </RightLeftLine>
+        <UpperLeftCorner>
+          <FillStyle/>
+          <LineWidth>0.0002</LineWidth>
+        </UpperLeftCorner>
+        <RightTopCorner>
+          <FillStyle/>
+          <LineWidth>0.0002</LineWidth>
+        </RightTopCorner>
+        <LowerRightCorner>
+          <FillStyle/>
+          <LineWidth>0.0002</LineWidth>
+        </LowerRightCorner>
+        <LowerLeftCorner>
+          <FillStyle/>
+          <LineWidth>0.0002</LineWidth>
+        </LowerLeftCorner>
+        <UpperLeftCornerType>
+          <CornerRadius X="0" Y="0"/>
+        </UpperLeftCornerType>
+        <UpperRightCornerType>
+          <CornerRadius X="0" Y="0"/>
+        </UpperRightCornerType>
+        <LowerRightCornerType>
+          <CornerRadius X="0" Y="0"/>
+        </LowerRightCornerType>
+        <LowerLeftCornerType>
+          <CornerRadius X="0" Y="0"/>
+        </LowerLeftCornerType>
+      </BorderStyle>
+
+      <!-- ==================== IMAGE ==================== -->
+      <!--
+        Propiedades usadas en elementos con ParentId:
+        - Id, Name, ParentId, IndexInParent
+
+        Propiedades usadas en configuración:
+        - Id
+        - ImageType: Simple/Variable/InlCond
+        - ImageLocation: Ubicación de la imagen (para Simple)
+        - VariableId: ID de variable (para Variable)
+      -->
+      <Image>
+        <Id>334</Id>
+        <Name>Logo</Name>
+        <ParentId>Def.ImagesGroup</ParentId>
+        <IndexInParent>0</IndexInParent>
+      </Image>
+
+      <Image>
+        <Id>334</Id>
+        <ImageType>Simple</ImageType>
+        <ImageLocation>vcs://Produccion/Images/logo.png</ImageLocation>
+      </Image>
+
+      <!-- ==================== IMAGEOBJECT ==================== -->
+      <!--
+        Propiedades usadas:
+        - Id, Name, ParentId, IndexInParent (si tiene ParentId)
+        - Pos (atributos X, Y): Posición
+        - Size (atributos X, Y): Tamaño
+        - Transformation_M0 a M5: Matriz de transformación (opcional)
+        - ImageId: ID de la imagen a mostrar
+      -->
+      <ImageObject>
+        <Id>500</Id>
+        <Name>ImageObject 1</Name>
+        <ParentId>159</ParentId>
+        <IndexInParent>0</IndexInParent>
+      </ImageObject>
+
+      <ImageObject>
+        <Id>500</Id>
+        <Pos X="0.01" Y="0.01"/>
+        <Size X="0.05" Y="0.05"/>
+        <Transformation_M0>1</Transformation_M0>
+        <Transformation_M1>0</Transformation_M1>
+        <Transformation_M2>0</Transformation_M2>
+        <Transformation_M3>1</Transformation_M3>
+        <Transformation_M4>0.01</Transformation_M4>
+        <Transformation_M5>0.01</Transformation_M5>
+        <ImageId>334</ImageId>
+      </ImageObject>
+
+      <!-- ==================== PATHOBJECT (Figuras Vectoriales) ==================== -->
+      <!--
+        Propiedades usadas:
+        - Id, Name, ParentId, IndexInParent (si tiene ParentId)
+        - Pos (atributos X, Y): Posición
+        - Size (atributos X, Y): Tamaño
+        - Scale (atributos X, Y): Escala (opcional)
+        - Transformation_M0 a M5: Matriz de transformación (opcional)
+        - Path: Definición del path
+          - MoveTo (atributos X, Y): Mover a punto
+          - LineTo (atributos X, Y): Línea a punto
+          - BezierTo (atributos X1, Y1, X2, Y2, X, Y): Curva Bezier
+          - ArcTo (atributos X, Y): Arco
+          - ClosePath: Cerrar path
+        - FillStyleId: ID del estilo de relleno
+      -->
+      <PathObject>
+        <Id>600</Id>
+        <Name>Path 1</Name>
+        <ParentId>159</ParentId>
+        <IndexInParent>0</IndexInParent>
+      </PathObject>
+
+      <PathObject>
+        <Id>600</Id>
+        <Pos X="0.01" Y="0.01"/>
+        <Size X="0.05" Y="0.05"/>
+        <Scale X="1" Y="1"/>
+        <Path>
+          <MoveTo X="0" Y="0"/>
+          <LineTo X="0.05" Y="0"/>
+          <LineTo X="0.05" Y="0.05"/>
+          <LineTo X="0" Y="0.05"/>
+          <ClosePath/>
+        </Path>
+        <FillStyleId>Def.BlackFill</FillStyleId>
+      </PathObject>
+
+      <!-- ==================== BARCODE ==================== -->
+      <!--
+        Propiedades usadas:
+        - Id, Name, ParentId, IndexInParent (si tiene ParentId)
+        - Pos (atributos X, Y): Posición
+        - Size (atributos X, Y): Tamaño
+        - Transformation_M0 a M5: Matriz de transformación (opcional)
+        - VariableId: ID de la variable con el contenido
+        - FillStyleId: ID del estilo de relleno
+        - BarcodeGenerator: Configuración del código de barras
+          - Type: Tipo (QR/EAN8/EAN13/EAN128/Code39/Code128)
+          - ErrorLevel: Nivel de error (para QR)
+          - ModulWidth: Ancho del módulo
+          - ModulSize: Tamaño del módulo
+          - Height: Altura del código de barras
+      -->
+      <Barcode>
+        <Id>700</Id>
+        <Name>Barcode 1</Name>
+        <ParentId>159</ParentId>
+        <IndexInParent>0</IndexInParent>
+      </Barcode>
+
+      <Barcode>
+        <Id>700</Id>
+        <Pos X="0.01" Y="0.01"/>
+        <Size X="0.03" Y="0.03"/>
+        <VariableId>50</VariableId>
+        <FillStyleId>Def.BlackFill</FillStyleId>
+        <BarcodeGenerator>
+          <Type>QR</Type>
+          <ErrorLevel>M</ErrorLevel>
+          <ModulWidth>0.001</ModulWidth>
+          <ModulSize>0.001</ModulSize>
+          <Height>0.03</Height>
+        </BarcodeGenerator>
+      </Barcode>
+
+      <!-- ==================== CHART ==================== -->
+      <!--
+        Propiedades usadas:
+        - Id, Name, ParentId, IndexInParent (si tiene ParentId)
+        - Pos (atributos X, Y): Posición
+        - Size (atributos X, Y): Tamaño
+        - Chart_Type: Tipo de gráfico (Bar/Line/Pie)
+        - Chart_Title: Título del gráfico
+        - Serie: Datos de la serie
+          - SerieItem (múltiples): Items de datos
+            - Value: Valor numérico
+            - Label: Etiqueta
+      -->
+      <Chart>
+        <Id>800</Id>
+        <Name>Chart 1</Name>
+        <ParentId>159</ParentId>
+        <IndexInParent>0</IndexInParent>
+      </Chart>
+
+      <Chart>
+        <Id>800</Id>
+        <Pos X="0.01" Y="0.01"/>
+        <Size X="0.1" Y="0.08"/>
+        <Chart_Type>Bar</Chart_Type>
+        <Chart_Title>Ventas 2024</Chart_Title>
+        <Serie>
+          <SerieItem>
+            <Value>100</Value>
+            <Label>Enero</Label>
+          </SerieItem>
+          <SerieItem>
+            <Value>150</Value>
+            <Label>Febrero</Label>
+          </SerieItem>
+        </Serie>
+      </Chart>
+
+      <!-- ==================== ELEMENTOBJECT ==================== -->
+      <!--
+        Propiedades usadas:
+        - Id: Identificador
+        - Name: Nombre
+        - ParentId, IndexInParent (si tiene ParentId)
+
+        NOTA: ElementObject es un contenedor genérico procesado en process_elements.py
+        pero no tiene propiedades específicas adicionales más allá de las básicas.
+      -->
+      <ElementObject>
+        <Id>900</Id>
+        <Name>Element 1</Name>
+        <ParentId>159</ParentId>
+        <IndexInParent>0</IndexInParent>
+      </ElementObject>
+
+    </Layout>
+  </Layout>
+</WorkFlow>
